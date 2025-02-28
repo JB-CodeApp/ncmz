@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "firstName": "Alric",
+    "lastName": "Truelock",
+    "displayName": "Truelock Alric",
+    "slug": "truelock-alric",
+    "email": "atruelock0@skype.com",
+    "password": "",
+    "gender": "Bigender",
+    "avatar": "https://robohash.org/doloremaliquidquia.png?size=150x150&set=set1",
+    "bgImage": "https://images.pexels.com/photos/912410/pexels-photo-912410.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "blog_count": 40,
+    "href": "/author/the-demo-author-slug",
+    "desc": "There’s no stopping the tech giant. Apple now opens its 100th store in China.There’s no stopping the tech giant.",
+    "Social": {
+      "website": "",
+      "facebook": "",
+      "twitter": "",
+      "instagram": "",
+      "linkedin": ""
+    },
+    "followers": [],
+    "follow": []
+  }
+]

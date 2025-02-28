@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "firstName": "Alric",
+    "lastName": "Truelock",
+    "email": "atruelock0@skype.com",
+    "password": "Hash Password",
+    "gender": "Male",
+    "status": "Active",
+    "subscription": {
+      "isSubscribed": "true, false",
+      "subscriptionStartDate": "",
+      "subscriptionEndDate": ""
+    },
+    "avatar": "https://robohash.org/doloremaliquidquia.png?size=150x150&set=set1",
+    "href": "/user/the-demo-author-slug",
+    "newsletter": "true, false",
+    "createdAt": ""
+  }
+]

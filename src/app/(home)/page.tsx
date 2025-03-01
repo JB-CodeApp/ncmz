@@ -24,6 +24,7 @@ import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2"
 import SectionVideos from "@/components/Sections/SectionVideos";
 import SectionLatestPosts from "@/components/Sections/SectionLatestPosts";
 import SectionMagazine2 from "@/components/Sections/SectionMagazine2";
+import { HIGHLIGHT_BLOGS } from "@/data/blogs";
 
 //
 const MAGAZINE1_POSTS = DEMO_POSTS.filter((_, i) => i >= 8 && i < 16);
@@ -36,7 +37,7 @@ const PageHome = ({}) => {
       <div className="container relative">
         <SectionLargeSlider
           className="pt-10 pb-16 md:py-16 lg:pb-28 lg:pt-20"
-          posts={DEMO_POSTS?.filter((_, i) => i < 3)}
+          posts={HIGHLIGHT_BLOGS}
         />
 
         <div className="relative py-16">

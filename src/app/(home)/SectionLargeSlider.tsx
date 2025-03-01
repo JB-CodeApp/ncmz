@@ -2,13 +2,14 @@
 
 import CardLarge1 from "@/components/CardLarge1/CardLarge1";
 import Heading from "@/components/Heading/Heading";
+import { BlogDataType } from "@/data/datatypes";
 import { PostDataType } from "@/data/types";
 import React, { FC, useState } from "react";
 
 export interface SectionLargeSliderProps {
   className?: string;
   heading?: string;
-  posts: PostDataType[];
+  posts: BlogDataType[];
 }
 
 const SectionLargeSlider: FC<SectionLargeSliderProps> = ({

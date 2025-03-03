@@ -30,7 +30,7 @@ const Card5: FC<Card5Props> = ({ className = "", post }) => {
         <CardAuthor2
           className="relative mt-auto"
           readingTime={readingTime}
-          author={author}
+          author={author as any}
           date={date}
         />
       </div>

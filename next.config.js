@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: 'export',
+  // trailingSlash: true,
   experimental: {
     appDir: true,
     typedRoutes: true,
   },
   images: {
+    // unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

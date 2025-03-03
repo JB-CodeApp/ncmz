@@ -56,7 +56,7 @@ const SectionMagazine6: FC<SectionMagazine6Props> = ({
               <CardAuthor2
                 readingTime={readingTime}
                 date={date}
-                author={author}
+                author={author as any}
               />
             </div>
           </div>

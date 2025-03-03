@@ -4,17 +4,18 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Avatar from "@/components/Avatar/Avatar";
 import NcImage from "@/components/NcImage/NcImage";
 import Link from "next/link";
+import { BlogAuthorType } from "@/data/datatypes";
 
 export interface CardAuthorBox2Props {
   className?: string;
-  author: PostAuthorType;
+  author: BlogAuthorType;
 }
 
 const CardAuthorBox2: FC<CardAuthorBox2Props> = ({
   className = "",
   author,
 }) => {
-  const { displayName, href = "/", avatar, jobName, count, bgImage } = author;
+  const { displayName, href = "/", avatar, slug, blog_count, bgImage } = author;
   return (
     <Link
       href={href}
@@ -32,7 +33,7 @@ const CardAuthorBox2: FC<CardAuthorBox2Props> = ({
         </div>
         <div className="absolute top-3 inset-x-3 flex">
           <div className=" py-1 px-4 bg-neutral-100 dark:bg-neutral-800 rounded-full flex items-center justify-center leading-none text-xs font-medium">
-            {count}{" "}
+            {blog_count}{" "}
             <ArrowRightIcon className="w-5 h-5 text-yellow-600 ms-3 rtl:rotate-180" />
           </div>
         </div>
@@ -53,7 +54,7 @@ const CardAuthorBox2: FC<CardAuthorBox2Props> = ({
           <span
             className={`block mt-1 text-sm text-neutral-500 dark:text-neutral-400`}
           >
-            @{jobName}
+            @{slug}
           </span>
         </div>
       </div>

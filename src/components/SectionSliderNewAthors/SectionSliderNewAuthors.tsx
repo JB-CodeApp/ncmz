@@ -30,7 +30,7 @@ const SectionSliderNewAuthors: FC<SectionSliderNewAuthorsProps> = ({
         itemPerRow={itemPerRow}
         data={authors}
         renderItem={(item, index) => (
-          <CardAuthorBox2 key={index} author={item} />
+          <CardAuthorBox2 key={index} author={item as any} />
         )}
       />
     </div>

@@ -35,7 +35,7 @@ export interface BlogAuthorType {
     firstName: string
     lastName: string
     displayName: string
-    slug: string
+    slug: string | any
     email?: string
     password?: string
     gender: string

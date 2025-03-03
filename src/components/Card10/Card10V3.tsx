@@ -148,7 +148,7 @@ const Card10V3: FC<Card10V3Props> = ({
         </h2>
         <CardAuthor2
           className="mt-3"
-          author={author}
+          author={author as any}
           hoverReadingTime={false}
           date={date}
           readingTime={readingTime}

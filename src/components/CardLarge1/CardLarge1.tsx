@@ -39,7 +39,7 @@ const CardLarge1: FC<CardLarge1Props> = ({
             </Link>
           </h2>
 
-          <CardAuthor2 className="relative" author={author} date={date} />
+          <CardAuthor2 className="relative" author={author as any} date={date} />
 
           <div className="flex items-center justify-between mt-auto">
             <PostCardLikeAndComment />

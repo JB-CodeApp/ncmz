@@ -41,7 +41,7 @@ const Card4: FC<Card4Props> = ({ className = "h-full", post }) => {
           </h2>
         </div>
         <div className="flex items-end justify-between mt-auto">
-          <CardAuthor2 readingTime={readingTime} date={date} author={author} />
+          <CardAuthor2 readingTime={readingTime} date={date} author={author as any} />
           <PostCardSaveAction hidenReadingTime />
         </div>
       </div>

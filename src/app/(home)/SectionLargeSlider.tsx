@@ -47,7 +47,7 @@ const SectionLargeSlider: FC<SectionLargeSliderProps> = ({
             key={index}
             onClickNext={handleClickNext}
             onClickPrev={handleClickPrev}
-            post={item}
+            post={item as any}
           />
         );
       })}

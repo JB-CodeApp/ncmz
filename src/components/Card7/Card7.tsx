@@ -67,7 +67,7 @@ const Card7: FC<Card7Props> = ({
             </Link>
           </h2>
         </div>
-        <CardAuthor2 readingTime={readingTime} date={date} author={author} />
+        <CardAuthor2 readingTime={readingTime} date={date} author={author as any} />
       </div>
     </div>
   );

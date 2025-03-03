@@ -104,6 +104,7 @@ export interface BlogDataType {
   updatedAt: string
   publishedAt: string
   deletedAt: string
+  tag: any[]
 }
 
 //  ##########  Tag ######## //

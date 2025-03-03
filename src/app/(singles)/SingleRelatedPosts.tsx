@@ -5,10 +5,12 @@ import Card11 from '@/components/Card11/Card11'
 import Card9 from '@/components/Card9/Card9'
 import { DEMO_POSTS } from '@/data/posts'
 import { Route } from '@/routers/types'
+import { findAuthorBlogs, findRelatedBlogs } from '@/data/blogs'
 
 export interface SingleRelatedPostsProps {
 	relatedPosts?: PostDataType[]
 	moreFromAuthorPosts?: PostDataType[]
+	slug?: string
 }
 
 // DEMO DATA
@@ -31,7 +33,11 @@ demoMoreFromAuthor = demoMoreFromAuthor.map((item, index) => ({
 const SingleRelatedPosts: FC<SingleRelatedPostsProps> = ({
 	relatedPosts = demoRelated,
 	moreFromAuthorPosts = demoMoreFromAuthor,
+	slug
 }) => {
+
+	const relatedBlogs = findRelatedBlogs(slug as any);
+	const authorBlogs = findAuthorBlogs(slug as any);
 	return (
 		<div className="relative mt-16 bg-neutral-100 py-16 dark:bg-neutral-800 lg:mt-28 lg:py-28">
 			{/* RELATED  */}
@@ -44,8 +50,8 @@ const SingleRelatedPosts: FC<SingleRelatedPostsProps> = ({
 						Related posts
 					</Heading>
 					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4">
-						{relatedPosts.map((post) => (
-							<Card11 key={post.id} post={post} />
+						{relatedBlogs.map((post) => (
+							<Card11 key={post.id} post={post as any} />
 						))}
 					</div>
 				</div>
@@ -59,8 +65,8 @@ const SingleRelatedPosts: FC<SingleRelatedPostsProps> = ({
 						More from author
 					</Heading>
 					<div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 xl:grid-cols-4">
-						{moreFromAuthorPosts.map((post) => (
-							<Card9 key={post.id} post={post} />
+						{authorBlogs.map((post) => (
+							<Card9 key={post.id} post={post as any} />
 						))}
 					</div>
 				</div>

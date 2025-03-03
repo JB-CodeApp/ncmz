@@ -2,6 +2,9 @@ import allblogs from '@/data/jsons/blogs.json';
 import allauthors from '@/data/jsons/authors.json';
 import allcategories from '@/data/jsons/categories.json';
 import alltags from '@/data/jsons/tags.json';
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 import { BlogDataType } from './datatypes';
 
@@ -11,6 +14,25 @@ const TAGS = alltags || [];
 
 const publishandnotdeleteBlogs = allblogs.filter((post) => post.status === 'published' && post.deletedAt === "");
 
+const fetchSingleMdxFile = async (mdxFile: string) => {
+	try {
+	  const mdxPath = path.join(process.cwd(), mdxFile.replace(/^\/+/, ""));
+  
+	  if (!fs.existsSync(mdxPath)) {
+		console.error(`❌ MDX file not found at path: ${mdxPath}`);
+		return null;
+	  }
+  
+	  const fileContent = await fs.promises.readFile(mdxPath, 'utf-8');
+	  
+	  const { data: frontmatter, content } = matter(fileContent);
+  
+	  return { frontmatter, content };
+	} catch (error) {
+	  console.error("❌ Error fetching MDX file:", error);
+	  return null;
+	}
+  };
 
 //  Function to Get Filtered Blogs Dynamically
 const getFilteredBlogs = (filters: {
@@ -78,11 +100,15 @@ const getFilteredBlogs = (filters: {
                 CATEGORIES.find((category) => category.slug === slug)
             )
             : [];
+		const tags = Array.isArray(post.tagsId)
+			? TAGS.filter((tag) => post.tagsId.includes(tag.slug))
+			: [];
 
         return {
             ...post,
             author: author || "",
             categories: categories.filter(Boolean),
+			tag: tags,
         };
     });
 };
@@ -142,10 +168,48 @@ function paginationblogs({ POSTS_PER_PAGE, currentPage }: { POSTS_PER_PAGE: numb
     return getFilteredBlogs().slice(0, POSTS_PER_PAGE * currentPage);
 }
 
+const blogs = getFilteredBlogs();
+
+function blogslugmatched(slug: string) {
+    return blogs.find((post) => post.slug === slug) || null;
+}
+
+const findRelatedBlogs = (slug: string) => {
+	const currentBlog = blogs.find((blog) => blog.slug === slug);
+	if (!currentBlog) return [];
+  
+	const { tagsId = [], categoriesId = [] } = currentBlog;
+	
+	return blogs
+	  .filter((blog) => 
+		blog.slug !== slug && 
+		(
+		  blog.tagsId?.some(tag => tagsId.includes(tag)) || 
+		  blog.categoriesId?.some(category => categoriesId.includes(category))
+		)
+	  )
+	  .slice(0, 4); 
+  };
+  
+  const findAuthorBlogs = (slug: string) => {
+	const currentBlog = blogs.find((blog) => blog.slug === slug);
+	if (!currentBlog) return [];
+  
+	const { authorId } = currentBlog;
+  
+	return blogs
+	  .filter((blog) => blog.slug !== slug && blog.authorId === authorId)
+	  .slice(0, 4);
+  };
+  
 export { 
+	fetchSingleMdxFile,
 	getFilteredBlogs, 
 	matchedblogs, 
 	paginationblogs,
+	blogslugmatched,
+	findRelatedBlogs,
+	findAuthorBlogs,
 	mostViewedBlogs, 
 	latestBlogs, 
 	CATEGORIES, 

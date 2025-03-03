@@ -4,9 +4,11 @@ import React, { FC } from "react";
 export interface PostCardCommentBtnProps {
   className?: string;
   isATagOnSingle?: boolean;
+  comment?: number;
 }
 
 const PostCardCommentBtn: FC<PostCardCommentBtnProps> = ({
+  comment,
   className = "flex px-3 h-8 text-xs",
   isATagOnSingle = false,
 }) => {
@@ -46,7 +48,7 @@ const PostCardCommentBtn: FC<PostCardCommentBtnProps> = ({
         </svg>
 
         <span className="ml-1 text-neutral-900 dark:text-neutral-200">
-          {"110"}
+           {comment ? comment : 1}
         </span>
       </a>
     );
@@ -87,7 +89,7 @@ const PostCardCommentBtn: FC<PostCardCommentBtnProps> = ({
       </svg>
 
       <span className="ml-1 text-neutral-900 dark:text-neutral-200">
-        {"110"}
+         {comment ? comment : 1}
       </span>
     </Link>
   );

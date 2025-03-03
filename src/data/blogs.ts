@@ -116,7 +116,6 @@ const mostViewedBlogs = getFilteredBlogs({ sortByViews: true });
 
 const latestBlogs = getFilteredBlogs({ latestblogs: true });
 
-
 function matchedblogs(slug: string | string[]) {
     const slugArray = Array.isArray(slug) ? slug : [slug];
 
@@ -142,7 +141,6 @@ function matchedblogs(slug: string | string[]) {
 function paginationblogs({ POSTS_PER_PAGE, currentPage }: { POSTS_PER_PAGE: number; currentPage: number }) {
     return getFilteredBlogs().slice(0, POSTS_PER_PAGE * currentPage);
 }
-
 
 export { 
 	getFilteredBlogs, 

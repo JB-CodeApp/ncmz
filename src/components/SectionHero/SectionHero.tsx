@@ -30,7 +30,9 @@ const SectionHero: FC<SectionHeroProps> = ({
           {!!btnText && <ButtonPrimary href="/">{btnText}</ButtonPrimary>}
         </div>
         <div className="flex-grow">
-          <Image className="w-full" src={rightImg} alt="" />
+          <Image className="w-full" src={rightImg} alt=""
+            width={728}
+            height={320} />
         </div>
       </div>
     </div>

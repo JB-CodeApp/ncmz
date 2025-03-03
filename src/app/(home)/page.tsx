@@ -26,6 +26,7 @@ import SectionLatestPosts from "@/components/Sections/SectionLatestPosts";
 import SectionMagazine2 from "@/components/Sections/SectionMagazine2";
 import { AUTHORS, getFilteredBlogs, latestBlogs } from "@/data/blogs";
 import BlogCategoryTabs from "@/components/MyComponents/BlogCategoryTabs";
+import CalHomeButton from "@/components/MyComponents/CalButtonandForm/CalHomeButton";
 // import { HIGHLIGHT_BLOGS } from "@/data/blogs";
 
 //
@@ -37,6 +38,7 @@ const highlightedBlogs = getFilteredBlogs({ highlight: true });
 
 const PageHome = ({ }) => {
   return (
+    <>
     <div className="nc-PageHome relative">
       <div className="container relative">
         <SectionLargeSlider
@@ -115,10 +117,10 @@ const PageHome = ({ }) => {
           authors={DEMO_AUTHORS.filter((_, i) => i < 10)}
         /> */}
 
-        <div className="relative py-16">
+        {/* <div className="relative py-16">
           <BackgroundSection />
           <SectionBecomeAnAuthor />
-        </div>
+        </div> */}
 
         {/* <SectionMagazine2
           className="py-16 lg:py-24"
@@ -138,13 +140,16 @@ const PageHome = ({ }) => {
           />
         </div> */}
 
-        {/* <SectionSubscribe2 className="pt-16 lg:pt-28" /> */}
+        <SectionSubscribe2 className="pt-16 lg:pt-28" />
 
         {/* <SectionVideos className="py-16 lg:py-28" /> */}
 
         <SectionLatestPosts latestblog={latestBlogs as any} className="py-16 lg:py-28" />
       </div>
     </div>
+    <CalHomeButton />
+    </>
+
   );
 };
 

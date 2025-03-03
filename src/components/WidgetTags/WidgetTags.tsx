@@ -8,7 +8,7 @@ import { CategoryType } from "@/data/datatypes";
 
 // const tagsDemo = DEMO_TAGS.filter((_, i) => i < 9);
 const tagsDemo = BLOGTAGSWITHCOUNT;
-console.log("data =>", tagsDemo);
+
 export interface WidgetTagsProps {
   className?: string;
   tags?: CategoryType[];

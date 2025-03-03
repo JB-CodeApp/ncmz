@@ -10,6 +10,7 @@
   },
   "prettier": "@epic-web/config/prettier",
   "dependencies": {
+    "@calcom/embed-react": "^1.5.2",
     "@epic-web/config": "^1.16.3",
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",

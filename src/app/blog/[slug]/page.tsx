@@ -1,16 +1,18 @@
 import { Sidebar } from "@/app/(singles)/Sidebar";
 import SingleContent from "@/app/(singles)/SingleContent";
 import SingleRelatedPosts from "@/app/(singles)/SingleRelatedPosts";
+import Page404 from "@/app/not-found";
 import BlogHeader from "@/components/MyComponents/Blog/BlogHeader";
 import { blogslugmatched } from "@/data/blogs";
 import { notFound } from "next/navigation";
 
 export default async function BlogPage({ params }: { params: { slug: string } }) {
     const slug = params.slug;
-    if (!slug) return notFound();
-
+    
     const blog = blogslugmatched(slug);
-    console.log(blog)
+    
+    if (!blog) return <Page404 />;
+
     return (
         <>
             <div>

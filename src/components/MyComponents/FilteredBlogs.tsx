@@ -11,27 +11,27 @@ import ArchiveFilterListBox from '@/components/ArchiveFilterListBox/ArchiveFilte
 
 export const FilteredBlogs = ({slug, data, mostviewed, mostrecent, filtertype, blogdata  }: any) => {
   const [selected, setSelected] = useState(filtertype[0])
-  console.log('selected', selected)
+  // console.log('selected', selected)
 
   const blogsToShow = useMemo(() => {
-  console.log('blogdata', blogdata)
+  // console.log('blogdata', blogdata)
 
     let filteredBlogs = [...blogdata]
 
     if (selected === "Most Recent") {
       filteredBlogs = filteredBlogs.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-      console.log('most recent', filteredBlogs)
+      // console.log('most recent', filteredBlogs)
     } else if (selected === "Most Viewed") {
       filteredBlogs = filteredBlogs.sort((a, b) => b.viewCount - a.viewCount)
-      console.log('most Viewed', filteredBlogs)
+      // console.log('most Viewed', filteredBlogs)
 
     } else if (selected === "Most Appreciated") {
       filteredBlogs = filteredBlogs.sort((a, b) => b.likeUsersId.length - a.likeUsersId.length) 
-      console.log('most Appreciated', filteredBlogs)
+      // console.log('most Appreciated', filteredBlogs)
       
     } else if (selected === "Most Discussed") {
       filteredBlogs = filteredBlogs.sort((a, b) => b.comments.length - a.comments.length)
-      console.log('most Appreciated', filteredBlogs)
+      // console.log('most Appreciated', filteredBlogs)
     }
 
     return filteredBlogs

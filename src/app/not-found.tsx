@@ -1,6 +1,11 @@
 import ButtonPrimary from '@/components/Button/ButtonPrimary'
 import React from 'react'
 
+
+export const metadata = {
+	title: '404 Not Found',
+}
+
 const Page404: React.FC = () => (
 	<div className="nc-Page404">
 		<div className="container relative py-16 lg:py-20">

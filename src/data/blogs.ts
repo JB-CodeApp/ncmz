@@ -195,11 +195,15 @@ function paginationblogs({
 	POSTS_PER_PAGE,
 	currentPage,
 }: {
-	POSTS_PER_PAGE: number
-	currentPage: number
+	POSTS_PER_PAGE: number;
+	currentPage: number;
 }) {
-	return getFilteredBlogs().slice(0, POSTS_PER_PAGE * currentPage)
+	const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+	const endIndex = startIndex + POSTS_PER_PAGE;
+
+	return getFilteredBlogs().slice(startIndex, endIndex);
 }
+
 
 function blogslugmatched(slug: string) {
 	return blogs.find((post) => post.slug === slug) || null

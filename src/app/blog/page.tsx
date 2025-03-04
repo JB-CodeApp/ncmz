@@ -15,7 +15,7 @@ const page = () => {
                         rightImg="/assets/images/seoimages/blogs.webp"
                         className="pt-10 pb-16 md:py-16 lg:pb-28 lg:pt-20"
                         heading={
-                            <h1>
+                            <>
                                 All &nbsp;
                                 <span className="relative pr-3">
                                     <Image
@@ -25,7 +25,7 @@ const page = () => {
                                     />
                                     <span className="relative">Blogs</span>
                                 </span>
-                            </h1>
+                            </>
                         }
                         btnText="Getting started"
                         subHeading="Expert blogs on iOS app development, Swift programming, UI/UX design, and app optimization. Stay updated with new trends."

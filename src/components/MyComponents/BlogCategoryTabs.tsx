@@ -30,8 +30,8 @@ const BlogCategoryTabs: FC<HeaderFilterProps> = ({
     }
     setTabActive(item);
   };
-  console.log("tabs", tabActive);
-  const filteredData = matchedblogs(tabActive);
+  // console.log("tabs", tabActive);
+  const filteredData = matchedblogs(tabActive).slice(0, 5);
 
   return (
     <>

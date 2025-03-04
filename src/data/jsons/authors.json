@@ -8,18 +8,18 @@
     "email": "bhumika@ios.com",
     "password": "password",
     "gender": "Female",
-    "status": "Active",
+    "status": "active",
     "avatar": "/assets/images/author/bhumika_patel.webp",
     "bgImage": "/assets/images/author/bhumika_patel_bgimage.webp",
     "blog_count": 40,
     "href": "/author/bhumika-ios",
     "desc": "There’s no stopping the tech giant. Apple now opens its 100th store in China.There’s no stopping the tech giant.",
     "Social": {
-      "website": "",
-      "facebook": "",
-      "twitter": "",
-      "instagram": "",
-      "linkedin": ""
+      "website": "https://bhumikaios.com/",
+      "facebook": "https://www.facebook.com/bhumikaios",
+      "twitter": "https://twitter.com/bhumikaios",
+      "instagram": "https://www.instagram.com/bhumikaios",
+      "linkedin": "https://www.linkedin.com/in/bhumika-ios/"
     },
     "followers": [],
     "follow": []

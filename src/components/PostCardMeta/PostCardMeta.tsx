@@ -2,10 +2,11 @@ import React, { FC } from "react";
 import Avatar from "@/components/Avatar/Avatar";
 import { PostDataType } from "@/data/types";
 import Link from "next/link";
+import { BlogDataType } from "@/data/datatypes";
 
 export interface PostCardMetaProps {
   className?: string;
-  meta: Pick<PostDataType, "date" | "author">;
+  meta: Pick<BlogDataType, "publishedAt" | "author">;
   hiddenAvatar?: boolean;
   avatarSize?: string;
 }
@@ -16,14 +17,14 @@ const PostCardMeta: FC<PostCardMetaProps> = ({
   hiddenAvatar = false,
   avatarSize = "h-7 w-7 text-sm",
 }) => {
-  const { date, author } = meta;
+  const {  author, publishedAt } = meta;
 
   return (
     <div
       className={`nc-PostCardMeta inline-flex items-center flex-wrap text-neutral-800 dark:text-neutral-200 ${className}`}
     >
       <Link
-        href={author.href}
+        href={author.href || ""}
         className="relative flex items-center space-x-2 rtl:space-x-reverse"
       >
         {!hiddenAvatar && (
@@ -43,7 +44,7 @@ const PostCardMeta: FC<PostCardMetaProps> = ({
           ·
         </span>
         <span className="text-neutral-500 dark:text-neutral-400 font-normal">
-          {date}
+          {publishedAt}
         </span>
       </>
     </div>

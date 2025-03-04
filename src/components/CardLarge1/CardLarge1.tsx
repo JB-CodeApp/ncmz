@@ -8,10 +8,11 @@ import CardAuthor2 from "@/components/CardAuthor2/CardAuthor2";
 import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
 import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
 import Link from "next/link";
+import { BlogDataType } from "@/data/datatypes";
 
 export interface CardLarge1Props {
   className?: string;
-  post: PostDataType;
+  post: BlogDataType;
   onClickNext?: () => void;
   onClickPrev?: () => void;
 }
@@ -42,7 +43,11 @@ const CardLarge1: FC<CardLarge1Props> = ({
           <CardAuthor2 className="relative" author={author as any} date={date} />
 
           <div className="flex items-center justify-between mt-auto">
-            <PostCardLikeAndComment />
+            <PostCardLikeAndComment 
+             view={post?.viewdCount || 1}
+             commentscount={post?.comments.length || 1}
+             data={post?.likeUsersId?.length || 1}
+             />
             <PostCardSaveAction bookmarkClass="h-8 w-8 bg-neutral-50/30 hover:bg-neutral-50/50 dark:bg-neutral-800/30 dark:hover:bg-neutral-800/50" />
           </div>
         </div>

@@ -92,7 +92,7 @@ const SingleContent: FC<SingleContentProps> = ({slug}) => {
 				{/* AUTHOR */}
 				<div className="mx-auto max-w-screen-md border-b border-t border-neutral-100 dark:border-neutral-700"></div>
 				<div className="mx-auto max-w-screen-md">
-					<SingleAuthor authordata={slug.author}/>
+					<SingleAuthor authordata={slug.author as any}/>
 				</div>
 
 				{/* COMMENT FORM */}

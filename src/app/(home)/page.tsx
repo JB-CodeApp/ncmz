@@ -144,7 +144,7 @@ const PageHome = ({ }) => {
 
         {/* <SectionVideos className="py-16 lg:py-28" /> */}
 
-        <SectionLatestPosts latestblog={latestBlogs as any} className="py-16 lg:py-28" />
+        <SectionLatestPosts latestblog={latestBlogs.slice(0,10) as any} className="py-16 lg:py-28" />
       </div>
     </div>
     <CalHomeButton />

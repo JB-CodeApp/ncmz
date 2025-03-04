@@ -79,7 +79,7 @@ const PostFeaturedMedia: FC<PostFeaturedMediaProps> = ({
       {renderContent()}
       {postType !== "gallery" && (
         <Link
-          href={href}
+          href={href || ""}
           className={`block absolute inset-0 ${
             !postType || postType === "standard"
               ? "bg-black/20 transition-opacity opacity-0 group-hover:opacity-100"

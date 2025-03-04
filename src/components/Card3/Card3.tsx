@@ -7,10 +7,11 @@ import PostCardLikeAndComment from "@/components/PostCardLikeAndComment/PostCard
 import CategoryBadgeList from "@/components/CategoryBadgeList/CategoryBadgeList";
 import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeaturedIcon";
 import Link from "next/link";
+import { BlogDataType } from "@/data/datatypes";
 
 export interface Card3Props {
   className?: string;
-  post: PostDataType;
+  post: BlogDataType;
 }
 
 const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
@@ -49,7 +50,11 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
           <PostCardMeta meta={{ ...post }} />
         </div>
         <div className="mt-5 flex items-center flex-wrap justify-between">
-          <PostCardLikeAndComment />
+          <PostCardLikeAndComment
+          view={post?.viewdCount || 1}
+          commentscount={post?.comments.length || 1}
+          data={post?.likeUsersId?.length || 1}
+           />
           <PostCardSaveAction readingTime={readingTime} />
         </div>
       </div>

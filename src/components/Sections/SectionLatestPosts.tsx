@@ -18,6 +18,7 @@ import Card11 from "@/components/Card11/Card11";
 import Card14 from "@/components/Card14/Card14";
 import { BlogDataType } from "@/data/datatypes";
 import { paginationblogs } from "@/data/blogs";
+import Link from "next/link";
 
 // THIS IS DEMO FOR MAIN DEMO
 // OTHER DEMO WILL PASS PROPS
@@ -45,7 +46,7 @@ const SectionLatestPosts: FC<SectionLatestPostsProps> = ({
   postCardName = "card3",
   heading = "Latest Articles 🎈",
   gridClass = "",
-  className ,
+  className,
 }) => {
   const renderCard = (post: BlogDataType, index: number) => {
     switch (postCardName) {
@@ -73,7 +74,7 @@ const SectionLatestPosts: FC<SectionLatestPostsProps> = ({
 
   const [currentPage, setCurrentPage] = useState(1);
   const currentPosts = paginationblogs({ POSTS_PER_PAGE: 10, currentPage });
-  
+
   const handleShowMore = () => setCurrentPage((prev) => prev + 1);
 
   return (
@@ -86,12 +87,15 @@ const SectionLatestPosts: FC<SectionLatestPostsProps> = ({
           </div>
           <div className="flex flex-col mt-12 md:mt-20 space-y-5 sm:space-y-0 sm:space-x-3 rtl:space-x-reverse sm:flex-row sm:justify-between sm:items-center">
             {/* <Pagination /> */}
-            {/* <ButtonPrimary>Show me more</ButtonPrimary> */}
-            {currentPosts && (
+            <Link href="/blog">
+              <ButtonPrimary>Show me more</ButtonPrimary>
+            </Link>
+
+            {/* {currentPosts && (
               <ButtonPrimary onClick={handleShowMore}>
                 Show me more
               </ButtonPrimary>
-            )}
+            )} */}
           </div>
         </div>
         <div className="w-full space-y-7 mt-24 lg:mt-0 lg:w-2/5 lg:ps-10 xl:ps-0 xl:w-1/3 ">

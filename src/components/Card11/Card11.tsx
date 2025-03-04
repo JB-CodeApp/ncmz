@@ -26,7 +26,7 @@ const Card11: FC<Card11Props> = ({
   const { title, href, categories, date } = post;
 
   const [isHover, setIsHover] = useState(false);
-  console.log("Card11Props", post);
+  // console.log("Card11Props", post.author);
   return (
     <div
       className={`nc-Card11 relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 ${className}`}
@@ -41,7 +41,7 @@ const Card11: FC<Card11Props> = ({
           <PostFeaturedMedia post={post as any} isHover={isHover} />
         </div>
       </div>
-      <Link href={href} className="absolute inset-0"></Link>
+      <Link href={href || ""} className="absolute inset-0"></Link>
       <span className="absolute top-3 inset-x-3 z-10">
         <CategoryBadgeList categories={categories as any} />
       </span>
@@ -60,7 +60,7 @@ const Card11: FC<Card11Props> = ({
         <div className="flex items-end justify-between mt-auto">
           <PostCardLikeAndComment
             view={post?.viewdCount || 1}
-            commentscount={post?.comments.length || 1}
+            commentscount={(post?.comments?.length || 1)}
             data={post?.likeUsersId?.length || 1}
             className="relative" />
           <PostCardSaveAction className="relative" />

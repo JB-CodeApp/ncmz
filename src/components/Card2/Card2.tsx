@@ -7,10 +7,11 @@ import PostTypeFeaturedIcon from "@/components/PostTypeFeaturedIcon/PostTypeFeat
 import Link from "next/link";
 import Image from "next/image";
 import PostCardMeta from "../PostCardMeta/PostCardMeta";
+import { BlogDataType } from "@/data/datatypes";
 
 export interface Card2Props {
   className?: string;
-  post: PostDataType;
+  post: BlogDataType;
   size?: "normal" | "large";
 }
 
@@ -72,14 +73,16 @@ const Card2: FC<Card2Props> = ({
             </Link>
           </h2>
           <span className="block text-neutral-500 dark:text-neutral-400 text-[15px] leading-6 ">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
-            beatae quasi et, reprehenderit alias veritatis nostrum iste sed
-            laboriosam eveniet possimus.
+            {desc}
           </span>
         </div>
         <div className="my-5 border-t border-neutral-200 dark:border-neutral-700"></div>
         <div className="flex items-center justify-between">
-          <PostCardLikeAndComment className="relative" />
+          <PostCardLikeAndComment 
+           view={post?.viewdCount || 1}
+           commentscount={post?.comments.length || 1}
+           data={post?.likeUsersId?.length || 1}
+          className="relative" />
           <PostCardSaveAction className="relative" readingTime={readingTime} />
         </div>
       </div>

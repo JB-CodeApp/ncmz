@@ -56,7 +56,7 @@ const Card9: FC<Card9Props> = ({
       <div className={`flex items-start relative w-full ${ratio}`}></div>
       {postType === "audio" ? (
         <div className="absolute inset-0">
-          <PostFeaturedMedia post={post} />
+          <PostFeaturedMedia post={post as any} />
         </div>
       ) : (
         <Link href={href}>
@@ -83,7 +83,7 @@ const Card9: FC<Card9Props> = ({
       <div className="absolute bottom-0 inset-x-0 p-4 flex flex-col flex-grow">
         <Link href={href} className="absolute inset-0"></Link>
         <div className="mb-3">
-          <CategoryBadgeList categories={categories} />
+          <CategoryBadgeList categories={categories as any} />
         </div>
         {renderMeta()}
       </div>

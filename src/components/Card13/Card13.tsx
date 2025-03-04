@@ -30,7 +30,7 @@ const Card13: FC<Card13Props> = ({ className = "", post }) => {
           {date}
         </span>
         <div className="mt-auto hidden sm:block">
-          <PostCardMeta meta={{ ...post }} />
+          <PostCardMeta meta={{ ...post } as any} />
         </div>
       </div>
 

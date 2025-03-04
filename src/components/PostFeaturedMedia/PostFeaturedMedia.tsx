@@ -51,7 +51,7 @@ const PostFeaturedMedia: FC<PostFeaturedMediaProps> = ({
 
     // AUDIO
     if (postType === "audio" && !!audioUrl) {
-      return <MediaAudio post={post} />;
+      return <MediaAudio post={post as any} />;
     }
 
     // ICON

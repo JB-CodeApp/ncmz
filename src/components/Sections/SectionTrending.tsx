@@ -19,7 +19,7 @@ const SectionTrending: FC<SectionTrendingProps> = ({
       {!!heading && <Heading>{heading}</Heading>}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:md:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
         {posts.map((post) => {
-          return <Card5 key={post.id} post={post} />;
+          return <Card5 key={post.id} post={post as any} />;
         })}
       </div>
     </div>

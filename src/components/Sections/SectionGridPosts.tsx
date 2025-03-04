@@ -52,27 +52,27 @@ const SectionGridPosts: FC<SectionGridPostsProps> = ({
           <Card3
             key={post.id}
             className="p-3 sm:p-5 2xl:p-6 [ nc-box-has-hover ] [ nc-dark-box-bg-has-hover ]"
-            post={post}
+            post={post as any}
           />
         );
       case "card4":
-        return <Card4 key={post.id} post={post} />;
+        return <Card4 key={post.id} post={post as any} />;
       case "card7":
         return (
-          <Card7 key={post.id} post={post} ratio="aspect-w-5 aspect-h-5" />
+          <Card7 key={post.id} post={post as any} ratio="aspect-w-5 aspect-h-5" />
         );
       case "card9":
-        return <Card9 key={post.id} post={post} />;
+        return <Card9 key={post.id} post={post as any} />;
       case "card10":
-        return <Card10 key={post.id} post={post} />;
+        return <Card10 key={post.id} post={post as any} />;
       case "card10V2":
-        return <Card10V2 key={post.id} post={post} />;
+        return <Card10V2 key={post.id} post={post as any} />;
       case "card11":
-        return <Card11 key={post.id} post={post} />;
+        return <Card11 key={post.id} post={post as any} />;
       case "card14":
-        return <Card14 key={post.id} post={post} />;
+        return <Card14 key={post.id} post={post as any} />;
       case "card15Podcast":
-        return <Card15Podcast key={post.id} post={post} />;
+        return <Card15Podcast key={post.id} post={post as any} />;
       default:
         return null;
     }

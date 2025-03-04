@@ -36,7 +36,7 @@ const SectionMagazine10: FC<SectionMagazine10Props> = ({
           )}
         </div>
 
-        {posts[0] && <Card19 className="" post={posts[0]} />}
+        {posts[0] && <Card19 className="" post={posts[0] as any} />}
       </div>
     </div>
   );

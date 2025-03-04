@@ -42,7 +42,7 @@ const PageAuthor = ({ params }: { params: { slug: string } }) => {
             alt=""
             containerClassName="absolute inset-0"
             sizes="(max-width: 1280px) 100vw, 1536px"
-            src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            src={author?.bgImage || ""}
             className="object-cover w-full h-full"
             fill
             priority

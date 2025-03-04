@@ -29,7 +29,7 @@ const SectionMagazine8: FC<SectionMagazine8Props> = ({
       <div className={`grid grid-cols-1 sm:grid-cols-6 gap-6 md:gap-8`}>
         <Card16Podcast
           className="sm:col-span-3 lg:col-span-2"
-          post={posts[0]}
+          post={posts[0] as any}
         />
         <Card16Podcast
           className="sm:col-span-3 lg:col-span-2"

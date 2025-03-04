@@ -46,7 +46,7 @@ const Card14: FC<Card14Props> = ({
       </Link>
 
       <div className="absolute top-4 inset-x-4 sm:top-5 sm:inset-x-5">
-        <CategoryBadgeList itemClass="px-3 py-[6px]" categories={categories} />
+        <CategoryBadgeList itemClass="px-3 py-[6px]" categories={categories as any} />
       </div>
 
       <div className="dark absolute bottom-4 inset-x-4 sm:bottom-5 sm:inset-x-5 flex flex-col flex-grow">

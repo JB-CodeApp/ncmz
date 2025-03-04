@@ -25,7 +25,7 @@ export const Sidebar: FC<SidebarProps> = ({ className = 'space-y-6 ' }) => {
 	return (
 		<div className={`nc-SingleSidebar ${className}`}>
 			<WidgetTags tags={tags as any} />
-			{/* <WidgetCategories categories={categories} /> */}
+			{/* <WidgetCategories categories={categories as any} /> */}
 			<WidgetAuthors authors={authors as any} />
 			{/* <WidgetPosts posts={widgetPosts} /> */}
 		</div>

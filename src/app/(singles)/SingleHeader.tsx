@@ -24,7 +24,7 @@ const SingleHeader: FC<SingleHeaderProps> = ({
 				<div className="space-y-5">
 					<CategoryBadgeList
 						itemClass="!px-3"
-						categories={[DEMO_CATEGORIES[1]]}
+						categories={[DEMO_CATEGORIES[1] as any]}
 					/>
 					<SingleTitle
 						mainClass={titleMainClass}

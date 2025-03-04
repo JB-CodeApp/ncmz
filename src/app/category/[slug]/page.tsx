@@ -58,4 +58,5 @@ const PageCategory = ({ params }: { params: { slug: string } }) => {
         </>
     )
 }
+
 export default PageCategory;

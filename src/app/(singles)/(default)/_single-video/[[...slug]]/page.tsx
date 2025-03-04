@@ -39,7 +39,7 @@ const PageSv = ({}) => {
         <div className="space-y-5 dark text-neutral-100">
           <CategoryBadgeList
             itemClass="!px-3"
-            categories={[DEMO_CATEGORIES[2]]}
+            categories={[DEMO_CATEGORIES[2] as any]}
           />
           <SingleTitle
             mainClass="text-neutral-900 font-semibold text-3xl md:!leading-[120%] dark:text-neutral-100"

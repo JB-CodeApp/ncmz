@@ -72,7 +72,7 @@ const Card15Podcast: FC<Card15PodcastProps> = ({
 
         {IS_AUDIO && (
           <ButtonPlayMusicPlayer
-            post={post}
+            post={post as any}
             renderDefaultBtn={() => renderDefaultBtnListen()}
             renderPlayingBtn={() => renderDefaultBtnListen("playing")}
           />

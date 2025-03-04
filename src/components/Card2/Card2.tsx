@@ -49,7 +49,7 @@ const Card2: FC<Card2Props> = ({
         <CategoryBadgeList
           className="flex flex-wrap space-x-2 absolute top-3 left-3"
           itemClass="relative"
-          categories={categories}
+          categories={categories as any}
         />
       </div>
 
@@ -60,7 +60,7 @@ const Card2: FC<Card2Props> = ({
           <PostCardMeta
             className="relative text-sm"
             avatarSize="h-8 w-8 text-sm"
-            meta={post}
+            meta={post as any}
           />
 
           <h2

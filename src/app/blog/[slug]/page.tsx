@@ -4,20 +4,20 @@ import SingleRelatedPosts from "@/app/(singles)/SingleRelatedPosts";
 import Page404 from "@/app/not-found";
 import BlogHeader from "@/components/MyComponents/Blog/BlogHeader";
 import { blogslugmatched } from "@/data/blogs";
-import { notFound } from "next/navigation";
+import React from "react";
 
 export default async function BlogPage({ params }: { params: { slug: string } }) {
-    const slug = params.slug;
-    
-    const blog = blogslugmatched(slug);
-    
-    if (!blog) return <Page404 />;
+  const slug = params.slug;
 
-    return (
-        <>
-            <div>
+  const blog = blogslugmatched(slug);
+
+  if (!blog) return <Page404 />;
+
+  return (
+    <>
+      <div>
         <div className={`relative`}>
-      
+
           <BlogHeader data={blog} />
 
           <div className="container flex flex-col my-10 lg:flex-row ">
@@ -33,6 +33,6 @@ export default async function BlogPage({ params }: { params: { slug: string } })
           <SingleRelatedPosts slug={slug as any} />
         </div>
       </div>
-        </>
-    );
+    </>
+  );
 }

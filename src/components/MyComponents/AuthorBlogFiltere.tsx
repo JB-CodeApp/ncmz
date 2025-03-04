@@ -51,7 +51,7 @@ export const AuthorBlogFiltere = ({ blogdata }: { blogdata: any[] }) => {
       {/* Blog Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 mt-8 lg:mt-10">
         {filteredBlogs.length > 0 ? (
-          filteredBlogs.map((post) => <Card11 key={post.id} post={post} />)
+          filteredBlogs.map((post) => <Card11 key={post.id} post={post as any} />)
         ) : (
           <p className="text-center col-span-full text-neutral-500">No blogs found.</p>
         )}

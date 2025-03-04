@@ -33,7 +33,7 @@ const Card4: FC<Card4Props> = ({ className = "h-full", post }) => {
 
       <div className="p-4 flex flex-col flex-grow">
         <div className="space-y-2.5 mb-4">
-          <CategoryBadgeList categories={categories} />
+          <CategoryBadgeList categories={categories as any} />
           <h2 className="nc-card-title block text-base font-semibold text-neutral-900 dark:text-neutral-100 ">
             <Link href={href} className="line-clamp-2" title={title}>
               {title}

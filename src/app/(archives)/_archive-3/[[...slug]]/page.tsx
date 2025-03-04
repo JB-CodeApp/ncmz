@@ -47,7 +47,7 @@ const PageArchiveVideo = ({}) => {
           {/* LOOP ITEMS */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-8 md:gap-x-8 md:gap-y-10 mt-8 lg:mt-10">
             {DEMO_POSTS_VIDEO.map((post) => (
-              <Card10V2 key={post.id} post={post} />
+              <Card10V2 key={post.id} post={post as any} />
             ))}
           </div>
 

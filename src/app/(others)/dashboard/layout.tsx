@@ -83,7 +83,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
             <li>
               <Link
                 className={`flex items-center px-6 py-3 font-medium text-red-500`}
-                href={"/"}
+                href={"/" as any}
               >
                 <span className="w-8 me-2 text-lg">💡</span>
                 Sign out

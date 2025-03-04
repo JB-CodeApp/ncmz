@@ -23,5 +23,30 @@
     },
     "followers": [],
     "follow": []
+  },
+  {
+    "id": 1,
+    "firstName": "jigar",
+    "lastName": "Patel",
+    "displayName": "jigar Patel",
+    "slug": "jigar-patel",
+    "email": "jigar@patel.com",
+    "password": "password",
+    "gender": "Female",
+    "status": "active",
+    "avatar": "/assets/images/author/bhumika_patel.webp",
+    "bgImage": "/assets/images/author/bhumika_patel_bgimage.webp",
+    "blog_count": 40,
+    "href": "/author/jigar-patel",
+    "desc": "Apple now opens its 100th store in China.There’s no stopping the tech giant.",
+    "Social": {
+      "website": "https://expertlaravel.com/",
+      "facebook": "#",
+      "twitter": "#",
+      "instagram": "#",
+      "linkedin": "#"
+    },
+    "followers": [],
+    "follow": []
   }
 ]

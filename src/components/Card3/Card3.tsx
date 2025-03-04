@@ -31,7 +31,7 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
     >
       <div className="flex flex-col flex-grow">
         <div className="space-y-3.5">
-          <CategoryBadgeList categories={categories} />
+          <CategoryBadgeList categories={categories as any} />
           <Link href={href} className="block">
             <h2
               className={`nc-card-title block font-medium sm:font-semibold text-neutral-900 dark:text-neutral-100 text-sm sm:text-base xl:text-lg`}
@@ -47,7 +47,7 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
             </div>
           </Link>
 
-          <PostCardMeta meta={{ ...post }} />
+          <PostCardMeta meta={{ ...post } as any} />
         </div>
         <div className="mt-5 flex items-center flex-wrap justify-between">
           <PostCardLikeAndComment

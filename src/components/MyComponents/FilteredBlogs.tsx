@@ -48,8 +48,8 @@ export const FilteredBlogs = ({slug, data, mostviewed, mostrecent, filtertype, b
         <div className="flex justify-end">
           <ArchiveFilterListBox
             lists={filtertype}
-            selected={selected}
-            setSelected={setSelected}
+            // selected={selected as any}
+            // setSelected={setSelected}
           />
         </div>
       </div>

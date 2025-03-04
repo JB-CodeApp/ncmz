@@ -6,7 +6,7 @@ import { BlogDataType } from "@/data/datatypes";
 
 export interface PostCardMetaProps {
   className?: string;
-  meta: Pick<BlogDataType, "publishedAt" | "author">;
+  meta: any;
   hiddenAvatar?: boolean;
   avatarSize?: string;
 }

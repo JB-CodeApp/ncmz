@@ -21,7 +21,7 @@ const SingleHeader4: FC<SingleHeader4Props> = ({
 				<div className="dark mx-auto max-w-5xl space-y-5">
 					<CategoryBadgeList
 						itemClass="!px-3"
-						categories={[DEMO_CATEGORIES[1]]}
+						categories={[DEMO_CATEGORIES[1] as any]}
 					/>
 					<SingleTitle
 						mainClass="text-neutral-900 font-bold text-3xl md:text-4xl md:!leading-[120%] lg:text-5xl 2xl:text-6xl dark:text-neutral-100"

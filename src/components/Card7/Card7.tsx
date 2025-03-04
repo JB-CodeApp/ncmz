@@ -60,7 +60,7 @@ const Card7: FC<Card7Props> = ({
       <div className="absolute bottom-3 inset-x-3 p-4 bg-white dark:bg-neutral-900 flex flex-col flex-grow rounded-3xl group-hover:shadow-2xl transition-shadow">
         <Link href={href} className="absolute inset-0"></Link>
         <div className="space-y-2.5 mb-3">
-          <CategoryBadgeList categories={categories} />
+          <CategoryBadgeList categories={categories as any} />
           <h2 className="block text-base font-semibold text-neutral-900 dark:text-neutral-100 ">
             <Link href={href} title={title} className="line-clamp-2">
               {title}

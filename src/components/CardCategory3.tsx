@@ -11,7 +11,7 @@ export interface CardCategory3Props {
 const CardCategory3: FC<CardCategory3Props> = ({ className = "" }) => {
   return (
     <Link
-      href={"/archive/demo-slug"}
+      href={"/archive/demo-slug" as any}
       className={`nc-CardCategory3 block ${className}`}
     >
       <div

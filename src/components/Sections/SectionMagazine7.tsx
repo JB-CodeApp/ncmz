@@ -25,7 +25,7 @@ const SectionMagazine7: FC<SectionMagazine7Props> = ({
       </Heading>
       <div className={`grid grid-cols-1 gap-6 md:gap-8`}>
         <div className={`grid gap-6 md:gap-8 lg:grid-cols-2`}>
-          <Card10V3 post={posts[0]} />
+          <Card10V3 post={posts[0] as any} />
           <Card10V3 galleryType={2} post={posts[1]} />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 mt-3">

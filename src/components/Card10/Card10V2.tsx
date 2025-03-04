@@ -24,7 +24,7 @@ const Card10V2: FC<Card10V2Props> = ({ className = "h-full", post }) => {
     >
       <div className="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-16 aspect-h-12 sm:aspect-h-9 overflow-hidden z-0">
         <div>
-          <PostFeaturedMedia post={post} isHover={isHover} />
+          <PostFeaturedMedia post={post as any} isHover={isHover} />
         </div>
 
         <Link
@@ -33,12 +33,12 @@ const Card10V2: FC<Card10V2Props> = ({ className = "h-full", post }) => {
         ></Link>
       </div>
       <div className="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 rtl:space-x-reverse">
-        <CategoryBadgeList categories={categories} />
+        <CategoryBadgeList categories={categories as any} />
         <PostCardSaveAction />
       </div>
 
       <div className="space-y-2.5 mt-4 px-4">
-        <PostCardMetaV2 meta={post} />
+        <PostCardMetaV2 meta={post as any} />
       </div>
     </div>
   );

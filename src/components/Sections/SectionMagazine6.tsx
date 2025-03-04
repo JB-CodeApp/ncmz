@@ -75,7 +75,7 @@ const SectionMagazine6: FC<SectionMagazine6Props> = ({
                   </h2>
                   <PostCardMeta
                     className="mt-4 text-xs sm:text-sm"
-                    meta={post}
+                    meta={post as any}
                   />
                 </div>
               ))}

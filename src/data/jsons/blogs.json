@@ -131,7 +131,7 @@
     "tagsId": ["vapor"],
     "status": "published", 
     "ishighlight": "true",
-    "contentType": "free, login, subscribed",
+    "contentType": "free",
     "postType": "standard",
     "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
     "seo": {
@@ -813,7 +813,7 @@
     "likeUsersId": ["jigar-aptel"],
     "categoriesId": ["network"],
     "tagsId": ["vapora"],
-    "status": "published", 
+    "status": "draft", 
     "ishighlight": "true",
     "contentType": "free, login, subscribed",
     "postType": "standard",

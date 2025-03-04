@@ -1,18 +1,42 @@
 'use client'
 
 import {
+	Button,
 	Popover,
 	PopoverButton,
 	PopoverPanel,
 	Transition,
 } from '@headlessui/react'
 import { avatarImgs } from '@/contains/fakeData'
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import Avatar from '@/components/Avatar/Avatar'
 import SwitchDarkMode2 from '@/components/SwitchDarkMode/SwitchDarkMode2'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { getBlogsByAuthor } from '@/data/blogs'
 
 export default function AvatarDropdown() {
+	const router = useRouter();
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
+	const [user, setUser] = useState("");
+
+	useEffect(() => {
+		const storedLogin = localStorage.getItem("islogin") === "true";
+		setIsLoggedIn(storedLogin);
+		setUser(localStorage.getItem("user") || "");
+	}, []);
+
+	const handleSignOut = () => {
+		if (typeof window !== "undefined" && localStorage) {
+			localStorage.clear();
+			router.push("/login");
+			window.location.reload();
+		}
+	};
+
+	const { author, authorblogs } = getBlogsByAuthor(user);
+
+
 	return (
 		<div className="AvatarDropdown">
 			<Popover className="relative">
@@ -56,19 +80,22 @@ export default function AvatarDropdown() {
 								<div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-black ring-opacity-5">
 									<div className="relative grid grid-cols-1 gap-6 bg-white px-6 py-7 dark:bg-neutral-800">
 										<div className="flex items-center">
-											<Avatar imgUrl={avatarImgs[7]} sizeClass="w-12 h-12" />
+											<Avatar imgUrl={author?.avatar} sizeClass="w-12 h-12" />
 
 											<div className="ms-3 flex-grow">
-												<h4 className="font-semibold">Eden Smith</h4>
-												<p className="mt-0.5 text-xs">Los Angeles, CA</p>
+												<h4 className="font-semibold">{author?.displayName}</h4>
+												<p className="mt-0.5 text-xs"><span className='text-[9px]'>🟢</span> {author?.status}</p>
 											</div>
 										</div>
 
 										<div className="w-full border-b border-neutral-200 dark:border-neutral-700" />
 
 										{/* ------------------ 1 --------------------- */}
-										<Link
-											href={'/author/demo-slug'}
+										{isLoggedIn ? (
+										<></>
+										) :
+											<Link
+											href={'/login'}
 											className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-neutral-700"
 											onClick={() => close()}
 										>
@@ -100,6 +127,8 @@ export default function AvatarDropdown() {
 												<p className="text-sm font-medium">{'My Account'}</p>
 											</div>
 										</Link>
+
+										}
 
 										{/* ------------------ 2 --------------------- */}
 										<Link
@@ -224,7 +253,7 @@ export default function AvatarDropdown() {
 										</div>
 
 										{/* ------------------ 2 --------------------- */}
-										<Link
+										{/* <Link
 											href={'/'}
 											className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-neutral-700"
 											onClick={() => close()}
@@ -284,49 +313,56 @@ export default function AvatarDropdown() {
 											<div className="ms-4">
 												<p className="text-sm font-medium">{'Help'}</p>
 											</div>
-										</Link>
+										</Link> */}
 
 										{/* ------------------ 2 --------------------- */}
-										<Link
-											href={'/#'}
-											className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-neutral-700"
-											onClick={() => close()}
-										>
-											<div className="flex flex-shrink-0 items-center justify-center text-neutral-500 dark:text-neutral-300">
-												<svg
-													width="24"
-													height="24"
-													viewBox="0 0 24 24"
-													fill="none"
-													xmlns="http://www.w3.org/2000/svg"
-												>
-													<path
-														d="M8.90002 7.55999C9.21002 3.95999 11.06 2.48999 15.11 2.48999H15.24C19.71 2.48999 21.5 4.27999 21.5 8.74999V15.27C21.5 19.74 19.71 21.53 15.24 21.53H15.11C11.09 21.53 9.24002 20.08 8.91002 16.54"
-														stroke="currentColor"
-														strokeWidth="1.5"
-														strokeLinecap="round"
-														strokeLinejoin="round"
-													/>
-													<path
-														d="M15 12H3.62"
-														stroke="currentColor"
-														strokeWidth="1.5"
-														strokeLinecap="round"
-														strokeLinejoin="round"
-													/>
-													<path
-														d="M5.85 8.6499L2.5 11.9999L5.85 15.3499"
-														stroke="currentColor"
-														strokeWidth="1.5"
-														strokeLinecap="round"
-														strokeLinejoin="round"
-													/>
-												</svg>
-											</div>
-											<div className="ms-4">
-												<p className="text-sm font-medium">{'Log out'}</p>
-											</div>
-										</Link>
+										{isLoggedIn ? (
+
+											<Link
+												href={'/'}
+												className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-neutral-700"
+												onClick={handleSignOut}
+											>
+												<div className="flex flex-shrink-0 items-center justify-center text-neutral-500 dark:text-neutral-300">
+													<svg
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<path
+															d="M8.90002 7.55999C9.21002 3.95999 11.06 2.48999 15.11 2.48999H15.24C19.71 2.48999 21.5 4.27999 21.5 8.74999V15.27C21.5 19.74 19.71 21.53 15.24 21.53H15.11C11.09 21.53 9.24002 20.08 8.91002 16.54"
+															stroke="currentColor"
+															strokeWidth="1.5"
+															strokeLinecap="round"
+															strokeLinejoin="round"
+														/>
+														<path
+															d="M15 12H3.62"
+															stroke="currentColor"
+															strokeWidth="1.5"
+															strokeLinecap="round"
+															strokeLinejoin="round"
+														/>
+														<path
+															d="M5.85 8.6499L2.5 11.9999L5.85 15.3499"
+															stroke="currentColor"
+															strokeWidth="1.5"
+															strokeLinecap="round"
+															strokeLinejoin="round"
+														/>
+													</svg>
+												</div>
+												<div className="ms-4">
+													<Button
+													>
+														<p className="text-sm font-medium">{'Log out'}</p>
+													</Button>
+												</div>
+											</Link>
+										) :
+											<></>}
 									</div>
 								</div>
 							</PopoverPanel>

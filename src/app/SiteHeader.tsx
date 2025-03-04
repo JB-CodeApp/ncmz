@@ -170,8 +170,7 @@ const SiteHeader = () => {
 			{/* for our demo page, please delete this if you do not use */}
 			{/* {renderControlSelections()} */}
 			{/*  */}
-			<Header2 />
-			{/* {headerComponent} */}
+			{headerComponent}
 		</>
 	)
 }

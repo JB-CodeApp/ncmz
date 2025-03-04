@@ -1,6 +1,7 @@
 import React from "react";
 import NcImage from "@/components/NcImage/NcImage";
 import Pagination from "@/components/Pagination/Pagination";
+import { allblogs } from "@/data/blogs";
 
 const people = [
   {
@@ -56,6 +57,7 @@ const people = [
 ];
 
 const DashboardPosts = () => {
+  const allblog = allblogs;
   return (
     <div className="flex flex-col space-y-8">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -80,13 +82,13 @@ const DashboardPosts = () => {
                 </tr>
               </thead>
               <tbody className="bg-white dark:bg-neutral-900 divide-y divide-neutral-200 dark:divide-neutral-800">
-                {people.map((item) => (
+                {allblog.map((item) => (
                   <tr key={item.id}>
                     <td className="px-6 py-4">
                       <div className="flex items-center w-96 lg:w-auto max-w-md overflow-hidden">
                         <NcImage
                           containerClassName="flex-shrink-0 h-12 w-12 rounded-lg relative z-0 overflow-hidden lg:h-14 lg:w-14"
-                          src={item.image}
+                          src={item.featuredImage}
                           fill
                           sizes="80px"
                           alt="post"
@@ -99,7 +101,16 @@ const DashboardPosts = () => {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      {item.liveStatus ? (
+                    <span
+                        className={`px-2 inline-flex text-sm font-medium rounded-full 
+                          ${item.status === 'published' ? 'bg-teal-100 text-teal-900' : ''}
+                          ${item.status === 'draft' ? 'text-neutral-500 dark:text-neutral-400' : ''}
+                          ${item.status === 'underreview' ? 'bg-yellow-100 text-yellow-500' : ''}
+                        `}
+                      >
+                        {item.status === 'published' ? 'Published' : item.status === 'draft' ? 'Draft' : 'Under Review'}
+                      </span>
+                      {/* {item.liveStatus ? (
                         <span className="px-2 inline-flex text-xs leading-5 font-medium rounded-full bg-teal-100 text-teal-900 lg:text-sm">
                           Active
                         </span>
@@ -107,10 +118,10 @@ const DashboardPosts = () => {
                         <span className="px-2 inline-flex text-sm text-neutral-500 dark:text-neutral-400 rounded-full">
                           Offline
                         </span>
-                      )}
+                      )} */}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-neutral-500 dark:text-neutral-400">
-                      <span> {item.payment}</span>
+                      <span> {item.contentType}</span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium text-neutral-300">
                       <a
@@ -135,7 +146,7 @@ const DashboardPosts = () => {
         </div>
       </div>
 
-      <Pagination />
+      {/* <Pagination /> */}
     </div>
   );
 };

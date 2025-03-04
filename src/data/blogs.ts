@@ -12,10 +12,12 @@ const CATEGORIES = allcategories || []
 const AUTHORS = allauthors.filter((author) => author.status === 'active') || []
 const TAGS = alltags || []
 
+// published and deletedAt empty blogs fetch only
 const publishandnotdeleteBlogs = allblogs.filter(
 	(post) => post.status === 'published' && post.deletedAt === '',
 )
 
+// Blog Detail Page
 const fetchSingleMdxFile = async (mdxFile: string) => {
 	try {
 		const mdxPath = path.join(process.cwd(), mdxFile.replace(/^\/+/, ''))
@@ -254,4 +256,5 @@ export {
 	TAGS,
 	BLOGTAGSWITHCOUNT,
 	allblogs,
+
 }

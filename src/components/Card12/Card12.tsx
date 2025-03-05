@@ -46,7 +46,7 @@ const Card12: FC<Card12Props> = ({ className = "h-full", post }) => {
         <span className="hidden sm:block mt-4 text-neutral-500 dark:text-neutral-400">
           <span className="line-clamp-2"> {desc}</span>
         </span>
-        <PostCardMeta className="mt-5 text-sm" meta={post} />
+        <PostCardMeta className="mt-5 text-sm" meta={post as any} />
       </div>
     </div>
   );

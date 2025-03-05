@@ -122,7 +122,7 @@ const Card10V3: FC<Card10V3Props> = ({
       <div className="block group rounded-3xl flex-shrink-0 relative w-full aspect-w-16 aspect-h-16 sm:aspect-h-9 overflow-hidden z-0">
         <div>
           {postType !== "gallery" && !!galleryImgs?.length ? (
-            <PostFeaturedMedia post={post} isHover={isHover} />
+            <PostFeaturedMedia post={post as any} isHover={isHover} />
           ) : galleryType === 1 ? (
             renderGallery()
           ) : (
@@ -136,7 +136,7 @@ const Card10V3: FC<Card10V3Props> = ({
         ></Link>
       </div>
       <div className="absolute top-3 inset-x-3 flex justify-between items-start space-x-4 rtl:space-x-reverse">
-        <CategoryBadgeList categories={categories} />
+        <CategoryBadgeList categories={categories as any} />
         <PostCardSaveAction />
       </div>
 
@@ -148,7 +148,7 @@ const Card10V3: FC<Card10V3Props> = ({
         </h2>
         <CardAuthor2
           className="mt-3"
-          author={author}
+          author={author as any}
           hoverReadingTime={false}
           date={date}
           readingTime={readingTime}

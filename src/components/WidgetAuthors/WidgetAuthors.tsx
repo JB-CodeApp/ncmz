@@ -1,14 +1,16 @@
 import CardAuthor from "@/components/CardAuthor/CardAuthor";
 import WidgetHeading1 from "@/components/WidgetHeading1/WidgetHeading1";
-import { DEMO_AUTHORS } from "@/data/authors";
+import { BLOG_AUTHORS, DEMO_AUTHORS } from "@/data/authors";
+import { AUTHORS } from "@/data/blogs";
+import { BlogAuthorType } from "@/data/datatypes";
 import { PostAuthorType } from "@/data/types";
 import React, { FC } from "react";
 
-const authorsDemo: PostAuthorType[] = DEMO_AUTHORS.filter((_, i) => i < 5);
-
+// const authorsDemo: PostAuthorType[] = DEMO_AUTHORS.filter((_, i) => i < 5);
+const authorsDemo: BlogAuthorType[] = AUTHORS as any;
 export interface WidgetAuthorsProps {
   className?: string;
-  authors?: PostAuthorType[];
+  authors?: BlogAuthorType[];
 }
 
 const WidgetAuthors: FC<WidgetAuthorsProps> = ({
@@ -29,7 +31,7 @@ const WidgetAuthors: FC<WidgetAuthorsProps> = ({
             <CardAuthor
               className="p-4 xl:p-5 hover:bg-neutral-200 dark:hover:bg-neutral-700"
               key={author.id}
-              author={author}
+              author={author as any}
             />
           ))}
         </div>

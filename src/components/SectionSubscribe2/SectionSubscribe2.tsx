@@ -35,7 +35,7 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
             </span>
           </li>
         </ul>
-        <form className="mt-10 relative max-w-sm">
+        {/* <form className="mt-10 relative max-w-sm">
           <Input
             required
             aria-required
@@ -48,7 +48,7 @@ const SectionSubscribe2: FC<SectionSubscribe2Props> = ({ className = "" }) => {
           >
             <ArrowRightIcon className="w-5 h-5 rtl:rotate-180" />
           </ButtonCircle>
-        </form>
+        </form> */}
       </div>
       <div className="flex-grow">
         <Image

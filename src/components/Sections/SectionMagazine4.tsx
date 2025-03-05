@@ -17,7 +17,7 @@ const SectionMagazine4: FC<SectionMagazine4Props> = ({
 
       {!posts?.length && <span>Nothing we found!</span>}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-        {posts[0] && <Card8 className="sm:col-span-2" post={posts[0]} />}
+        {posts[0] && <Card8 className="sm:col-span-2" post={posts[0] as any} />}
         {posts
           .filter((_, i) => i < 3 && i >= 1)
           .map((item, index) => (

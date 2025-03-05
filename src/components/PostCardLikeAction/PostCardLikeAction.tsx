@@ -7,11 +7,13 @@ export interface PostCardLikeActionProps {
   className?: string;
   likeCount?: number;
   liked?: boolean;
+  likes?: any;
 }
 
 const PostCardLikeAction: FC<PostCardLikeActionProps> = ({
+  likes,
   className = "px-3 h-8 text-xs",
-  likeCount = 34,
+  likeCount = likes || 1,
   liked = false,
 }) => {
   const [isLiked, setisLiked] = useState(liked);

@@ -9,13 +9,21 @@ import NcBookmark from '@/components/NcBookmark/NcBookmark'
 
 export interface SingleMetaAction2Props {
 	className?: string
+	comments?: any
+	likes?: any
+	URL?: any
+	data?: any
+	views?: any
 }
 
-const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = '' }) => {
+const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = '', comments, likes, URL, data, views }) => {
 	return (
 		<div className={`nc-SingleMetaAction2 ${className}`}>
 			<div className="flex flex-row items-center space-x-2.5 rtl:space-x-reverse">
 				<PostCardLikeAndComment
+					view={views}
+					commentscount={comments}
+					data={likes}
 					itemClass="px-4 h-9 text-sm"
 					hiddenCommentOnMobile
 					useOnSinglePage
@@ -44,7 +52,7 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = '' }) => {
 							/>
 						</svg>
 					)}
-					onClick={() => {}}
+					onClick={() => { }}
 					data={SOCIALS_DATA}
 				/>
 				<PostActionDropdown

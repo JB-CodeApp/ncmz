@@ -52,7 +52,7 @@ const SectionHero3: FC<SectionHero3Props> = ({ posts, className = "" }) => {
           <Card5
             className="bg-white dark:bg-neutral-800 shadow-2xl rounded-3xl"
             key={post.id}
-            post={post}
+            post={post as any}
           />
         ))}
       </div>

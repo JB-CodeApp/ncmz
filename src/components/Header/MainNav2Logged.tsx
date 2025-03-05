@@ -5,8 +5,6 @@ import Logo from "@/components/Logo/Logo";
 import MenuBar from "@/components/MenuBar/MenuBar";
 import AvatarDropdown from "./AvatarDropdown";
 import Navigation from "@/components/Navigation/Navigation";
-import SearchModal from "./SearchModal";
-import NotifyDropdown from "./NotifyDropdown";
 
 export interface MainNav2LoggedProps {}
 
@@ -27,8 +25,8 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
         </div>
 
         <div className="flex-1 flex items-center justify-end text-slate-700 dark:text-slate-100">
-          <SearchModal />
-          <NotifyDropdown />
+          {/* <SearchModal /> */}
+          {/* <NotifyDropdown /> */}
           <AvatarDropdown />
         </div>
       </div>

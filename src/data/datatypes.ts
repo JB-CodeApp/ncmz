@@ -35,7 +35,7 @@ export interface BlogAuthorType {
     firstName: string
     lastName: string
     displayName: string
-    slug: string
+    slug: string | any
     email?: string
     password?: string
     gender: string
@@ -104,6 +104,9 @@ export interface BlogDataType {
   updatedAt: string
   publishedAt: string
   deletedAt: string
+  tag: any[]
+  author: any[]
+  category: CategoryType[]
 }
 
 //  ##########  Tag ######## //

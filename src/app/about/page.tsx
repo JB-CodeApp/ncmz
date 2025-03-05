@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHero from "@/components/SectionHero/SectionHero";
-import rightImg from "@/images/about-hero-right.png";
+import rightImg from "@/images/image/about_hero_image.webp";
 import SectionFounder from "./SectionFounder";
 import SectionStatistic from "./SectionStatistic";
 import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
@@ -21,7 +21,7 @@ const PageAbout = ({}) => {
           subHeading="We’re impartial and independent, and every day we create distinctive, world-class programmes and content which inform, educate and entertain millions of people in the around the world."
         />
 
-        <SectionFounder />
+        {/* <SectionFounder /> */}
 
         <div className="relative py-16">
           <BackgroundSection />

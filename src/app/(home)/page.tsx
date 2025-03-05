@@ -24,40 +24,45 @@ import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2"
 import SectionVideos from "@/components/Sections/SectionVideos";
 import SectionLatestPosts from "@/components/Sections/SectionLatestPosts";
 import SectionMagazine2 from "@/components/Sections/SectionMagazine2";
-import { HIGHLIGHT_BLOGS } from "@/data/blogs";
-
+import { AUTHORS, getFilteredBlogs, latestBlogs } from "@/data/blogs";
+import BlogCategoryTabs from "@/components/MyComponents/BlogCategoryTabs";
+import CalHomeButton from "@/components/MyComponents/CalButtonandForm/CalHomeButton";
+// import { HIGHLIGHT_BLOGS } from "@/data/blogs";
 //
 const MAGAZINE1_POSTS = DEMO_POSTS.filter((_, i) => i >= 8 && i < 16);
 const MAGAZINE2_POSTS = DEMO_POSTS.filter((_, i) => i >= 0 && i < 7);
 //
 
-const PageHome = ({}) => {
+const highlightedBlogs = getFilteredBlogs({ highlight: true });
+
+const PageHome = ({ }) => {
   return (
+    <>
     <div className="nc-PageHome relative">
       <div className="container relative">
         <SectionLargeSlider
           className="pt-10 pb-16 md:py-16 lg:pb-28 lg:pt-20"
-          posts={HIGHLIGHT_BLOGS}
+          posts={highlightedBlogs as any}
         />
 
-        <div className="relative py-16">
+        {/* <div className="relative py-16">
           <BackgroundSection />
           <SectionSliderNewAuthors
             heading="Newest authors"
             subHeading="Say hello to future creator potentials"
-            authors={DEMO_AUTHORS.filter((_, i) => i < 10)}
+            authors={AUTHORS as any}
           />
-        </div>
+        </div> */}
 
-        <SectionSliderNewCategories
+        {/* <SectionSliderNewCategories
           className="py-16 lg:py-28"
           heading="Top trending topics"
           subHeading="Discover 233 topics"
           categories={DEMO_CATEGORIES.filter((_, i) => i < 10)}
           categoryCardType="card4"
-        />
+        /> */}
 
-        <div className="relative py-16">
+        {/* <div className="relative py-16">
           <BackgroundSection />
           <SectionSliderPosts
             postCardName="card9"
@@ -65,19 +70,21 @@ const PageHome = ({}) => {
             subHeading="Click on the icon to enjoy the music or podcast 🎧"
             posts={DEMO_POSTS_AUDIO.filter((_, i) => i > 3 && i < 10)}
           />
-        </div>
+        </div> */}
 
-        <SectionMagazine1 className="py-16 lg:py-28" posts={MAGAZINE1_POSTS} />
+        {/* <SectionMagazine1 className="py-16 lg:py-28" posts={MAGAZINE1_POSTS} /> */}
 
-        <SectionAds />
+        <BlogCategoryTabs heading="🎈 Popular Articles" className="pb-16 lg:pb-28" />
+        
+        {/* <SectionAds /> */}
 
-        <SectionMagazine7
+        {/* <SectionMagazine7
           className="py-16 lg:py-28"
           posts={DEMO_POSTS_GALLERY.filter((_, i) => i < 6)}
-        />
+        /> */}
       </div>
 
-      <div className="dark bg-neutral-900 dark:bg-black dark:bg-opacity-20 text-neutral-100">
+      {/* <div className="dark bg-neutral-900 dark:bg-black dark:bg-opacity-20 text-neutral-100">
         <div className="relative container">
           <SectionGridPosts
             className="py-16 lg:py-28"
@@ -89,38 +96,38 @@ const PageHome = ({}) => {
             gridClass="md:grid-cols-2 lg:grid-cols-3"
           />
         </div>
-      </div>
+      </div> */}
 
       <div className="container ">
-        <SectionMagazine8
+        {/* <SectionMagazine8
           className="py-16 lg:py-28"
           posts={DEMO_POSTS_AUDIO.filter((_, i) => i < 6)}
-        />
+        /> */}
 
-        <div className="relative py-16">
+        {/* <div className="relative py-16">
           <BackgroundSection />
           <SectionMagazine9
             posts={DEMO_POSTS_AUDIO.filter((_, i) => i >= 6 && i < 15)}
           />
-        </div>
+        </div> */}
 
-        <SectionGridAuthorBox
+        {/* <SectionGridAuthorBox
           className="py-16 lg:py-28"
           authors={DEMO_AUTHORS.filter((_, i) => i < 10)}
-        />
+        /> */}
 
-        <div className="relative py-16">
+        {/* <div className="relative py-16">
           <BackgroundSection />
           <SectionBecomeAnAuthor />
-        </div>
+        </div> */}
 
-        <SectionMagazine2
+        {/* <SectionMagazine2
           className="py-16 lg:py-24"
           heading="Life styles 🎨 "
           posts={MAGAZINE2_POSTS}
-        />
+        /> */}
 
-        <div className="relative py-16">
+        {/* <div className="relative py-16">
           <BackgroundSection />
           <SectionSliderPosts
             postCardName="card11"
@@ -130,15 +137,18 @@ const PageHome = ({}) => {
               (p, i) => i > 3 && i < 25 && p.postType === "standard"
             )}
           />
-        </div>
+        </div> */}
 
         <SectionSubscribe2 className="pt-16 lg:pt-28" />
 
-        <SectionVideos className="py-16 lg:py-28" />
+        {/* <SectionVideos className="py-16 lg:py-28" /> */}
 
-        <SectionLatestPosts className="pb-16 lg:pb-28" />
+        <SectionLatestPosts latestblog={latestBlogs.slice(0,10) as any} className="py-16 lg:py-28" />
       </div>
     </div>
+    <CalHomeButton />
+    </>
+
   );
 };
 

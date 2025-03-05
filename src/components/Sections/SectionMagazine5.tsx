@@ -18,7 +18,7 @@ const SectionMagazine5: FC<SectionMagazine5Props> = ({
       <HeaderFilter heading={heading} />
       {!posts.length && <span>Nothing we found!</span>}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-7">
-        {posts[0] && <Card12 post={posts[0]} />}
+        {posts[0] && <Card12 post={posts[0] as any} />}
         <div className="flex flex-col gap-5 md:gap-7">
           {posts
             .filter((_, i) => i < 4 && i > 0)

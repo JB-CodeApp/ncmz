@@ -12,14 +12,21 @@ export interface PostMeta2Props {
   hiddenCategories?: boolean;
   size?: "large" | "normal";
   avatarRounded?: string;
+  data?: string;
+  postdata?: string;
+  readtime?: any;
+  authordata?: any;
 }
 
 const PostMeta2: FC<PostMeta2Props> = ({
   className = "leading-none",
   meta = metaDemo,
-  hiddenCategories = false,
+  hiddenCategories = true,
   size = "normal",
   avatarRounded,
+  postdata,
+  readtime,
+  authordata
 }) => {
   const { date, author, categories, readingTime } = meta;
   return (
@@ -29,7 +36,7 @@ const PostMeta2: FC<PostMeta2Props> = ({
       } ${className}`}
     >
       <Link
-        href={author.href}
+        href={authordata.href}
         className="flex items-center space-x-2 rtl:space-x-reverse"
       >
         <Avatar
@@ -39,14 +46,14 @@ const PostMeta2: FC<PostMeta2Props> = ({
               ? "h-6 w-6 text-sm"
               : "h-10 w-10 sm:h-11 sm:w-11 text-xl"
           }
-          imgUrl={author.avatar}
-          userName={author.displayName}
+          imgUrl={authordata.avatar}
+          userName={authordata.displayName}
         />
       </Link>
       <div className="ms-3">
         <div className="flex items-center">
-          <Link href={author.href} className="block font-semibold">
-            {author.displayName}
+          <Link href={authordata.href} className="block font-semibold">
+            {authordata.displayName}
           </Link>
 
           {!hiddenCategories && (
@@ -65,10 +72,10 @@ const PostMeta2: FC<PostMeta2Props> = ({
           )}
         </div>
         <div className="text-xs mt-[6px]">
-          <span className="text-neutral-700 dark:text-neutral-300">{date}</span>
+          <span className="text-neutral-700 dark:text-neutral-300">{postdata}</span>
           <span className="mx-2 font-semibold">·</span>
           <span className="text-neutral-700 dark:text-neutral-300">
-            {readingTime} min read
+            {readtime} min read
           </span>
         </div>
       </div>

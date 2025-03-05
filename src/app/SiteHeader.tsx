@@ -53,11 +53,10 @@ const SiteHeader = () => {
 						return (
 							<div
 								key={dir}
-								className={`flex cursor-pointer select-none items-center rounded-full px-3.5 py-1.5 text-xs font-medium uppercase ${
-									themeDir === dir
+								className={`flex cursor-pointer select-none items-center rounded-full px-3.5 py-1.5 text-xs font-medium uppercase ${themeDir === dir
 										? 'bg-black text-white shadow-lg shadow-black/10 dark:bg-neutral-200 dark:text-black'
 										: 'border border-neutral-300 hover:border-neutral-400 dark:border-neutral-700 dark:hover:border-neutral-500'
-								}`}
+									}`}
 								onClick={() => setThemeDIr(dir)}
 							>
 								{dir}
@@ -77,11 +76,10 @@ const SiteHeader = () => {
 						return (
 							<div
 								key={header}
-								className={`flex cursor-pointer select-none items-center rounded-full px-3.5 py-1.5 text-xs font-medium ${
-									headerSelected === header
+								className={`flex cursor-pointer select-none items-center rounded-full px-3.5 py-1.5 text-xs font-medium ${headerSelected === header
 										? 'bg-black text-white shadow-lg shadow-black/10 dark:bg-neutral-200 dark:text-black'
 										: 'border border-neutral-300 hover:border-neutral-400 dark:border-neutral-700 dark:hover:border-neutral-500'
-								}`}
+									}`}
 								onClick={() =>
 									setHeaderSelected(
 										header as 'Header 1' | 'Header 2' | 'Header 3',
@@ -104,9 +102,8 @@ const SiteHeader = () => {
 						{({ open }) => (
 							<>
 								<PopoverButton
-									className={`z-10 rounded-xl border border-neutral-200 bg-white p-2.5 shadow-xl hover:bg-neutral-100 focus:outline-none dark:border-primary-6000 dark:bg-primary-6000 dark:hover:bg-primary-700 ${
-										open ? 'ring-primary-500 focus:ring-2' : ''
-									}`}
+									className={`z-10 rounded-xl border border-neutral-200 bg-white p-2.5 shadow-xl hover:bg-neutral-100 focus:outline-none dark:border-primary-6000 dark:bg-primary-6000 dark:hover:bg-primary-700 ${open ? 'ring-primary-500 focus:ring-2' : ''
+										}`}
 								>
 									<CogIcon className="h-8 w-8" />
 								</PopoverButton>
@@ -171,9 +168,8 @@ const SiteHeader = () => {
 	return (
 		<>
 			{/* for our demo page, please delete this if you do not use */}
-			{renderControlSelections()}
+			{/* {renderControlSelections()} */}
 			{/*  */}
-
 			{headerComponent}
 		</>
 	)

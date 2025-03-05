@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import NavigationItem from "./NavigationItem";
-import { NAVIGATION_DEMO_2 } from "@/data/navigation";
+import { NAVIGATION_DEMO_2, NAVIGATION_LINKS } from "@/data/navigation";
 
 interface Props {
   className?: string;
@@ -9,7 +9,8 @@ interface Props {
 const Navigation: FC<Props> = ({ className = "flex" }) => {
   return (
     <ul className={`nc-Navigation items-center ${className}`}>
-      {NAVIGATION_DEMO_2.map((item) => (
+    {/* For Default Data => NAVIGATION_LINKS ---- Replace ---- NAVIGATION_DEMO_2 */}
+      {NAVIGATION_LINKS.map((item) => (
         <NavigationItem key={item.id} menuItem={item} />
       ))}
     </ul>

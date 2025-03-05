@@ -41,7 +41,7 @@ const Card8: FC<Card8Props> = ({ className = "h-full", post }) => {
       ></Link>
       <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col">
         <Link href={href} className="absolute inset-0" />
-        <CategoryBadgeList categories={categories} />
+        <CategoryBadgeList categories={categories as any} />
         <h2
           className={`mt-3 relative block font-semibold text-neutral-50 text-lg sm:text-2xl`}
         >

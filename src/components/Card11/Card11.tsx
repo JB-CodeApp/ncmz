@@ -8,10 +8,11 @@ import PostCardLikeAndComment from "@/components/PostCardLikeAndComment/PostCard
 import PostCardMeta from "@/components/PostCardMeta/PostCardMeta";
 import PostFeaturedMedia from "@/components/PostFeaturedMedia/PostFeaturedMedia";
 import Link from "next/link";
+import { BlogDataType } from "@/data/datatypes";
 
 export interface Card11Props {
   className?: string;
-  post: PostDataType;
+  post: BlogDataType;
   ratio?: string;
   hiddenAuthor?: boolean;
 }
@@ -25,29 +26,29 @@ const Card11: FC<Card11Props> = ({
   const { title, href, categories, date } = post;
 
   const [isHover, setIsHover] = useState(false);
-
+  // console.log("Card11Props", post.author);
   return (
     <div
       className={`nc-Card11 relative flex flex-col group rounded-3xl overflow-hidden bg-white dark:bg-neutral-900 ${className}`}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      //
+    //
     >
       <div
         className={`block flex-shrink-0 relative w-full rounded-t-3xl overflow-hidden z-10 ${ratio}`}
       >
         <div>
-          <PostFeaturedMedia post={post} isHover={isHover} />
+          <PostFeaturedMedia post={post as any} isHover={isHover} />
         </div>
       </div>
-      <Link href={href} className="absolute inset-0"></Link>
+      <Link href={href || ""} className="absolute inset-0"></Link>
       <span className="absolute top-3 inset-x-3 z-10">
-        <CategoryBadgeList categories={categories} />
+        <CategoryBadgeList categories={categories as any} />
       </span>
 
       <div className="p-4 flex flex-col space-y-3">
         {!hiddenAuthor ? (
-          <PostCardMeta meta={post} />
+          <PostCardMeta meta={post as any} />
         ) : (
           <span className="text-xs text-neutral-500">{date}</span>
         )}
@@ -57,7 +58,11 @@ const Card11: FC<Card11Props> = ({
           </span>
         </h3>
         <div className="flex items-end justify-between mt-auto">
-          <PostCardLikeAndComment className="relative" />
+          <PostCardLikeAndComment
+            view={post?.viewdCount || 1}
+            commentscount={(post?.comments?.length || 1)}
+            data={post?.likeUsersId?.length || 1}
+            className="relative" />
           <PostCardSaveAction className="relative" />
         </div>
       </div>

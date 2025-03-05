@@ -17,7 +17,7 @@ const SectionMagazine3: FC<SectionMagazine3Props> = ({
 
       {!posts.length && <span>Nothing we found!</span>}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-        {posts[0] && <Card2 size="large" post={posts[0]} />}
+        {posts[0] && <Card2 size="large" post={posts[0] as any} />}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
           {posts
             .filter((_, i) => i < 5 && i >= 1)

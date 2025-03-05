@@ -15,7 +15,7 @@ export const MEGAMENU_TEMPLATES: NavItemType[] = [
       { id: randomId(), href: "/home-2", name: "Home page 2" },
       { id: randomId(), href: "/home-3", name: "Home page 3" },
       { id: randomId(), href: "/home-4", name: "Home page 4" },
-      { id: randomId(), href: "/home-6", name: "Home page 5" },
+      // { id: randomId(), href: "/home-6", name: "Home page 5" },
       { id: randomId(), href: "/", name: "Header style 1", isNew: true },
       { id: randomId(), href: "/home-2", name: "Header style 2", isNew: true },
     ],
@@ -329,7 +329,7 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
       { id: randomId(), href: "/home-2", name: "Home page 2" },
       { id: randomId(), href: "/home-3", name: "Home page 3" },
       { id: randomId(), href: "/home-4", name: "Home page 4" },
-      { id: randomId(), href: "/home-6", name: "Home page 5" },
+      // { id: randomId(), href: "/home-6", name: "Home page 5" },
       { id: randomId(), href: "/", name: "Header style 1", isNew: true },
       { id: randomId(), href: "/home-2", name: "Header style 2", isNew: true },
       { id: randomId(), href: "/home-3", name: "Header style 3" },
@@ -395,6 +395,30 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
     href: "/archive/demo-slug" as Route,
     name: "Sport",
   },
+  {
+    id: randomId(),
+    href: "/search",
+    name: "Templates",
+    type: "megaMenu",
+    children: MEGAMENU_TEMPLATES,
+  },
+  {
+    id: randomId(),
+    href: "/search",
+    name: "Explore",
+    type: "dropdown",
+    children: OTHER_PAGE_CHILD,
+  },
+];
+
+
+export const NAVIGATION_LINKS: NavItemType[] = [
+  {
+    id: randomId(),
+    href: "/",
+    name: "Homes",
+  },
+
   {
     id: randomId(),
     href: "/search",

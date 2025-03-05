@@ -22,19 +22,19 @@ const SectionMagazine2: FC<SectionMagazine2Props> = ({
             .filter((_, i) => i < 3 && i > 0)
             .map((item, index) => {
               return (
-                <Card11 ratio="aspect-w-5 aspect-h-3" key={index} post={item} />
+                <Card11 ratio="aspect-w-5 aspect-h-3" key={index} post={item as any} />
               );
             })}
         </div>
         <div className="lg:col-span-2">
-          {posts[0] && <Card2 size="large" post={posts[0]} />}
+          {posts[0] && <Card2 size="large" post={posts[0] as any} />}
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-1 md:col-span-3 xl:col-span-1">
           {posts
             .filter((_, i) => i < 5 && i >= 3)
             .map((item, index) => {
               return (
-                <Card11 ratio="aspect-w-5 aspect-h-3" key={index} post={item} />
+                <Card11 ratio="aspect-w-5 aspect-h-3" key={index} post={item as any} />
               );
             })}
         </div>

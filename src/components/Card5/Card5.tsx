@@ -18,7 +18,7 @@ const Card5: FC<Card5Props> = ({ className = "", post }) => {
       <Link href={href} className="absolute inset-0 rounded-lg"></Link>
 
       <div className="flex flex-col">
-        <CategoryBadgeList categories={categories} />
+        <CategoryBadgeList categories={categories as any} />
         <h2
           className="block text-base font-semibold text-neutral-800 dark:text-neutral-300 my-4"
           title={title}
@@ -30,7 +30,7 @@ const Card5: FC<Card5Props> = ({ className = "", post }) => {
         <CardAuthor2
           className="relative mt-auto"
           readingTime={readingTime}
-          author={author}
+          author={author as any}
           date={date}
         />
       </div>

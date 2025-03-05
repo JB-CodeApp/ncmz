@@ -58,7 +58,7 @@ const Card16Podcast: FC<Card16PodcastProps> = ({
       {/* ABSOLUTE */}
       <Link href={href} className="absolute inset-0"></Link>
       <span className="absolute top-3 inset-x-3">
-        <CategoryBadgeList categories={categories} />
+        <CategoryBadgeList categories={categories as any} />
       </span>
 
       {/* MAIN CONTENT */}
@@ -72,7 +72,7 @@ const Card16Podcast: FC<Card16PodcastProps> = ({
             <Image src={musicWave} alt="musicWave" />
           </div>
           <ButtonPlayMusicPlayer
-            post={post}
+            post={post as any}
             renderDefaultBtn={() => renderListenButtonDefault()}
             renderPlayingBtn={() => renderListenButtonDefault("playing")}
           />

@@ -9,7 +9,7 @@ const layout = ({ children }: { children: ReactNode }) => {
 
       {/* SINGLE MAIN CONTENT */}
       <div className="container mt-10">
-        <SingleContent />
+        <SingleContent slug={[] as any} />
       </div>
 
       {/* RELATED POSTS */}

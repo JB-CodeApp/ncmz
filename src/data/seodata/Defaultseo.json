@@ -1,0 +1,37 @@
+{
+  "seo_title": "Bhumika iOS - Expert Web & App Development Services",
+  "seo_description": "Boost your business with Bhumikaios web design, app development, and digital marketing solutions. Your success is our priority.",
+  "seo_keyword": "Web development, iOS apps, Mobile app development, Digital marketing, Online presence, Business growth",
+  "authors": "Bhumikaios",
+  "images": [
+    {
+      "url": "default_seo_image.webp",
+      "width": "1200",
+      "height": "630",
+      "alt": "Bhumikaios Logo",
+      "type": "image/webp"
+    }
+  ],
+  "openGraph": {
+    "locale": "en_US",
+    "type": "website",
+    "seo_title": "Bhumika iOS - Expert Web & App Development Services",
+    "description": "Boost your business with Bhumikaios web design, app development, and digital marketing solutions. Your success is our priority.",
+    "siteName": "Bhumikaios",
+    "images": [
+      {
+        "url": "default_seo_image.webp",
+        "width": "1200",
+        "height": "630",
+        "alt": "Bhumikaios Logo",
+        "type": "image/webp"
+      }
+    ]
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "seo_title": "Bhumika iOS - Web & App Experts",
+    "description": "Partner with Bhumikaios for professional web design, app development, and online marketing services.",
+    "site": "@bhumikaios"
+  }
+}

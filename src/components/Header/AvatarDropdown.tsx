@@ -184,7 +184,7 @@ export default function AvatarDropdown() {
 
 										{/* ------------------ 2 --------------------- */}
 										<Link
-											href={'/author/demo-slug'}
+											href={'/author/demo-slug' as any}
 											className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-neutral-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 dark:hover:bg-neutral-700"
 											onClick={() => close()}
 										>

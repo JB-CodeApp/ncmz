@@ -38,9 +38,7 @@ export default async function BlogPage({ params }: { params: { slug: string } })
 }
 
 export async function generateStaticParams() {
-  const slugs = allblogs.map((blog) => blog.slug);
-
-  return slugs.map((slug) => ({
-    params: { slug },
+  return allblogs.map((blog) => ({
+      slug: blog.slug.toString(),
   }));
 }

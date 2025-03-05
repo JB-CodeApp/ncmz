@@ -87,7 +87,7 @@ const SectionLatestPosts: FC<SectionLatestPostsProps> = ({
           </div>
           <div className="flex flex-col mt-12 md:mt-20 space-y-5 sm:space-y-0 sm:space-x-3 rtl:space-x-reverse sm:flex-row sm:justify-between sm:items-center">
             {/* <Pagination /> */}
-            <Link href="/blog">
+            <Link href={"/blog" as any}>
               <ButtonPrimary>Show me more</ButtonPrimary>
             </Link>
 

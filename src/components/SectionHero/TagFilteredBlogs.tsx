@@ -71,7 +71,7 @@ export const TagFilteredBlogs = ({ slug, data, mostviewed, mostrecent }: any) =>
             Show me more
           </ButtonPrimary>
         ) : (
-          <p className='!text-lg '>No more blogs</p>
+          <></>
         )}
         {/* {blogsToShow.length > POSTS_PER_PAGE &&
           <ButtonPrimary onClick={handleShowMore}>

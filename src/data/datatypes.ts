@@ -64,6 +64,7 @@ export interface BlogDataType {
     mdxFile: string
     featuredImage: string | StaticImageData
     authorId: string[]
+    author: BlogAuthorType
     desc?: string
     viewdCount: number
     readingTime: number

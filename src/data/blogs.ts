@@ -107,11 +107,20 @@ const getFilteredBlogs = (
 
 	return filteredBlogs.map((post) => {
 		const author = AUTHORS.find((user) => user.slug === post.authorId)
-		const categories = Array.isArray(post.categoriesId)
-			? post.categoriesId.map((slug) =>
-					CATEGORIES.find((category) => category.slug === slug),
-				)
-			: []
+=======
+import { PostDataType } from './types'
+import { BLOG_AUTHORS } from './authors'
+import { BlogDataType, Tag } from './datatypes'
+
+const CATEGORIES = allcategories || []
+
+const AUTHORS = allauthors || []
+
+const BLOG_LISTING = allblogs
+	.filter((post) => post.status === 'published')
+	.map((post): BlogDataType => {
+		const author = AUTHORS.find((user) => user.slug === post.authorId)
+
 		const tags = Array.isArray(post.tagsId)
 			? TAGS.filter((tag) => post.tagsId.includes(tag.slug))
 			: []
@@ -144,15 +153,22 @@ const getBlogsByAuthor = (authorSlug: string) => {
 //  Add `count` to Each Category
 CATEGORIES.forEach((category) => {
 	category.count = publishandnotdeleteBlogs.reduce((acc, post) => {
-		if (
-			Array.isArray(post.categoriesId) &&
-			post.categoriesId.includes(category.slug as any)
-		) {
-			return acc + 1
+=======
+
+		return {
+			...post,
+			author: BLOG_AUTHORS.filter((user) => user.slug === post.authorId)[0] || author || null,
+			categories: categories.filter(Boolean),
 		}
-		return acc
-	}, 0)
-})
+	})
+
+const HIGHLIGHT_BLOGS = BLOG_LISTING
+    .filter((post) => post?.ishighlight === "true");
+
+console.log(BLOG_LISTING?.[0]);
+
+CATEGORIES.forEach((category) => {
+	category.count = BLOG_LISTING.reduce((acc, post) => {
 
 const BLOGTAGSWITHCOUNT = TAGS.map((tag) => {
 	const count = publishandnotdeleteBlogs.reduce((acc, post) => {

@@ -28,7 +28,6 @@ import { AUTHORS, getFilteredBlogs, latestBlogs } from "@/data/blogs";
 import BlogCategoryTabs from "@/components/MyComponents/BlogCategoryTabs";
 import CalHomeButton from "@/components/MyComponents/CalButtonandForm/CalHomeButton";
 // import { HIGHLIGHT_BLOGS } from "@/data/blogs";
-
 //
 const MAGAZINE1_POSTS = DEMO_POSTS.filter((_, i) => i >= 8 && i < 16);
 const MAGAZINE2_POSTS = DEMO_POSTS.filter((_, i) => i >= 0 && i < 7);

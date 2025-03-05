@@ -2,12 +2,12 @@ import ButtonPrimary from "@/components/Button/ButtonPrimary";
 import { AuthorBlogFiltere } from "@/components/MyComponents/AuthorBlogFiltere";
 import { TagFilteredBlogs } from "@/components/SectionHero/TagFilteredBlogs";
 import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import { getFilteredBlogs } from "@/data/blogs";
+import { CATEGORIES, getFilteredBlogs } from "@/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
 import BgImg from "@/images/image/background_img.webp";
 
-const PageCategory = ({ params }: { params: { slug: string } }) => {
+export default async function PageCategory ({ params }: { params: { slug: string } }) {
     const slug = params.slug;
 
     const techBlogs = getFilteredBlogs({ category: slug });
@@ -44,7 +44,7 @@ const PageCategory = ({ params }: { params: { slug: string } }) => {
                     <div
                         className="flex justify-center "
                     >
-                        {techBlogs.length > 12 && <Link href="/blog">
+                        {techBlogs.length > 12 && <Link href={"/blog" as any}>
                             <ButtonPrimary>Show me more</ButtonPrimary>
                         </Link>
                         }
@@ -59,4 +59,9 @@ const PageCategory = ({ params }: { params: { slug: string } }) => {
     )
 }
 
-export default PageCategory;
+
+export async function generateStaticParams() {
+    return CATEGORIES.map((category) => ({
+        slug: category.slug.toString(),
+    }));
+}

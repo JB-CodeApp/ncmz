@@ -3,7 +3,7 @@ import SingleContent from "@/app/(singles)/SingleContent";
 import SingleRelatedPosts from "@/app/(singles)/SingleRelatedPosts";
 import Page404 from "@/app/not-found";
 import BlogHeader from "@/components/MyComponents/Blog/BlogHeader";
-import { blogslugmatched } from "@/data/blogs";
+import { allblogs, blogslugmatched } from "@/data/blogs";
 import React from "react";
 
 export default async function BlogPage({ params }: { params: { slug: string } }) {
@@ -35,4 +35,12 @@ export default async function BlogPage({ params }: { params: { slug: string } })
       </div>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const slugs = allblogs.map((blog) => blog.slug);
+
+  return slugs.map((slug) => ({
+    params: { slug },
+  }));
 }

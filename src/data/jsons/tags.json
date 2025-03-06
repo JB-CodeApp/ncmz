@@ -1,6 +1,195 @@
 [
   {
     "id": 1,
+    "name": "SwiftUI",
+    "slug": "swiftui",
+    "href": "/tag/swiftui",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 2,
+    "name": "UIKit",
+    "slug": "uikit",
+    "href": "/tag/uikit",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 3,
+    "name": "Storyboards",
+    "slug": "storyboards",
+    "href": "/tag/storyboards",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 4,
+    "slug": "animations",
+    "name": "Animations",
+    "href": "/tag/animations",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 5,
+    "slug": "urlsession",
+    "name": "URLSession",
+    "href": "/tag/urlsession",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 6,
+    "slug": "restful-apis",
+    "name": "RESTful APIs",
+    "href": "/tag/restful-apis",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 7,
+    "slug": "ai",
+    "name": "AI",
+    "href": "/tag/ai",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 8,
+    "slug": "alamofire",
+    "name": "Alamofire",
+    "href": "/tag/alamofire",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 9,
+    "slug": "customer-data-platform",
+    "name": "Customer Data Platform",
+    "href": "/tag/customer-data-platform",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 1,
+    "slug": "websockets",
+    "name": "WebSockets",
+    "href": "/tag/websockets",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 11,
+    "slug": "json-parsing",
+    "name": "JSON Parsing",
+    "href": "/tag/json-parsing",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 12,
+    "slug": "coredata",
+    "name": "CoreData",
+    "href": "/tag/coredata",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 13,
+    "slug": "userdefaults",
+    "name": "UserDefaults",
+    "href": "/tag/userdefaults",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 14,
+    "slug": "keychain",
+    "name": "Keychain",
+    "href": "/tag/keychain",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 15,
+    "slug": "sqlite",
+    "name": "SQLite",
+    "href": "/tag/sqlite",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 16,
+    "slug": "realm",
+    "name": "Realm",
+    "href": "/tag/realm",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 17,
+    "slug": "cloudkit",
+    "name": "CloudKit",
+    "href": "/tag/cloudkit",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 18,
+    "slug": "mvc",
+    "name": "MVC",
+    "href": "/tag/mvc",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 19,
+    "slug": "mvvm",
+    "name": "MVVM",
+    "href": "/tag/mvvm",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 20,
+    "slug": "viper",
+    "name": "VIPER",
+    "href": "/tag/viper",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 21,
+    "name": "Clean Architecture",
+    "slug": "clean-architecture",
+    "href": "/tag/clean-architecture",
+    "thumbnail": "",
+    "count": "",
+    "color": ""
+  },
+  {
+    "id": 22,
     "name": "MVVM",
     "slug": "mvvm",
     "href": "/tag/mvvm",
@@ -9,7 +198,7 @@
     "color": "indigo"
   },
   {
-    "id": 2,
+    "id": 23,
     "name": "Vapor",
     "slug": "vapor",
     "href": "/tag/vapor",

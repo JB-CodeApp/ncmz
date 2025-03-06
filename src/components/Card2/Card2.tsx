@@ -64,9 +64,8 @@ const Card2: FC<Card2Props> = ({
           />
 
           <h2
-            className={`nc-card-title block font-semibold text-neutral-900 dark:text-neutral-100 ${
-              size === "large" ? "text-base sm:text-lg md:text-xl" : "text-base"
-            }`}
+            className={`nc-card-title block font-semibold text-neutral-900 dark:text-neutral-100 ${size === "large" ? "text-base sm:text-lg md:text-xl" : "text-base"
+              }`}
           >
             <Link href={href} className="line-clamp-2" title={title}>
               {title}
@@ -77,14 +76,14 @@ const Card2: FC<Card2Props> = ({
           </span>
         </div>
         <div className="my-5 border-t border-neutral-200 dark:border-neutral-700"></div>
-        <div className="flex items-center justify-between">
-          <PostCardLikeAndComment 
-           view={post?.viewdCount || 1}
-           commentscount={post?.comments.length || 1}
-           data={post?.likeUsersId?.length || 1}
-          className="relative" />
+        {/* <div className="flex items-center justify-between">
+          <PostCardLikeAndComment
+            view={post?.viewdCount || 1}
+            commentscount={post?.comments.length || 1}
+            data={post?.likeUsersId?.length || 1}
+            className="relative" />
           <PostCardSaveAction className="relative" readingTime={readingTime} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

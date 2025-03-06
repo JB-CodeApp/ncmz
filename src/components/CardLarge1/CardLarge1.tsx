@@ -23,7 +23,7 @@ const CardLarge1: FC<CardLarge1Props> = ({
   onClickNext = () => {},
   onClickPrev = () => {},
 }) => {
-  const { featuredImage, title, date, categories, author, readingTime, href } =
+  const { featuredImage, title, desc, date, categories, author, readingTime, href } =
     post;
 
   return (
@@ -41,15 +41,15 @@ const CardLarge1: FC<CardLarge1Props> = ({
           </h2>
 
           <CardAuthor2 className="relative" author={author as any} date={date} />
-
-          <div className="flex items-center justify-between mt-auto">
+          <p>{desc}</p>
+          {/* <div className="flex items-center justify-between mt-auto">
             <PostCardLikeAndComment 
              view={post?.viewdCount || 1}
              commentscount={post?.comments.length || 1}
              data={post?.likeUsersId?.length || 1}
              />
             <PostCardSaveAction bookmarkClass="h-8 w-8 bg-neutral-50/30 hover:bg-neutral-50/50 dark:bg-neutral-800/30 dark:hover:bg-neutral-800/50" />
-          </div>
+          </div> */}
         </div>
         <div className="p-4 sm:pt-8 sm:px-10">
           <NextPrev

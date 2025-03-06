@@ -49,14 +49,14 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
 
           <PostCardMeta meta={{ ...post } as any} />
         </div>
-        <div className="mt-5 flex items-center flex-wrap justify-between">
+        {/* <div className="mt-5 flex items-center flex-wrap justify-between">
           <PostCardLikeAndComment
-          view={post?.viewdCount || 1}
-          commentscount={post?.comments.length || 1}
-          data={post?.likeUsersId?.length || 1}
-           />
+            view={post?.viewdCount || 1}
+            commentscount={post?.comments.length || 1}
+            data={post?.likeUsersId?.length || 1}
+          />
           <PostCardSaveAction readingTime={readingTime} />
-        </div>
+        </div> */}
       </div>
 
       <div

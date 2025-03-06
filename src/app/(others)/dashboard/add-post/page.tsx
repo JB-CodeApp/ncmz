@@ -86,7 +86,7 @@ const AddBlogPost = () => {
       authorId: author.trim(),
       authorslug: author.trim(),
       desc: excerpt.trim(),
-      viewdCount: Math.floor(Math.random() * 500) + 1,
+      viewdCount: Math.floor(Math.random() * 500) + 1, // 50-500
       readingTime: Math.floor(Math.random() * 6) + 1, // word counter before
       bookmarkUsersId: [""],
       likeUsersId: [""],

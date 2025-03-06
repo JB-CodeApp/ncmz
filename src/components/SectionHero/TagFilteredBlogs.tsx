@@ -3,7 +3,7 @@
 import React, { useMemo, useState } from 'react'
 import Card11 from '@/components/Card11/Card11'
 import ArchiveFilterListBox from '@/components/ArchiveFilterListBox/ArchiveFilterListBox'
-import { BLOGTAGSWITHCOUNT, CATEGORIES, paginationblogs } from '@/data/blogs'
+import { BLOGTAGSWITHCOUNT, CATEGORIES, paginatePosts } from '@/data/blogs'
 import ModalCategories from './ModalCategories'
 import ModalTags from '@/app/(archives)/ModalTags'
 import FilterListBox from '../MyComponents/FilterListBox'
@@ -19,22 +19,14 @@ export const TagFilteredBlogs = ({ slug, data, mostviewed, mostrecent }: any) =>
   const [selected, setSelected] = useState(FILTERS[0])
   const [currentPage, setCurrentPage] = useState(1);
 
-  // const handleShowMore = () => {
-  //   setCurrentPage(currentPage + 1);
-  // };
-
-  const blogsToShow = selected.name === 'Most Recent' ? mostrecent : mostviewed
+  const blogdata = selected.name === 'Most Recent' ? mostrecent : mostviewed
   // const POSTS_PER_PAGE = 12
   //   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
   //   const endIndex = startIndex + POSTS_PER_PAGE;
   //   const currentPosts = blogsToShow.slice(0, endIndex);
   // console.log(blogsToShow.length)
 
-  const POSTS_PER_PAGE = 12;
-
-  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-  const endIndex = startIndex + POSTS_PER_PAGE;
-  const currentPosts = blogsToShow.slice(0, endIndex); // Slice up to the current end index
+  const currentPosts = paginatePosts(blogdata, currentPage);
 
   const handleShowMore = () => {
     setCurrentPage(currentPage + 1);
@@ -66,7 +58,7 @@ export const TagFilteredBlogs = ({ slug, data, mostviewed, mostrecent }: any) =>
       <div
         className="flex justify-center py-12 lg:py-16"
       >
-        {endIndex < blogsToShow.length ? (
+        {currentPosts.length < blogdata.length ? (
           <ButtonPrimary onClick={handleShowMore}>
             Show me more
           </ButtonPrimary>

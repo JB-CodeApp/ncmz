@@ -17,7 +17,7 @@ import Card10 from "@/components/Card10/Card10";
 import Card11 from "@/components/Card11/Card11";
 import Card14 from "@/components/Card14/Card14";
 import { BlogDataType } from "@/data/datatypes";
-import { paginationblogs } from "@/data/blogs";
+// import { paginationblogs } from "@/data/blogs";
 import Link from "next/link";
 
 // THIS IS DEMO FOR MAIN DEMO
@@ -73,7 +73,7 @@ const SectionLatestPosts: FC<SectionLatestPostsProps> = ({
   };
 
   const [currentPage, setCurrentPage] = useState(1);
-  const currentPosts = paginationblogs({ POSTS_PER_PAGE: 10, currentPage });
+  // const currentPosts = paginationblogs({ POSTS_PER_PAGE: 10, currentPage });
 
   const handleShowMore = () => setCurrentPage((prev) => prev + 1);
 

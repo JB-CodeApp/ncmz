@@ -12,6 +12,12 @@ const CATEGORIES = allcategories || []
 const AUTHORS = allauthors.filter((author) => author.status === 'active') || []
 const TAGS = alltags || []
 
+const allblogwithlatest = allblogs.sort(
+	(a, b) =>
+		new Date(b.publishedAt || b.createdAt || 0).getTime() -
+		new Date(a.publishedAt || a.createdAt || 0).getTime(),
+)
+
 // published and deletedAt empty blogs fetch only
 const publishandnotdeleteBlogs = allblogs.filter(
 	(post) => post.status === 'published' && post.deletedAt === '',
@@ -80,7 +86,7 @@ const getFilteredBlogs = (
 	//  Filter by Category ID
 	if (filters.category) {
 		filteredBlogs = filteredBlogs.filter((post) =>
-			post.categoriesId.includes(filters.category as string),
+			post.categoriesId.includes(filters.category as never),
 		)
 	}
 
@@ -193,19 +199,18 @@ function matchedblogs(slug: string | string[]) {
 // 	return currentPosts;
 // }
 
-function paginationblogs({
-	POSTS_PER_PAGE,
-	currentPage,
-}: {
-	POSTS_PER_PAGE: number;
-	currentPage: number;
-}) {
-	const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-	const endIndex = startIndex + POSTS_PER_PAGE;
+// function paginationblogs({
+// 	POSTS_PER_PAGE,
+// 	currentPage,
+// }: {
+// 	POSTS_PER_PAGE: number
+// 	currentPage: number
+// }) {
+// 	const startIndex = (currentPage - 1) * POSTS_PER_PAGE
+// 	const endIndex = startIndex + POSTS_PER_PAGE
 
-	return getFilteredBlogs().slice(startIndex, endIndex);
-}
-
+// 	return getFilteredBlogs().slice(startIndex, endIndex)
+// }
 
 function blogslugmatched(slug: string) {
 	return blogs.find((post) => post.slug === slug) || null
@@ -240,15 +245,24 @@ const findAuthorBlogs = (slug: string) => {
 		.slice(0, 4)
 }
 
+// Use in blog listing page and admin posts login in
+const paginatePosts = (blogdata: any[], currentPage: number) => {
+	const POSTS_PER_PAGE = 12
+	const startIndex = (currentPage - 1) * POSTS_PER_PAGE
+	const endIndex = startIndex + POSTS_PER_PAGE
+	return blogdata.slice(0, endIndex)
+}
+
 export {
 	fetchSingleMdxFile,
 	getFilteredBlogs,
 	matchedblogs,
-	paginationblogs,
+	// paginationblogs,
 	blogslugmatched,
 	findRelatedBlogs,
 	findAuthorBlogs,
 	getBlogsByAuthor, //For Author Page
+	paginatePosts,
 	mostViewedBlogs,
 	latestBlogs,
 	CATEGORIES,
@@ -256,5 +270,5 @@ export {
 	TAGS,
 	BLOGTAGSWITHCOUNT,
 	allblogs,
-
+	allblogwithlatest,
 }

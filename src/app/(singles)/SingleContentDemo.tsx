@@ -5,13 +5,13 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { fetchSingleMdxFile } from '@/data/fetchmdxdata';
 
 const SingleContentDemo = async ({ filepath }: any) => {
-	const mdxData = await fetchSingleMdxFile(filepath);
+	// const mdxData = await fetchSingleMdxFile(filepath);
 
-	if(!mdxData) return <Page404 />;
+	// if(!mdxData) return <Page404 />;
 
 	return (
 		<>
-			<MDXRemote source={mdxData.content} />
+			<MDXRemote source={filepath} />
 		</>
 	)
 }

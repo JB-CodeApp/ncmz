@@ -17,9 +17,10 @@ const demoTags = DEMO_TAGS.filter((_, i) => i < 9)
 
 export interface SingleContentProps {
 	slug: BlogDataType
+	blogcontent: any
 }
 
-const SingleContent: FC<SingleContentProps> = ({slug}) => {
+const SingleContent: FC<SingleContentProps> = ({slug , blogcontent}) => {
 	// const endedAnchorRef = useRef<HTMLDivElement>(null)
 	// const contentRef = useRef<HTMLDivElement>(null)
 	// const progressRef = useRef<HTMLButtonElement>(null)
@@ -80,7 +81,7 @@ const SingleContent: FC<SingleContentProps> = ({slug}) => {
 					className="prose mx-auto !max-w-screen-md dark:prose-invert lg:prose-lg"
 					// ref={contentRef}
 				>
-					<SingleContentDemo filepath={slug?.mdxFile as any}/>
+					<SingleContentDemo filepath={blogcontent as any}/>
 				</div>
 				{/* TAGS */}
 				<div className="mx-auto flex max-w-screen-md flex-wrap">

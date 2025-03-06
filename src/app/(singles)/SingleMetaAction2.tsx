@@ -20,7 +20,7 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = '', comment
 	return (
 		<div className={`nc-SingleMetaAction2 ${className}`}>
 			<div className="flex flex-row items-center space-x-2.5 rtl:space-x-reverse">
-				<PostCardLikeAndComment
+				{/* <PostCardLikeAndComment
 					view={views}
 					commentscount={comments}
 					data={likes}
@@ -31,9 +31,9 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = '', comment
 				/>
 				<div className="px-1">
 					<div className="h-6 border-s border-neutral-200 dark:border-neutral-700" />
-				</div>
+				</div> */}
 
-				<NcBookmark containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200" />
+				{/* <NcBookmark containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200" /> */}
 				<NcDropDown
 					className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200 focus:outline-none dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
 					renderTrigger={() => (
@@ -53,7 +53,8 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = '', comment
 						</svg>
 					)}
 					onClick={() => { }}
-					data={SOCIALS_DATA}
+					data={data}
+					url={URL}
 				/>
 				<PostActionDropdown
 					containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700"

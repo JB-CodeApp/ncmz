@@ -4,6 +4,7 @@ import SingleRelatedPosts from "@/app/(singles)/SingleRelatedPosts";
 import Page404 from "@/app/not-found";
 import BlogHeader from "@/components/MyComponents/Blog/BlogHeader";
 import { allblogs, blogslugmatched } from "@/data/blogs";
+import { fetchSingleMdxFile } from "@/data/fetchmdxdata";
 import React from "react";
 
 export default async function BlogPage({ params }: { params: { slug: string } }) {
@@ -11,7 +12,11 @@ export default async function BlogPage({ params }: { params: { slug: string } })
 
   const blog = blogslugmatched(slug);
 
-  if (!blog) return <Page404 />;
+  const mdxData = await fetchSingleMdxFile(blog?.mdxFile as any);
+
+  if (!blog || mdxData?.content === undefined) {
+    return <Page404 />;
+  }
 
   return (
     <>
@@ -22,7 +27,7 @@ export default async function BlogPage({ params }: { params: { slug: string } })
 
           <div className="container flex flex-col my-10 lg:flex-row ">
             <div className="w-full lg:w-3/5 xl:w-2/3 xl:pe-20">
-              <SingleContent slug={blog as any} />
+              <SingleContent blogcontent={mdxData?.content} slug={blog as any} />
             </div>
             <div className="w-full mt-12 lg:mt-0 lg:w-2/5 lg:ps-10 xl:ps-0 xl:w-1/3">
               <Sidebar />

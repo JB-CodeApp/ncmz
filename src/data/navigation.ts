@@ -420,17 +420,17 @@ export const NAVIGATION_LINKS: NavItemType[] = [
 
   {
     id: randomId(),
-    href: "/blogs" as Route,
+    href: "/blog/" as Route,
     name: "Blog",
   },
   {
     id: randomId(),
-    href: "/about" as Route,
+    href: "/about/" as Route,
     name: "About",
   },
   {
     id: randomId(),
-    href: "/contact" as Route,
+    href: "/contact/" as Route,
     name: "Contact",
   },
 

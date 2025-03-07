@@ -6,8 +6,7 @@ const BLOG_LISTING = require('./data/jsons/blogs.json');
 const CATEGORIES = require('./data/jsons/categories.json');
 const AUTHORS = require('./data/jsons/authors.json');
 
-const formattedDate = new Date().toISOString(); 
-
+const formattedDate = new Date(); 
 const sitemapDir = './public';
 
 const URL = 'https://bhumikaios.com';

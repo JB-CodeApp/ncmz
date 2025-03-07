@@ -49,7 +49,6 @@ export default function SEO({ slug }: SEOProps) {
     if (typeof window === "undefined") return;
 
     const pathname = window.location.pathname;
-
     setIsBlogPage(pathname.startsWith("/blog/"));
 
     const generateBreadcrumbs = () => {
@@ -154,13 +153,38 @@ export default function SEO({ slug }: SEOProps) {
       <title>{seoData.seo_title}</title>
       <meta name="description" content={seoData.seo_description} />
       <meta name="keywords" content={seoData.seo_keyword} />
-      <link rel="canonical" href={typeof window !== "undefined" ? window.location.href : ""} />
+
+      {/* <link rel="canonical" href={typeof window !== "undefined" ? window.location.href : ""} /> */}
+      {typeof window !== "undefined" ? (
+        <link rel="canonical" href={window.location.href} />
+      ) : (
+        null
+      )}
+
+      {/* SEO OG INFO */}
       <meta property="og:locale" content="en_US" />
       <meta property="og:site_name" content={process.env.NEXT_PUBLIC_SITE_NAME || "Website"} />
       <meta property="og:url" content={typeof window !== "undefined" ? window.location.href : ""} />
       <meta property="og:title" content={seoData.seo_title} />
       <meta property="og:description" content={seoData.seo_description} />
       <meta property="og:image" content={imageUrl} />
+      <meta name="og:image:width" content="1200" />
+      <meta name="og:image:height" content="630" />
+      <meta name="og:image:alt" content={process.env.NEXT_PUBLIC_SITE_NAME || "Website"} />
+      <meta name="og:image:type" content="image/webp" />
+
+      {/* SEO TWITTER INFO */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter :title" content={seoData.seo_title} />
+      <meta property="twitter:site_name" content={process.env.NEXT_PUBLIC_SITE_NAME || "Website"} />
+      <meta property="twitter:url" content={typeof window !== "undefined" ? window.location.href : ""} />
+      <meta property="twitter:description" content={seoData.seo_description} />
+      <meta property="twitter:image" content={imageUrl} />
+      <meta name="twitter:image:width" content="1200" />
+      <meta name="twitter:image:height" content="630" />
+      <meta name="twitter:image:alt" content={process.env.NEXT_PUBLIC_SITE_NAME || "Website"} />
+      <meta name="twitter:image:type" content="image/webp" />
+
       <meta name="robots" content="index, follow" />
 
       {isBlogPage && (

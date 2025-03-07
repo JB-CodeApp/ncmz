@@ -27,7 +27,7 @@ const config = {
     ],
   },
   transform: async (config, path) => {
-    let lastmod = new Date(); // Default lastmod
+    let lastmod = new Date().toISOString(); // Default lastmod
 
     const metadata = require('./src/data/seodata/seometadata.json'); // Your SEO metadata
     const lastSegment = path.split('/').pop(); // Get last segment of path

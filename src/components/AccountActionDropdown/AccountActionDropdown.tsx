@@ -57,15 +57,25 @@ const AccountActionDropdown: FC<AccountActionDropdownProps> = ({
 
 	const hanldeClickDropDown = (item: (typeof actions)[number]) => {
 		if (item.id === 'copylink') {
-			navigator.clipboard.writeText(
-				window.location.href,
-			)
-			setIsCopied(true)
-			setTimeout(() => {
-				setIsCopied(false)
-			}, 1000)
+			// navigator.clipboard.writeText(
+			// 	window.location.href,
+			// )
+			// setIsCopied(true)
+			// setTimeout(() => {
+			// 	setIsCopied(false)
+			// }, 1000)
+			const input = document.createElement("input");
+			input.value = window.location.href;
+			document.body.appendChild(input);
+			input.select();
+			document.execCommand("copy");
+			document.body.removeChild(input);
+		
+			setIsCopied(true);
+			setTimeout(() => setIsCopied(false), 1000);
 			return
 		}
+
 		if (item.id === 'reportThisArticle') {
 			return openModalReportPost()
 		}

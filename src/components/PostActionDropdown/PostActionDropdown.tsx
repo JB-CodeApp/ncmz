@@ -70,15 +70,24 @@ const PostActionDropdown: FC<PostActionDropdownProps> = ({
   const onCloseModalHideAuthor = () => setShowModalHideAuthor(false);
 
   const hanldeClickDropDowns = (item: typeof actions[number]) => {
-    console.log("Hello")
+    // console.log("Hello")
     if (item.id === "copylink") {
-      navigator.clipboard.writeText(
-        window.location.origin + data
-      );
+      //   navigator.clipboard.writeText(
+      //     window.location.origin + data
+      //   );
+      //   setIsCopied(true);
+      //   setTimeout(() => {
+      //     setIsCopied(false);
+      //   }, 1000);
+      const input = document.createElement("input");
+      input.value = window.location.href;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand("copy");
+      document.body.removeChild(input);
+
       setIsCopied(true);
-      setTimeout(() => {
-        setIsCopied(false);
-      }, 1000);
+      setTimeout(() => setIsCopied(false), 1000);
       return;
     }
     if (item.id === "reportThisArticle") {

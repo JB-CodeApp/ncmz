@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+require('dotenv').config();
 
 const TAGS = require('./data/jsons/tags.json');
 const BLOG_LISTING = require('./data/jsons/blogs.json');
@@ -9,7 +10,7 @@ const AUTHORS = require('./data/jsons/authors.json');
 const formattedDate = new Date().toISOString(); 
 const sitemapDir = './public';
 
-const URL = 'https://bhumikaios.com';
+const URL = process.env.NEXT_PUBLIC_FRONTEND_URL;
 
 if (!fs.existsSync(sitemapDir)) {
   fs.mkdirSync(sitemapDir, { recursive: true });
@@ -36,7 +37,7 @@ const generateBlogSitemap = () => {
   const blogUrls = BLOG_LISTING
     .filter((post) => post.status === 'published' && post.deletedAt === '')
     .map(blog => ({
-      loc: `/blog/${blog.slug}`,
+      loc: `/blog/${blog.slug}/`,
       lastmod: blog.updatedAt > blog.publishedAt ? blog.updatedAt : blog.publishedAt,
       changefreq: 'daily',
       priority: 0.9,

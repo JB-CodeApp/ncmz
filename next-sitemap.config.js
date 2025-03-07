@@ -1,17 +1,17 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: 'https://bhumikaios.com',
+  siteUrl: process.env.NEXT_PUBLIC_FRONTEND_URL,
   generateRobotsTxt: true, // Generates robots.txt
-  sitemapSize: 5000,
+  // sitemapSize: 5000,
   generateIndexSitemap: true,
   outDir: './public',
   exclude: ["/api/*", "/admin/*", "/author/*", "/blog/*", "/category/*", "/tag/*", "/dashboard/*", "/login", "/dashboard"], // Exclude unnecessary paths
-  additionalSitemaps: [
-    `${process.env.SITE_URL || 'https://bhumikaios.com'}/blog-sitemap.xml`, // Blog listing sitemap
-    `${process.env.SITE_URL || 'https://bhumikaios.com'}/authors-sitemap.xml`, // Authors sitemap
-    `${process.env.SITE_URL || 'https://bhumikaios.com'}/tags-sitemap.xml`, // Tags sitemap
-    `${process.env.SITE_URL || 'https://bhumikaios.com'}/category-sitemap.xml`, // Pages sitemap
-  ],
+  // additionalSitemaps: [
+  //   `${process.env.NEXT_PUBLIC_FRONTEND_URL}/blog-sitemap.xml`, // Blog listing sitemap
+  //   `${process.env.SITE_URL || 'https://bhumikaios.com'}/authors-sitemap.xml`, // Authors sitemap
+  //   `${process.env.SITE_URL || 'https://bhumikaios.com'}/tags-sitemap.xml`, // Tags sitemap
+  //   `${process.env.SITE_URL || 'https://bhumikaios.com'}/category-sitemap.xml`, // Pages sitemap
+  // ],
   robotsTxtOptions: {
     policies: [
       {
@@ -20,19 +20,19 @@ const config = {
       },
     ],
     additionalSitemaps: [
-      `${process.env.SITE_URL || 'https://bhumikaios.com'}/blog-sitemap.xml`,
-      `${process.env.SITE_URL || 'https://bhumikaios.com'}/authors-sitemap.xml`,
-      `${process.env.SITE_URL || 'https://bhumikaios.com'}/tags-sitemap.xml`,
-      `${process.env.SITE_URL || 'https://bhumikaios.com'}/category-sitemap.xml`,
+      `${process.env.NEXT_PUBLIC_FRONTEND_URL || 'https://bhumikaios.com'}/blog-sitemap.xml`,
+      `${process.env.NEXT_PUBLIC_FRONTEND_URL || 'https://bhumikaios.com'}/authors-sitemap.xml`,
+      `${process.env.NEXT_PUBLIC_FRONTEND_URL || 'https://bhumikaios.com'}/tags-sitemap.xml`,
+      `${process.env.NEXT_PUBLIC_FRONTEND_URL || 'https://bhumikaios.com'}/category-sitemap.xml`,
     ],
   },
   transform: async (config, path) => {
-    let lastmod = new Date().toISOString(); // Default lastmod
+    let lastmod = new Date().toISOString();
+    
+    const metadata = require('./src/data/seodata/seometadata.json');
+    const lastSegment = path.split('/').pop();
 
-    const metadata = require('./src/data/seodata/seometadata.json'); // Your SEO metadata
-    const lastSegment = path.split('/').pop(); // Get last segment of path
-
-    // Loop through metadata to match the page
+    // GENERAL STATIC PAGE EXAMPLE aBOUT, CONTACT PAGES 
     metadata.forEach(item => {
       if (lastSegment === item.page_title) {
         const createdDate = new Date(item.created_date);
@@ -45,48 +45,6 @@ const config = {
         }
       }
     });
-
-    // Handling specific path patterns
-
-    // Blog Listing Pages (/blog)
-    if (path.startsWith('/blog')) {
-      return {
-        loc: path,
-        lastmod,
-        changefreq: 'daily',
-        priority: 0.9,
-      };
-    }
-
-    // Authors Pages (/author)
-    if (path.startsWith('/author')) {
-      return {
-        loc: path,
-        lastmod,
-        changefreq: 'monthly',
-        priority: 0.8,
-      };
-    }
-
-    // Tags Pages (/tag)
-    if (path.startsWith('/tag')) {
-      return {
-        loc: path,
-        lastmod,
-        changefreq: 'weekly',
-        priority: 0.7,
-      };
-    }
-
-    // Static Pages (e.g., /about, /contact)
-    if (path === '/about' || path === '/contact') {
-      return {
-        loc: path,
-        lastmod,
-        changefreq: 'monthly',
-        priority: 0.6,
-      };
-    }
 
     return {
       loc: path,

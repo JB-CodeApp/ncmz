@@ -415,7 +415,7 @@ export const NAVIGATION_LINKS: NavItemType[] = [
   {
     id: randomId(),
     href: "/",
-    name: "Homes",
+    name: "Home",
   },
 
   {

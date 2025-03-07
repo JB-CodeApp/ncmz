@@ -6,6 +6,7 @@ import PostCardLikeAndComment from '@/components/PostCardLikeAndComment/PostCard
 import { SOCIALS_DATA } from '@/components/SocialsShare/SocialsShare'
 import NcDropDown from '@/components/NcDropDown/NcDropDown'
 import NcBookmark from '@/components/NcBookmark/NcBookmark'
+import BlogNcDropDown from './BlogNcDropDown'
 
 export interface SingleMetaAction2Props {
 	className?: string
@@ -34,7 +35,7 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = '', comment
 				</div> */}
 
 				{/* <NcBookmark containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200" /> */}
-				<NcDropDown
+				<BlogNcDropDown
 					className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200 focus:outline-none dark:bg-neutral-800 dark:text-neutral-200 dark:hover:bg-neutral-700"
 					renderTrigger={() => (
 						<svg
@@ -57,6 +58,7 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({ className = '', comment
 					url={URL}
 				/>
 				<PostActionDropdown
+					data={URL}
 					containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700"
 					iconClass="h-5 w-5"
 				/>

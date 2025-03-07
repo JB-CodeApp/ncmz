@@ -117,14 +117,14 @@ const PostActionDropdown: FC<PostActionDropdownProps> = ({
     <div>
       {renderMenu()}
 
-      <ModalReportItem
+      {/* <ModalReportItem
         show={isReporting}
         onCloseModalReportItem={closeModalReportPost}
       />
       <ModalHideAuthor
         show={showModalHideAuthor}
         onCloseModalHideAuthor={onCloseModalHideAuthor}
-      />
+      /> */}
     </div>
   );
 };

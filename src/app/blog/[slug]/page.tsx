@@ -12,7 +12,7 @@ export default async function BlogPage({ params }: { params: { slug: string } })
 
   const blog = blogslugmatched(slug);
 
-  const mdxData = await fetchSingleMdxFile(blog?.mdxFile as any);
+  const mdxData = await fetchSingleMdxFile(blog?.mdxPath as any);
 
   if (!blog || mdxData?.content === undefined) {
     return <Page404 />;

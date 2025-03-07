@@ -44,7 +44,7 @@ export async function POST(req) {
 
     // Handle MDX Content Update
     if (updatedFields.MDXContent) {
-      const mdxFilePath = updatedFields.mdxFile?.replace('/public', '') || '';
+      const mdxFilePath = updatedFields.mdxPath?.replace('/public', '') || '';
       if (!mdxFilePath.includes('.mdx')) throw new Error(`❌ Invalid MDX file path: ${mdxFilePath}`);
 
       const mdxFullPath = path.join(process.cwd(), 'public', mdxFilePath);

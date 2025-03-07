@@ -73,8 +73,8 @@ const EditPost = () => {
         setPost(blogdata as any);
         setCategorySlug(blogdata.categoriesId as any || "");
 
-        const mdxFilePath = blogdata.mdxFile?.replace(/^\/?public\//, '') || '';
-        console.log("mdxFilePath =>", mdxFilePath)
+        const mdxFilePath = blogdata.mdxPath?.replace(/^\/?public\//, '') || '';
+        // console.log("mdxFilePath =>", mdxFilePath)
         if (!Content && mdxFilePath) {
             setIsLoading(true);
             getMdxContentBySlug(mdxFilePath).then((mdxContent) => {
@@ -163,16 +163,16 @@ const EditPost = () => {
             if (audioFile) {
                 audioBase64 = await fileToBase64(audioFile);
             }
-            if (blogdata?.mdxFile) {
-                blogdata.mdxFile = blogdata?.mdxFile;
+            if (blogdata?.mdxPath) {
+                blogdata.mdxPath = blogdata?.mdxPath;
             }
             const updatedPost = {
                 ...post,
                 image: myimage || post.image,
                 audioUrl: audioBase64,
-                mdxFile: blogdata?.mdxFile,
+                mdxPath: blogdata?.mdxPath,
             };
-            console.log("updatedPost => ", updatedPost)
+            // console.log("updatedPost => ", updatedPost)
             const response = await fetch('/api/edit-post', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

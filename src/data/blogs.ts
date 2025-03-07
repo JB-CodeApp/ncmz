@@ -8,20 +8,47 @@ import matter from 'gray-matter'
 
 import { BlogDataType } from './datatypes'
 
+const formatDate = (dateString: string) =>
+	new Date(dateString).toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	})
+
+const getNextIndexAndId = (allblogs: any[]) => {
+	// const lastBlog = allblogs.length > 0 ? allblogs[allblogs.length - 1] : null;
+	// const nextIndex = lastBlog ? lastBlog.index + 1 : 1;
+	const nextIndex = allblogs.length + 1
+	const newId =
+		Date.now().toString(36) + Math.random().toString(36).substr(2, 9)
+
+	return { index: nextIndex, id: newId }
+}
+
 const CATEGORIES = allcategories || []
 const AUTHORS = allauthors.filter((author) => author.status === 'active') || []
 const TAGS = alltags || []
 
-const allblogwithlatest = allblogs.sort(
-	(a, b) =>
-		new Date(b.publishedAt || b.createdAt || 0).getTime() -
-		new Date(a.publishedAt || a.createdAt || 0).getTime(),
-)
+const allblogwithlatest = allblogs
+	.sort(
+		(a, b) =>
+			new Date(b.publishedAt || b.createdAt || 0).getTime() -
+			new Date(a.publishedAt || a.createdAt || 0).getTime(),
+	)
+	.map((blog) => ({
+		...blog,
+		publishedAt: blog.publishedAt ? formatDate(blog.publishedAt) : '',
+		createdAt: blog.createdAt ? formatDate(blog.createdAt) : '',
+	}))
 
 // published and deletedAt empty blogs fetch only
-const publishandnotdeleteBlogs = allblogs.filter(
-	(post) => post.status === 'published' && post.deletedAt === '',
-)
+const publishandnotdeleteBlogs = allblogs
+	.filter((post) => post.status === 'published' && post.deletedAt === '')
+	.map((blog) => ({
+		...blog,
+		publishedAt: blog.publishedAt ? formatDate(blog.publishedAt) : '',
+		createdAt: blog.createdAt ? formatDate(blog.createdAt) : '',
+	}))
 
 // Blog Detail Page
 const fetchSingleMdxFile = async (mdxFile: string) => {
@@ -127,6 +154,8 @@ const getFilteredBlogs = (
 			author: author || '',
 			categories: categories.filter(Boolean),
 			tag: tags,
+			publishedAt: post.publishedAt ? formatDate(post.publishedAt) : '',
+			createdAt: post.createdAt ? formatDate(post.createdAt) : '',
 		}
 	})
 }
@@ -243,6 +272,11 @@ const findAuthorBlogs = (slug: string) => {
 	return blogs
 		.filter((blog) => blog.slug !== slug && blog.authorId === authorId)
 		.slice(0, 4)
+		.map(blog => ({
+            ...blog,
+            publishedAt: blog.publishedAt ? formatDate(blog.publishedAt) : '',
+            createdAt: blog.createdAt ? formatDate(blog.createdAt) : '',
+        }));
 }
 
 // Use in blog listing page and admin posts login in
@@ -253,10 +287,17 @@ const paginatePosts = (blogdata: any[], currentPage: number) => {
 	return blogdata.slice(0, endIndex)
 }
 
+const convertSlugToTitle = (slug: string) =>
+	slug
+		.split('-')
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+		.join(' ')
+
 export {
 	fetchSingleMdxFile,
 	getFilteredBlogs,
 	matchedblogs,
+	getNextIndexAndId,
 	// paginationblogs,
 	blogslugmatched,
 	findRelatedBlogs,
@@ -271,4 +312,5 @@ export {
 	BLOGTAGSWITHCOUNT,
 	allblogs,
 	allblogwithlatest,
+	convertSlugToTitle,
 }

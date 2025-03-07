@@ -9,7 +9,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Card11 from "@/components/Card11/Card11";
 import Card2 from "@/components/Card2/Card2";
 import Link from "next/link";
-import { matchedblogs } from "@/data/blogs";
+import { convertSlugToTitle, matchedblogs } from "@/data/blogs";
 
 export interface HeaderFilterProps {
   tabs?: string[];
@@ -18,7 +18,7 @@ export interface HeaderFilterProps {
 }
 
 const BlogCategoryTabs: FC<HeaderFilterProps> = ({
-  tabs = ["All items", "network", "architecture"],
+  tabs = ["All items", "data-storage", "architecture"],
   heading,
   className
 }) => {
@@ -49,7 +49,7 @@ const BlogCategoryTabs: FC<HeaderFilterProps> = ({
                   isActive={tabActive === item}
                   onClick={() => handleClickTab(item)}
                 >
-                  {item}
+                  {convertSlugToTitle(item)}
                 </NavItem>
               ))}
             </Nav>

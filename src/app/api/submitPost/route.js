@@ -36,7 +36,7 @@ export async function POST(request) {
                 featuredImagePath = `/blog/${year}/${month}/data/${featuredImageName}`;
             }
 
-            const mdxMetadata = `---\nslug: '${postData.slug || ''}'\ntitle: '${postData.title || ''}'\ndesc: '${postData.desc || ''}'\nauthor: '${postData.author || ''}'\ntags: ${JSON.stringify(postData.tags || [])}\ncategory: ${JSON.stringify(postData.categoryslug || [])}\npostType: '${postData.postType || ''}'\nimage: '${featuredImagePath || ''}'\ndate: '${postData.date || new Date().toISOString()}'\npublishdate: '${postData.publishdate || new Date().toISOString()}'\nstatus: '${postData.status || ''}'\n---\n\n`;
+            const mdxMetadata = `---\nslug: '${postData.slug || ''}'\ntitle: '${postData.title || ''}'\ndesc: '${postData.desc || ''}'\nauthor: '${postData.authorId || ''}'\ntags: ${JSON.stringify(postData.tagsId || [])}\ncategory: ${JSON.stringify(postData.categoriesId || [])}\npostType: '${postData.postType || ''}'\nimage: '${featuredImagePath || ''}'\ndate: '${postData.date || new Date().toISOString()}'\npublishdate: '${postData.publishdate || new Date().toISOString()}'\nstatus: '${postData.status || ''}'\n---\n\n`;
 
             let mdxPath = '';
             const MDXContent = formData.get('MDXContent');
@@ -50,8 +50,8 @@ export async function POST(request) {
                 mdxPath = `/public/blog/${year}/${month}/${mdxFileName}`;
             }
 
-            if (MDXContent) {
-                postData.MDXContent = mdxPath; 
+            if (mdxPath) {
+                postData.mdxPath = mdxPath; 
             }
 
             if (featuredImagePath) {
@@ -74,23 +74,6 @@ export async function POST(request) {
             if (blogImagePaths.length > 0) {
                 postData.blogResources = blogImagePaths;
             }
-
-            // let audioFilePaths = [];
-            // const audioFiles = formData.getAll('audioUrl');
-            // if (audioFiles.length > 0) {
-            //     for (const audioFile of audioFiles) {
-            //         const audioBuffer = Buffer.from(await audioFile.arrayBuffer());
-            //         const audioFileName = audioFile.name.replace(/\s+/g, '_');
-            //         const audioFileUploadPath = path.join(dataDir, audioFileName);
-
-            //         await fsPromises.writeFile(audioFileUploadPath, audioBuffer);
-            //         audioFilePaths.push(`/blog/(${year})/(${month})/data/${audioFileName}`);
-            //     }
-            // }
-
-            // if (audioFilePaths.length > 0) {
-            //     postData.audioUrl = audioFilePaths;
-            // }
 
             let audioFilePath = '';
             const audioFiles = formData.getAll('audioUrl');
@@ -128,6 +111,8 @@ export async function POST(request) {
                 postData.videoFiles = videoFilePaths;
             }
 
+            delete postData.MDXContent;
+            
             const filePath = path.join(process.cwd(), 'src', 'data', 'jsons', 'blogs.json');
             const data = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : '[]';
             let posts = JSON.parse(data);

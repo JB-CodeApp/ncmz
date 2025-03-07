@@ -150,7 +150,8 @@ export interface PostData {
 	// contenttype: string
 	authorId: number | any
 	categoriesId: number[] | any
-	audioFile?: File | string // Add this line
+	audioFile?: File | { name: string }[]
+	// Add this line
 	videoUrl?: string // Add this line
 	ishighlight?: string
 	MDXContent?: string
@@ -179,8 +180,8 @@ export interface PostData {
 	deletedAt: Date | any
 	image?: File | string
 	mdxPath?: string
-	tags: any
-	categoryslug: any
+	// tags: any
+	// categoryslug: any
 }
 
 //  ##########  TwMainColor ######## //

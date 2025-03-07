@@ -7,7 +7,7 @@ import Textarea from "@/components/Textarea/Textarea";
 import Label from "@/components/Label/Label";
 import MDEditor from '@uiw/react-md-editor';
 import Image from 'next/image';
-import { AUTHORS, CATEGORIES, TAGS } from "@/data/blogs";
+import { allblogs, AUTHORS, CATEGORIES, getNextIndexAndId, TAGS } from "@/data/blogs";
 import BlogImageUpload from "@/components/MyComponents/BlogImageUpload";
 import { BlogDataType, PostData } from "@/data/datatypes";
 import { generateSlug } from "@/app/api/fetchmdxdata";
@@ -75,9 +75,11 @@ const AddBlogPost = () => {
     //   year: "numeric",
     // });
 
+    const { index, id } = getNextIndexAndId(allblogs);
+
     const postData: PostData = {
-      index: 1,
-      id: "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
+      index: index,
+      id: id,
       title: title.trim(),
       slug: slug.trim(),
       href: `/blog/${slug}/`,
@@ -116,22 +118,22 @@ const AddBlogPost = () => {
       updatedAt: new Date(),
       deletedAt: "",
       mdxPath: "",
-      tags: [],
-      categoryslug: [],
-      commentCount: 0,
-      bookmark: {
-        count: 0,
-        isBookmarked: false
-      },
-      like: {
-        count: 0,
-        isLiked: false
-      },
-      date: "",
-      publishdate: "",
-      author: "",
-      jsonld: "",
-      contenttype: ""
+      // tags: [],
+      // categoryslug: [],
+      // commentCount: 0,
+      // bookmark: {
+      //   count: 0,
+      //   isBookmarked: false
+      // },
+      // like: {
+      //   count: 0,
+      //   isLiked: false
+      // },
+      // date: "",
+      // publishdate: "",
+      // author: "",
+      // jsonld: "",
+      // contenttype: ""
     };
 
     // audioUrl: audioFile,
@@ -139,7 +141,9 @@ const AddBlogPost = () => {
     // blogresources: blogImages,
 
     if (posttype === "audio" && audioFile) {
-      postData.audioFile = audioFile;
+      if (audioFile instanceof File) {
+        postData.audioFile = audioFile;
+      }
     }
 
     try {
@@ -336,7 +340,6 @@ const AddBlogPost = () => {
                       className="mt-1"
                       value={seoKeyword}
                       onChange={(e) => setseoKeyword(e.target.value)}
-                      maxLength={60}
                     />
                   </label>
 
@@ -437,7 +440,7 @@ const AddBlogPost = () => {
                       >
                         {audioFile ? (
                           <span>
-                            {audioFile.name} &nbsp;
+                            {typeof audioFile === 'string' ? audioFile : audioFile.name} &nbsp;
                           </span>
                         ) : (
                           <span>Upload Audio &nbsp;</span>
@@ -485,7 +488,8 @@ const AddBlogPost = () => {
                         >
                           {featuredImage ?
                             <>
-                              <span className="ml-2">{featuredImage.name}</span>
+                              <span className="ml-2">
+                                {typeof featuredImage === 'string' ? featuredImage : featuredImage.name}</span>
                               <input
                                 id="file-upload"
                                 name="file-upload"

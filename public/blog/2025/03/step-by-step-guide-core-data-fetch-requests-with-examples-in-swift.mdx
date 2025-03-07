@@ -1,0 +1,177 @@
+---
+slug: 'step-by-step-guide-core-data-fetch-requests-with-examples-in-swift'
+title: 'Step-by-Step Guide: Core Data Fetch Requests with Examples in Swift'
+desc: 'Learn how to set up Core Data fetch requests in iOS with Swift. This comprehensive guide includes practical examples to retrieve and manage data efficiently.'
+author: 'bhumika-ios'
+tags: ["coredata","userdefaults"]
+category: ["data-storage"]
+postType: 'standard'
+image: '/blog/2025/03/data/AddCoreData.jpg'
+date: '2025-03-06T11:33:27.361Z'
+publishdate: '2025-03-06T11:33:27.361Z'
+status: 'published'
+---
+
+
+## **Step-by-Step Guide: Core Data Fetch Requests with Examples**  
+
+When working with Core Data in iOS, fetching data efficiently is crucial for a seamless user experience. Fetch requests allow developers to retrieve specific data from Core Data storage using various conditions, filters, and sorting options.  
+
+In this guide, we will explore how to set up Core Data fetch requests in iOS using Swift with practical code examples.  
+
+---
+
+### **What is a Fetch Request in Core Data?**  
+A fetch request is a query that retrieves specific data from Core Data storage. Developers can define the fetch criteria using predicates, sort descriptors, and fetch limits.  
+
+---
+
+### **Step 1: Set Up Core Data in iOS**  
+
+To begin, ensure that Core Data is set up in your Xcode project:  
+
+1. **Create a new project:** Select "Use Core Data" during project setup.  
+
+![Alt Text](/blog/2025/03/data/AddCoreData.jpg)
+2. **Define your data model:** Create entities and attributes in the `.xcdatamodeld` file.  
+![Alt Text](/blog/2025/03/data/Task_Entity.jpg)
+**Entity Example:** Let's define a `Task` entity with the following attributes:  
+- `title` (String)  
+- `priority` (Integer)  
+![Alt Text](/blog/2025/03/data/Task_Attribute.jpg)
+
+---
+
+### **Step 2: Basic Fetch Request Example**  
+
+Here's how to fetch all `Task` records from Core Data:  
+
+```swift
+import CoreData
+import UIKit
+
+func fetchAllTasks() {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Task")
+    
+    do {
+        let tasks = try context.fetch(fetchRequest)
+        tasks.forEach { task in
+            let title = task.value(forKey: "title") as? String ?? "No Title"
+            print("Task Title: \(title)")
+        }
+    } catch {
+        print("Failed to fetch tasks: \(error)")
+    }
+}
+```
+
+**Usage:**  
+Call `fetchAllTasks()` to retrieve and print all task records.  
+
+---
+
+### **Step 3: Using Predicates for Filtering**  
+
+To fetch tasks with a specific priority, use an NSPredicate:  
+
+```swift
+func fetchTasksWithPriority(priority: Int) {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Task")
+    fetchRequest.predicate = NSPredicate(format: "priority == %d", priority)
+    
+    do {
+        let tasks = try context.fetch(fetchRequest)
+        tasks.forEach { task in
+            let title = task.value(forKey: "title") as? String ?? "No Title"
+            print("High Priority Task: \(title)")
+        }
+    } catch {
+        print("Failed to fetch tasks: \(error)")
+    }
+}
+```
+
+**Example Usage:**  
+```swift
+fetchTasksWithPriority(priority: 1)
+```
+
+---
+
+### **Step 4: Sorting Fetch Results**  
+
+To fetch tasks sorted by title in ascending order, use `NSSortDescriptor`:  
+
+```swift
+func fetchTasksSortedByTitle() {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Task")
+    
+    let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+    fetchRequest.sortDescriptors = [sortDescriptor]
+    
+    do {
+        let tasks = try context.fetch(fetchRequest)
+        tasks.forEach { task in
+            let title = task.value(forKey: "title") as? String ?? "No Title"
+            print("Task Title: \(title)")
+        }
+    } catch {
+        print("Failed to fetch sorted tasks: \(error)")
+    }
+}
+```
+
+---
+
+### **Step 5: Limiting Fetch Results**  
+
+To fetch only the top 3 tasks, set a fetch limit:  
+
+```swift
+func fetchLimitedTasks(limit: Int) {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Task")
+    fetchRequest.fetchLimit = limit
+    
+    do {
+        let tasks = try context.fetch(fetchRequest)
+        tasks.forEach { task in
+            let title = task.value(forKey: "title") as? String ?? "No Title"
+            print("Limited Task Title: \(title)")
+        }
+    } catch {
+        print("Failed to fetch limited tasks: \(error)")
+    }
+}
+```
+
+**Example Usage:**  
+```swift
+fetchLimitedTasks(limit: 3)
+```
+
+---
+
+### **Best Practices for Core Data Fetch Requests**  
+
+1. **Use Background Contexts:** Perform heavy fetch operations on background threads.  
+2. **Optimize Fetch Queries:** Use predicates and fetch limits to minimize memory usage.  
+3. **Handle Errors Gracefully:** Always use error handling for fetch operations.  
+4. **Test Performance:** Regularly monitor fetch request performance for large datasets.  
+
+---
+
+### **Further Reading**  
+
+- [Apple's Core Data Documentation](https://developer.apple.com/documentation/coredata)  
+- [Understanding Predicates in Swift](https://developer.apple.com/documentation/foundation/nspredicate)  
+
+---
+
+### **Conclusion**  
+By following this guide, you can efficiently set up Core Data fetch requests in iOS with Swift. Fetching, filtering, and sorting data are essential skills for managing persistent data in your app. Let me know if you'd like additional examples or explanations!
+
+---

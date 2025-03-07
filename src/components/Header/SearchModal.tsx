@@ -139,11 +139,11 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
 							<DialogPanel
 								className="mx-auto block max-w-2xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all"
 								as="form"
-								onSubmit={(e) => {
-									e.preventDefault()
-									router.push('/search')
-									setOpen(false)
-								}}
+								// onSubmit={(e) => {
+								// 	e.preventDefault()
+								// 	router.push('/search')
+								// 	setOpen(false)
+								// }}
 							>
 								<Combobox
 									onChange={(item: any) => {
@@ -354,13 +354,13 @@ const SearchModal: FC<Props> = ({ renderTrigger }) => {
 											?
 										</kbd>{' '}
 										for help, or{' '}
-										<Link
+										{/* <Link
 											href={'/search'}
 											className="mx-1 flex h-5 items-center justify-center rounded border border-primary-6000 bg-white px-1.5 text-neutral-900 sm:mx-2"
 											onClick={() => setOpen(false)}
 										>
 											Go to search page
-										</Link>{' '}
+										</Link>{' '} */}
 									</div>
 								</Combobox>
 							</DialogPanel>

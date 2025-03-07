@@ -35,7 +35,7 @@ const PageForgotPass = ({}) => {
           Go back for {` `}
           <NcLink href="/login">Sign in</NcLink>
           {` / `}
-          <NcLink href="/signup">Sign up</NcLink>
+          {/* <NcLink href="/signup">Sign up</NcLink> */}
         </span>
       </div>
     </>

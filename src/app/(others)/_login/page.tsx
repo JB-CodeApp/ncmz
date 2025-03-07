@@ -77,9 +77,9 @@ const PageLogin = ({}) => {
           <label className="block">
             <span className="flex justify-between items-center text-neutral-800 dark:text-neutral-200">
               Password
-              <NcLink href="/forgot-pass" className="text-sm underline">
+              {/* <NcLink href="/forgot-pass" className="text-sm underline">
                 Forgot password?
-              </NcLink>
+              </NcLink> */}
             </span>
             <Input type="password" className="mt-1" />
           </label>
@@ -89,7 +89,7 @@ const PageLogin = ({}) => {
         {/* ==== */}
         <span className="block text-center text-neutral-700 dark:text-neutral-300">
           New user? {` `}
-          <NcLink href="/signup">Create an account</NcLink>
+          {/* <NcLink href="/signup">Create an account</NcLink> */}
         </span>
       </div>
     </>

@@ -120,7 +120,7 @@ const PageSearch = ({}) => {
               <div className="w-full text-sm text-start mt-4 text-neutral-500 dark:text-neutral-300">
                 <div className="inline-block space-x-1.5 sm:space-x-2.5 rtl:space-x-reverse">
                   <span className="">Related:</span>
-                  <NcLink className="inline-block font-normal" href="/search">
+                  {/* <NcLink className="inline-block font-normal" href="/search">
                     Design
                   </NcLink>
                   <NcLink className="inline-block font-normal" href="/search">
@@ -131,7 +131,7 @@ const PageSearch = ({}) => {
                   </NcLink>
                   <NcLink className="inline-block font-normal" href="/search">
                     Frontend
-                  </NcLink>
+                  </NcLink> */}
                 </div>
               </div>
             </header>

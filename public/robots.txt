@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bhumikaios.com
+
+# Sitemaps
+Sitemap: https://bhumikaios.com/sitemap.xml
+Sitemap: https://bhumikaios.com/blog-sitemap.xml
+Sitemap: https://bhumikaios.com/authors-sitemap.xml
+Sitemap: https://bhumikaios.com/tags-sitemap.xml
+Sitemap: https://bhumikaios.com/category-sitemap.xml

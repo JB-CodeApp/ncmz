@@ -1603,8 +1603,8 @@
             }
         ],
         "createdAt": "2025-03-06T12:57:02.528Z",
-        "publishedAt": "2025-03-06T12:27:02.528Z",
-        "updatedAt": "2025-03-06T12:28:02.528Z",
+        "publishedAt": "2025-03-06T12:57:02.528Z",
+        "updatedAt": "2025-03-06T12:57:02.528Z",
         "deletedAt": "",
         "mdxPath": "/public/blog/2025/03/understanding-persistent-storage-in-core-data-with-examples.mdx"
     }

@@ -31,24 +31,24 @@
                         "@type": "Question",
                         "name": "What iOS development services do you offer?",
                         "acceptedAnswer": {
-                          "@type": "Answer",
-                          "text": "I provide end-to-end iOS app development, including UI/UX design, API integration, and performance optimization."
+                            "@type": "Answer",
+                            "text": "I provide end-to-end iOS app development, including UI/UX design, API integration, and performance optimization."
                         }
-                      },
-                      {
+                    },
+                    {
                         "@type": "Question",
                         "name": "What technologies do you use for iOS development?",
                         "acceptedAnswer": {
-                          "@type": "Answer",
-                          "text": "I specialize in Swift, SwiftUI, UIKit, Core Data, and advanced app architecture to create seamless mobile experiences."
+                            "@type": "Answer",
+                            "text": "I specialize in Swift, SwiftUI, UIKit, Core Data, and advanced app architecture to create seamless mobile experiences."
                         }
-                      }
+                    }
                 ]
             }
         ],
         "seo_keyword": "iOS developer, iPhone app development, iOS app developer, custom iOS apps, Swift app development, hire iOS developer, iOS app design",
         "created_date": "2025-03-06T10:20:26.129Z",
-         "updated_date": "2025-03-06T10:20:26.129Z"
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
         "page_title": "about",
@@ -75,7 +75,7 @@
         ],
         "seo_keyword": "iOS developer portfolio, Swift developer, iPhone app developer, mobile app expert, UI/UX designer",
         "created_date": "2025-03-06T10:20:26.129Z",
-         "updated_date": "2025-03-06T10:20:26.129Z"
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
         "page_title": "contact",
@@ -102,7 +102,7 @@
         ],
         "seo_keyword": "hire iOS developer, Swift expert, iPhone app development, iOS consultation, app development contact",
         "created_date": "2025-03-06T10:20:26.129Z",
-         "updated_date": "2025-03-06T10:20:26.129Z"
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
         "page_title": "blog",
@@ -137,7 +137,7 @@
         ],
         "seo_keyword": "iOS development blogs, Swift tutorials, iOS coding tips, mobile app development, iOS frameworks, UI/UX design",
         "created_date": "2025-03-06T10:20:26.129Z",
-         "updated_date": "2025-03-06T10:20:26.129Z"
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
         "page_title": "tag",
@@ -172,7 +172,7 @@
         ],
         "seo_keyword": "iOS development topics, Swift tags, mobile app trends, iOS UI design, iPhone app coding, Xcode development",
         "created_date": "2025-03-06T10:20:26.129Z",
-         "updated_date": "2025-03-06T10:20:26.129Z"
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
         "page_title": "category",
@@ -207,6 +207,6 @@
         ],
         "seo_keyword": "iOS development blog, Swift tutorials, app design guides, iOS frameworks, iOS coding tips, Apple app development",
         "created_date": "2025-03-06T10:20:26.129Z",
-         "updated_date": "2025-03-06T10:20:26.129Z"
+        "updated_date": "2025-03-06T10:20:26.129Z"
     }
 ]

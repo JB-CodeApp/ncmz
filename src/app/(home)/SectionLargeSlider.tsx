@@ -39,7 +39,23 @@ const SectionLargeSlider: FC<SectionLargeSliderProps> = ({
 
   return (
     <div className={`nc-SectionLargeSlider relative ${className}`}>
-      {!!heading && <Heading desc="">{heading}</Heading>}
+      {/* {!!heading && <Heading desc="">{heading}</Heading>} */}
+      <div
+        className={`nc-Section-Heading relative flex flex-col sm:flex-row sm:items-end justify-between`}
+      >
+        <div
+          className={
+            "max-w-2xl"
+          }
+        >
+          <h1
+            className={`text-2xl md:text-3xl lg:text-4xl font-semibold`}
+          >
+            {heading}
+          </h1>
+
+        </div>
+      </div>
       {posts.map((item, index) => {
         if (indexActive !== index) return null;
         return (

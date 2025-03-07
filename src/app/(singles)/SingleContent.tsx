@@ -41,6 +41,7 @@ const SingleContent: FC<SingleContentProps> = ({ slug, blogcontent }) => {
 
 				{/* TAGS */}
 				<div className="mx-auto flex max-w-screen-md flex-wrap">
+					<h2>Tags : &nbsp;</h2>
 					{slug?.tag.map((item: any) => (
 						<Tag hideCount key={item.id} tag={item} className="mb-2 me-2" />
 					))}

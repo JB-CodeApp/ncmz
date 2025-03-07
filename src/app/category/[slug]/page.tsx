@@ -29,7 +29,7 @@ export default async function PageCategory ({ params }: { params: { slug: string
                             <h1 className="inline-block align-middle text-5xl font-semibold md:text-7xl ">
                                 {slug}
                             </h1>
-                            <span className="block mt-4 text-neutral-300">{techBlogs.length} Articles</span>
+                            <h2 className="block mt-4 text-neutral-300">{techBlogs.length} Articles</h2>
                         </div>
                     </div>
                 </div>

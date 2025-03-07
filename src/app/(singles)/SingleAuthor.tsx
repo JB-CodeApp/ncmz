@@ -20,12 +20,12 @@ const SingleAuthor: FC<SingleAuthorProps> = ({ authordata }) => {
 				/>
 			</Link>
 			<div className="ml-3 flex max-w-lg flex-col sm:ml-5">
-				<span className="text-xs uppercase tracking-wider text-neutral-400">
+				<h2 className="text-xs uppercase tracking-wider text-neutral-400">
 					WRITTEN BY
-				</span>
-				<h2 className="text-lg font-semibold text-neutral-900 dark:text-neutral-200">
-					<Link href={authordata?.href as any}>{authordata?.displayName as any}</Link>
 				</h2>
+				<h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-200">
+					<Link href={authordata?.href as any}>{authordata?.displayName as any}</Link>
+				</h3>
 				<span className="mt-1 block text-sm text-neutral-500 dark:text-neutral-300 sm:text-base">
 					{authordata?.desc as any}
 					<Link

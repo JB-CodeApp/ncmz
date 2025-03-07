@@ -30,9 +30,9 @@ export default function FaqFullPage({ data }) {
 
     return (
         <>
-        <h2 className="text-2xl font-semibold pb-7">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-semibold pb-7">Frequently Asked Questions</h2>
             <dl className="toggle">
-            <hr className="border-1 border-black" />
+                <hr className="border-1 border-black" />
 
                 {data?.map((item, index) => (
                     <React.Fragment key={index}>
@@ -42,7 +42,7 @@ export default function FaqFullPage({ data }) {
                             }}
                             className="cursor-pointer text-md font-semibold flex items-center space-x-2 pt-2"
                         >
-                            <a ref={(el) => (questionRefs.current[index] = el)}>{item.question}</a>
+                            <h3 ref={(el) => (questionRefs.current[index] = el)}>{item.question}</h3>
                             <span
                                 className={`transform transition-transform duration-300 absolute right-0  ${openIndex === index ? 'rotate-180' : ''}`}
                             >

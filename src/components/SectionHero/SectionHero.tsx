@@ -24,9 +24,9 @@ const SectionHero: FC<SectionHeroProps> = ({
           <h1 className="text-3xl !leading-tight font-semibold text-neutral-900 md:text-4xl xl:text-5xl dark:text-neutral-100">
             {heading}
           </h1>
-          <span className="block text-base xl:text-lg text-neutral-6000 dark:text-neutral-400">
+          <h2 className="block text-base xl:text-lg text-neutral-6000 dark:text-neutral-400">
             {subHeading}
-          </span>
+          </h2>
           {!!btnText && <ButtonPrimary href="/">{btnText}</ButtonPrimary>}
         </div>
         <div className="flex-grow">

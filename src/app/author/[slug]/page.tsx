@@ -65,16 +65,16 @@ const PageAuthor = ({ params }: { params: { slug: string } }) => {
             {/*  */}
             <div className="pt-5 md:pt-1 lg:ml-6 xl:ml-12 flex-grow">
               <div className="max-w-screen-sm space-y-3.5 ">
-                <h2 className="inline-flex items-center text-2xl sm:text-3xl lg:text-4xl font-semibold">
+                <h1 className="inline-flex items-center text-2xl sm:text-3xl lg:text-4xl font-semibold">
                   <span>{author?.displayName}</span>
                   <VerifyIcon
                     className="ml-2"
                     iconClass="w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8"
                   />
-                </h2>
-                <span className="block text-sm text-neutral-500 dark:text-neutral-400">
+                </h1>
+                <h2 className="block text-sm text-neutral-500 dark:text-neutral-400">
                   {author?.desc}
-                </span>
+                </h2>
                 <a
                   href={author?.Social.website as any || ''}
                   className="flex items-center text-xs font-medium space-x-2.5 rtl:space-x-reverse cursor-pointer text-neutral-500 dark:text-neutral-400 truncate"

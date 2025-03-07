@@ -6,7 +6,7 @@ const BLOG_LISTING = require('./data/jsons/blogs.json');
 const CATEGORIES = require('./data/jsons/categories.json');
 const AUTHORS = require('./data/jsons/authors.json');
 
-const formattedDate = new Date(); 
+const formattedDate = new Date().toISOString(); 
 const sitemapDir = './public';
 
 const URL = 'https://bhumikaios.com';
@@ -36,7 +36,7 @@ const generateBlogSitemap = () => {
   const blogUrls = BLOG_LISTING
     .filter((post) => post.status === 'published' && post.deletedAt === '')
     .map(blog => ({
-      loc: `/blogs/${blog.slug}`,
+      loc: `/blog/${blog.slug}`,
       lastmod: blog.updatedAt > blog.publishedAt ? blog.updatedAt : blog.publishedAt,
       changefreq: 'daily',
       priority: 0.9,
@@ -50,8 +50,8 @@ const generateAuthorsSitemap = () => {
   const authorUrls = AUTHORS
   .filter((post) => post.status === 'active')
   .map(author => ({
-    loc: `/author/${author.slug}`,
-    lastmod: author.updated_at || author.created_at,
+    loc: `/author/${author.slug}/`,
+    lastmod: formattedDate,
     changefreq: 'monthly',
     priority: 0.8,
   }));
@@ -62,7 +62,7 @@ const generateAuthorsSitemap = () => {
 
 const generateCategoriesSitemap = () => {
   const categoryUrls = CATEGORIES.map(category => ({
-    loc: `/category/${category.slug}`,
+    loc: `/category/${category.slug}/`,
     lastmod: formattedDate,
     changefreq: 'weekly',
     priority: 0.8,
@@ -74,7 +74,7 @@ const generateCategoriesSitemap = () => {
 
 const generateTagsSitemap = () => {
   const tagUrls = TAGS.map(tag => ({
-    loc: `/tag/${tag.slug}`,
+    loc: `/tag/${tag.slug}/`,
     lastmod: formattedDate,
     changefreq: 'weekly',
     priority: 0.7,

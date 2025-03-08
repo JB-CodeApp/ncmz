@@ -69,6 +69,6 @@
     "publishedAt": "March 03, 2025",
     "updatedAt": "March 03, 2025",
     "deletedAt": "",
-    "mdxFile": "/public/blog/2025/03/test-new-blog.mdx"
+    "mdxPath": "/public/blog/2025/03/test-new-blog.mdx"
   }
 ]

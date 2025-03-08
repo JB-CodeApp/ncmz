@@ -56,6 +56,7 @@ const PostMeta2: FC<PostMeta2Props> = ({
           </Link>
           <Link href={`https://twitter.com/${authordata?.username}`}
             target="_blank"
+            rel="noopener noreferrer"
             className="!text-xs ml-5 text-neutral-700 dark:text-neutral-300">
             ({`@${authordata?.username}`})
           </Link>

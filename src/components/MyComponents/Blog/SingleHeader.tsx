@@ -19,7 +19,6 @@ const SingleHeader: FC<SingleHeaderProps> = ({
 	className = '',
 	data
 }) => {
-	
 
 	return (
 		<>

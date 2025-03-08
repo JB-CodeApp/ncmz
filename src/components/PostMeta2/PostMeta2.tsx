@@ -31,9 +31,8 @@ const PostMeta2: FC<PostMeta2Props> = ({
   const { date, author, categories, readingTime } = meta;
   return (
     <div
-      className={`nc-PostMeta2 flex items-center flex-wrap text-neutral-700 text-left dark:text-neutral-200 ${
-        size === "normal" ? "text-xs" : "text-sm"
-      } ${className}`}
+      className={`nc-PostMeta2 flex items-center flex-wrap text-neutral-700 text-left dark:text-neutral-200 ${size === "normal" ? "text-xs" : "text-sm"
+        } ${className}`}
     >
       <Link
         href={authordata.href}
@@ -54,6 +53,11 @@ const PostMeta2: FC<PostMeta2Props> = ({
         <div className="flex items-center">
           <Link href={authordata.href} className="block font-semibold">
             {authordata.displayName}
+          </Link>
+          <Link href={`https://twitter.com/${authordata?.username}`}
+            target="_blank"
+            className="!text-xs ml-5 text-neutral-700 dark:text-neutral-300">
+            ({`@${authordata?.username}`})
           </Link>
 
           {!hiddenCategories && (

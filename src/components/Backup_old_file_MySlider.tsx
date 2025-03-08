@@ -74,7 +74,7 @@ export default function MySlider<T>({
 
   return (
     <div className={`nc-MySlider ${className}`}>
-      {/* <MotionConfig
+      <MotionConfig
         transition={{
           x: { type: "spring", stiffness: 300, damping: 30 },
           opacity: { duration: 0.2 },
@@ -128,19 +128,7 @@ export default function MySlider<T>({
             />
           ) : null}
         </div>
-      </MotionConfig> */}
-
-      <div
-        className="grid gap-4"
-        style={{
-          gridTemplateColumns: `repeat(${numberOfItems}, 1fr)`,
-          rowGap: "50px",
-        }}
-      >
-        {data.map((item, indx) => (
-          <div key={indx}>{renderItem(item, indx)}</div>
-        ))}
-      </div>
+      </MotionConfig>
     </div>
   );
 }

@@ -13,6 +13,7 @@ const page = () => {
                 <div className="container relative">
                     <SectionHero
                         rightImg="/assets/images/seoimages/blogs.webp"
+                        // rightImg="/assets/images/seoimages/blogs_hero_image.webp"
                         className="pt-10 pb-16 md:py-16 lg:pb-28 lg:pt-20"
                         heading={
                             <>

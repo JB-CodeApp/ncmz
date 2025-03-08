@@ -4,7 +4,7 @@ import { StaticImageData } from "next/image";
 //  ######  CustomLink  ######## //
 export interface CustomLink {
   label: string;
-  href: Route;
+  href: Route | any;
   targetBlank?: boolean;
 }
 

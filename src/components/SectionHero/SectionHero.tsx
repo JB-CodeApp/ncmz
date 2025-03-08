@@ -27,7 +27,7 @@ const SectionHero: FC<SectionHeroProps> = ({
           <h2 className="block text-base xl:text-lg text-neutral-6000 dark:text-neutral-400">
             {subHeading}
           </h2>
-          {!!btnText && <ButtonPrimary href="/">{btnText}</ButtonPrimary>}
+          {!!btnText && <ButtonPrimary href={"/contact/" as any}>{btnText}</ButtonPrimary>}
         </div>
         <div className="flex-grow">
           <Image className="w-full" src={rightImg} alt=""

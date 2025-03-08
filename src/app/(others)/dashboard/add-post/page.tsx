@@ -107,12 +107,7 @@ const AddBlogPost = () => {
       },
       blogImgs: ["", ""],
       faqs: inputFields,
-      comments: [{
-        userId: "1",
-        comments: "comments1",
-        commentDate: "",
-        commentLikes: ""
-      }],
+      comments: [],
       createdAt: new Date(),
       publishedAt: new Date(),
       updatedAt: new Date(),

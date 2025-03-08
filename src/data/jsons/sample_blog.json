@@ -5,7 +5,6 @@
     "title": "Lenovo’s smarter devices stoke professional passionsLenovo’s smarter devices stoke professional passions ",
     "slug": "test-new-blog",
     "href": "/blog/test-new-blog",
-    "mdxFile": "/public/blog/2025/03/test-new-blog.mdx",
     "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     "authorId": "bhumika-ios",
     "desc": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
@@ -69,6 +68,7 @@
     "createdAt": "March 03, 2025",
     "publishedAt": "March 03, 2025",
     "updatedAt": "March 03, 2025",
-    "deletedAt": ""
+    "deletedAt": "",
+    "mdxFile": "/public/blog/2025/03/test-new-blog.mdx"
   }
 ]

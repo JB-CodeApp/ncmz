@@ -208,5 +208,40 @@
         "seo_keyword": "iOS development blog, Swift tutorials, app design guides, iOS frameworks, iOS coding tips, Apple app development",
         "created_date": "2025-03-06T10:20:26.129Z",
         "updated_date": "2025-03-06T10:20:26.129Z"
+    },
+    {
+        "page_title": "author",
+        "seo_title": "Expert Tech Author In-Depth Software & Development Insights",
+        "seo_description": "Explore expert articles from a tech author. Gain insights on iOS development, programming, and industry best practices.",
+        "og_image_alt": "Tech Author - Software & Development Insights",
+        "og_image": "/assets/images/seoimages/author.webp",
+        "json_ld": [],
+        "faq": [
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What topics do you cover as a tech author?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "I write about software development, web technologies, programming languages, and industry trends."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you provide tutorials for beginners?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, I create beginner-friendly guides on coding, development tools, and best practices."
+                        }
+                    }
+                ]
+            }
+        ],
+        "seo_keyword": "tech author, programming blogs, coding tutorials, technology articles, iOS insights, expert tech writer",
+        "created_date": "2025-03-07T12:30:00.000Z",
+        "updated_date": "2025-03-07T12:30:00.000Z"
     }
 ]

@@ -23,7 +23,7 @@ const SectionSliderNewAuthors: FC<SectionSliderNewAuthorsProps> = ({
 }) => {
   return (
     <div className={`nc-SectionSliderNewAuthors ${className}`}>
-      <Heading desc={subHeading} isCenter>
+      <Heading desc={subHeading} >
         {heading}
       </Heading>
       <MySlider

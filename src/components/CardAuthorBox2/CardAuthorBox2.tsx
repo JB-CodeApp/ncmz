@@ -48,9 +48,9 @@ const CardAuthorBox2: FC<CardAuthorBox2Props> = ({
           userName={displayName}
         />
         <div className="mt-3">
-          <h2 className={`text-base font-medium`}>
+          <h3 className={`text-base font-medium`}>
             <span className="line-clamp-1">{displayName}</span>
-          </h2>
+          </h3>
           <span
             className={`block mt-1 text-sm text-neutral-500 dark:text-neutral-400`}
           >

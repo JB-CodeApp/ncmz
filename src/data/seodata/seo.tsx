@@ -130,7 +130,7 @@ export default function SEO({ slug }: SEOProps) {
   }, [slug]);
 
   const seoData = metadata.seo_title ? metadata : Defaultseo;
-  const imageUrl = metadata.og_image ? `${siteURL}/${metadata.og_image}` : `${siteURL}/${Defaultseo.images[0].url}`;
+  const imageUrl = metadata.og_image ? `${siteURL}${metadata.og_image}` : `${siteURL}/${Defaultseo.images[0].url}`;
 
   // ✅ FAQ Schema Generation
   const FaqSchema = metadata.faq.length > 0

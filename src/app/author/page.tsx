@@ -19,7 +19,7 @@ const AuthorPage = () => {
     <div className="nc-PageHomeDemo3 relative">
       <div className="container relative">
         <SectionHero
-          rightImg="/assets/images/seoimages/authors.webp"
+          rightImg="/assets/images/seoimages/author.webp"
           // rightImg="/assets/images/seoimages/blogs_hero_image.webp"
           className="pt-10 pb-16 md:pb-16 lg:pb-28 lg:pt-20"
           heading={

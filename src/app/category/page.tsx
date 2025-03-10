@@ -5,6 +5,12 @@ import Image from "next/image";
 import { TagFilteredBlogs } from '@/components/SectionHero/TagFilteredBlogs';
 import { CATEGORIES, latestBlogs, mostViewedBlogs } from '@/data/blogs';
 import SectionSliderNewCategories from '@/components/SectionSliderNewCategories/SectionSliderNewCategories';
+import Nav from '@/components/Nav/Nav';
+import { AuthorBlogFiltere } from '@/components/MyComponents/AuthorBlogFiltere';
+import Link from 'next/link';
+import ButtonPrimary from '@/components/Button/ButtonPrimary';
+import SectionSubscribe2 from '@/components/SectionSubscribe2/SectionSubscribe2';
+import Heading from '@/components/Heading/Heading';
 
 const AuthorPage = () => {
 
@@ -41,13 +47,36 @@ const AuthorPage = () => {
             categoryCardType="card4"
           />
 
-          <div>
+          {/* <div>
             <TagFilteredBlogs
               slug=""
               mostviewed={mostViewedBlogs}
               mostrecent={latestBlogs}
             />
+          </div> */}
+          <Heading desc={`Stay updated with new blogs`}>{`Recently Published Blogs`}</Heading>
+
+          {/* TABS FILTER */}
+       
+          <AuthorBlogFiltere
+            blogdata={latestBlogs.slice(0, 12)}
+          />
+
+          {/* PAGINATION */}
+          <div
+            className="flex justify-center mt-12 lg:mt-16"
+          //  className="flex flex-col mt-12 lg:mt-16 space-y-5 sm:space-y-0 sm:space-x-3 sm:flex-row sm:justify-between sm:items-center"
+          >
+            {latestBlogs.length > 12 && <Link href="/blog">
+              <ButtonPrimary>Show me more</ButtonPrimary>
+            </Link>
+            }
           </div>
+          {/* </main> */}
+
+
+          {/* SUBCRIBES */}
+          <SectionSubscribe2 />
 
         </div>
       </div>

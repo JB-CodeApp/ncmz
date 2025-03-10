@@ -62,7 +62,7 @@ const CardCategory4: FC<CardCategory4Props> = ({
       </div>
 
       <div className="flex items-center mt-5">
-        <div className={`w-9 h-9 ${getColorClass()} rounded-full`}></div>
+        {/* <div className={`w-9 h-9 ${getColorClass()} rounded-full`}></div> */}
         <div className="ms-4">
           <h2 className="text-base text-neutral-900 dark:text-neutral-100 font-medium">
             {name}

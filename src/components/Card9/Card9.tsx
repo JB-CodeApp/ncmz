@@ -11,7 +11,7 @@ import Image from "next/image";
 export interface Card9Props {
   className?: string;
   ratio?: string;
-  post: PostDataType;
+  post: PostDataType | any;
   hoverClass?: string;
 }
 
@@ -21,24 +21,24 @@ const Card9: FC<Card9Props> = ({
   post,
   hoverClass = "",
 }) => {
-  const { title, href, featuredImage, categories, author, date, postType } =
+  const { title, href, featuredImage, categories, author, publishedAt, postType } =
     post;
 
   const renderMeta = () => {
     return (
       <div className="inline-flex items-center text-xs text-neutral-300">
         <div className="block ">
-          <h2 className="block text-base sm:text-lg font-semibold text-white ">
+          <h3 className="block text-base sm:text-lg font-semibold text-white ">
             <span className="line-clamp-2" title={title}>
               {title}
             </span>
-          </h2>
+          </h3>
           <Link href={author.href} className="flex mt-2.5 relative">
             <span className="block text-neutral-200 hover:text-white font-medium truncate">
               {author.displayName}
             </span>
             <span className="mx-[6px] font-medium">·</span>
-            <span className="font-normal truncate">{date}</span>
+            <span className="font-normal truncate">{publishedAt}</span>
           </Link>
         </div>
       </div>
@@ -49,10 +49,10 @@ const Card9: FC<Card9Props> = ({
     <div
       className={`nc-Card9 relative flex flex-col group rounded-3xl overflow-hidden z-0 ${hoverClass} ${className}`}
     >
-      <div className="absolute inset-x-0 top-0 p-3 flex items-center justify-between transition-all opacity-0 z-[-1] group-hover:opacity-100 group-hover:z-10 duration-300">
+      {/* <div className="absolute inset-x-0 top-0 p-3 flex items-center justify-between transition-all opacity-0 z-[-1] group-hover:opacity-100 group-hover:z-10 duration-300">
         <PostCardLikeAndComment className="relative" />
         <PostCardSaveAction hidenReadingTime className="relative" />
-      </div>
+      </div> */}
       <div className={`flex items-start relative w-full ${ratio}`}></div>
       {postType === "audio" ? (
         <div className="absolute inset-0">

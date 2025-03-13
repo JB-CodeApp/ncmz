@@ -2,12 +2,12 @@ import ButtonPrimary from "@/components/Button/ButtonPrimary";
 import { AuthorBlogFiltere } from "@/components/MyComponents/AuthorBlogFiltere";
 import { TagFilteredBlogs } from "@/components/SectionHero/TagFilteredBlogs";
 import SectionSubscribe2 from "@/components/SectionSubscribe2/SectionSubscribe2";
-import { getFilteredBlogs } from "@/data/blogs";
+import { getFilteredBlogs, TAGS } from "@/data/blogs";
 import Image from "next/image";
 import Link from "next/link";
 import BgImg from "@/images/image/bg-image.webp";
 
-const PageTag = ({ params }: { params: { slug: string } }) => {
+export default async function PageTag ({ params }: { params: { slug: string } }) {
     const slug = params.slug;
 
     const tagBlogs = getFilteredBlogs({ tag: slug });
@@ -29,7 +29,7 @@ const PageTag = ({ params }: { params: { slug: string } }) => {
                             <h1 className="inline-block align-middle text-5xl font-semibold md:text-7xl ">
                                 {slug}
                             </h1>
-                            <span className="block mt-4 text-neutral-300">{tagBlogs.length} Articles</span>
+                            <h2 className="block mt-4 text-neutral-300">{tagBlogs.length} Articles</h2>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ const PageTag = ({ params }: { params: { slug: string } }) => {
                     <div
                         className="flex justify-center "
                     >
-                        {tagBlogs.length > 12 && <Link href="/blog">
+                        {tagBlogs.length > 12 && <Link href={"/blog" as any}>
                             <ButtonPrimary>Show me more</ButtonPrimary>
                         </Link>
                         }
@@ -58,4 +58,10 @@ const PageTag = ({ params }: { params: { slug: string } }) => {
         </>
     )
 }
-export default PageTag;
+
+
+export async function generateStaticParams() {
+    return TAGS.map((tag) => ({
+        slug: tag.slug.toString(),
+    }));
+}

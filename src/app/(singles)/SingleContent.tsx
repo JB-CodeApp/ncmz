@@ -12,64 +12,16 @@ import PostCardLikeAction from '@/components/PostCardLikeAction/PostCardLikeActi
 import PostCardCommentBtn from '@/components/PostCardCommentBtn/PostCardCommentBtn'
 import { ArrowUpIcon } from '@heroicons/react/24/solid'
 import { BlogDataType } from '@/data/datatypes'
+import FaqFullPage from '@/components/MyComponents/FaqFullPage'
 
 const demoTags = DEMO_TAGS.filter((_, i) => i < 9)
 
 export interface SingleContentProps {
 	slug: BlogDataType
+	blogcontent: any
 }
 
-const SingleContent: FC<SingleContentProps> = ({slug}) => {
-	// const endedAnchorRef = useRef<HTMLDivElement>(null)
-	// const contentRef = useRef<HTMLDivElement>(null)
-	// const progressRef = useRef<HTMLButtonElement>(null)
-	//
-	// const [isShowScrollToTop, setIsShowScrollToTop] = useState<boolean>(false)
-	//
-
-	// const endedAnchorEntry = useIntersectionObserver(endedAnchorRef, {
-	// 	threshold: 0,
-	// 	root: null,
-	// 	rootMargin: '0%',
-	// 	freezeOnceVisible: false,
-	// })
-
-	// useEffect(() => {
-	// 	const handleProgressIndicator = () => {
-	// 		const entryContent = contentRef.current
-	// 		const progressBarContent = progressRef.current
-
-	// 		if (!entryContent || !progressBarContent) {
-	// 			return
-	// 		}
-
-	// 		const totalEntryH = entryContent.offsetTop + entryContent.offsetHeight
-	// 		let winScroll =
-	// 			document.body.scrollTop || document.documentElement.scrollTop
-	// 		let scrolled = (winScroll / totalEntryH) * 100
-
-	// 		progressBarContent.innerText = scrolled.toFixed(0) + '%'
-
-	// 		if (scrolled >= 100) {
-	// 			setIsShowScrollToTop(true)
-	// 		} else {
-	// 			setIsShowScrollToTop(false)
-	// 		}
-	// 	}
-
-	// 	const handleProgressIndicatorHeadeEvent = () => {
-	// 		window?.requestAnimationFrame(handleProgressIndicator)
-	// 	}
-	// 	handleProgressIndicator()
-	// 	window?.addEventListener('scroll', handleProgressIndicatorHeadeEvent)
-	// 	return () => {
-	// 		window?.removeEventListener('scroll', handleProgressIndicatorHeadeEvent)
-	// 	}
-	// }, [])
-
-	// const showLikeAndCommentSticky =
-	// 	!endedAnchorEntry?.intersectionRatio &&
-	// 	(endedAnchorEntry?.boundingClientRect.top || 0) > 0
+const SingleContent: FC<SingleContentProps> = ({ slug, blogcontent }) => {
 
 	return (
 		<div className="relative">
@@ -78,12 +30,18 @@ const SingleContent: FC<SingleContentProps> = ({slug}) => {
 				<div
 					id="single-entry-content"
 					className="prose mx-auto !max-w-screen-md dark:prose-invert lg:prose-lg"
-					// ref={contentRef}
+				// ref={contentRef}
 				>
-					<SingleContentDemo filepath={slug?.mdxFile as any}/>
+					<SingleContentDemo filepath={blogcontent as any} />
 				</div>
+
+				<div>
+					{slug.faqs && <FaqFullPage data={slug.faqs as any} />}
+				</div>
+
 				{/* TAGS */}
 				<div className="mx-auto flex max-w-screen-md flex-wrap">
+					<h2>Tags : &nbsp;</h2>
 					{slug?.tag.map((item: any) => (
 						<Tag hideCount key={item.id} tag={item} className="mb-2 me-2" />
 					))}

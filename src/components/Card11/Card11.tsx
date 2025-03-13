@@ -57,14 +57,15 @@ const Card11: FC<Card11Props> = ({
             {title}
           </span>
         </h3>
-        <div className="flex items-end justify-between mt-auto">
+        
+        {/* <div className="flex items-end justify-between mt-auto">
           <PostCardLikeAndComment
             view={post?.viewdCount || 1}
             commentscount={(post?.comments?.length || 1)}
             data={post?.likeUsersId?.length || 1}
             className="relative" />
           <PostCardSaveAction className="relative" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

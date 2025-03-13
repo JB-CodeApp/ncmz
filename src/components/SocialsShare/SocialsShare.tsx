@@ -22,7 +22,7 @@ const socials: SocialType[] = [
   </g>
   </svg>
   `,
-    href: "#",
+    href: "https://www.facebook.com/bhumika_ios",
   },
   {
     id: "Twitter",
@@ -33,7 +33,7 @@ const socials: SocialType[] = [
   </g>
   </svg>
   `,
-    href: "#",
+    href: "https://x.com/bhumika_ios",
   },
   {
     id: "Linkedin",
@@ -44,7 +44,7 @@ const socials: SocialType[] = [
   </g>
   </svg>
   `,
-    href: "#",
+    href: "https://www.linkedin.com/in/bhumika-ios/",
   },
   {
     id: "Instagram",
@@ -57,7 +57,7 @@ const socials: SocialType[] = [
   </g>
   </svg>
   `,
-    href: "#",
+    href: "https://www.instagram.com/bhumika_ios/",
   },
 ];
 

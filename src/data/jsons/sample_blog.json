@@ -1,0 +1,74 @@
+[
+  {
+    "index": 1,
+    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
+    "title": "Lenovo’s smarter devices stoke professional passionsLenovo’s smarter devices stoke professional passions ",
+    "slug": "test-new-blog",
+    "href": "/blog/test-new-blog",
+    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    "authorId": "bhumika-ios",
+    "desc": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+    "viewdCount": 2504,
+    "readingTime": 2,
+    "bookmarkUsersId": [
+      "jigar-patel",
+      "rohit-parmar"
+    ],
+    "likeUsersId": [
+      "jigar-aptel",
+      "rohit-parmar"
+    ],
+    "categoriesId": [
+      "network",
+      "architecture"
+    ],
+    "tagsId": [
+      "vapor",
+      "mvvm"
+    ],
+    "status": "published",
+    "ishighlight": "true",
+    "contentType": "free, login, subscribed",
+    "postType": "standard",
+    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
+    "seo": {
+      "seoTitle": "",
+      "seoKeyword": "",
+      "seoDesc": "",
+      "jsonLD": ""
+    },
+    "blogImgs": [
+      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    ],
+    "faqs": [
+      {
+        "question": "question1",
+        "answer": "Answer1"
+      },
+      {
+        "question": "question2",
+        "answer": "Answer2"
+      }
+    ],
+    "comments": [
+      {
+        "userId": "1",
+        "comments": "comments1",
+        "commentDate": "",
+        "commentLikes": ""
+      },
+      {
+        "userId": "2",
+        "comments": "comments2",
+        "commentDate": "",
+        "commentLikes": ""
+      }
+    ],
+    "createdAt": "March 03, 2025",
+    "publishedAt": "March 03, 2025",
+    "updatedAt": "March 03, 2025",
+    "deletedAt": "",
+    "mdxPath": "/public/blog/2025/03/test-new-blog.mdx"
+  }
+]

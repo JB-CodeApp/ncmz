@@ -33,13 +33,13 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
         <div className="space-y-3.5">
           <CategoryBadgeList categories={categories as any} />
           <Link href={href} className="block">
-            <h2
+            <h3
               className={`nc-card-title block font-medium sm:font-semibold text-neutral-900 dark:text-neutral-100 text-sm sm:text-base xl:text-lg`}
             >
               <span className="line-clamp-2" title={title}>
                 {title}
               </span>
-            </h2>
+            </h3>
             <div className="hidden sm:block sm:mt-2">
               <span className="text-neutral-500 dark:text-neutral-400 text-sm line-clamp-2">
                 {desc}
@@ -49,14 +49,14 @@ const Card3: FC<Card3Props> = ({ className = "h-full", post }) => {
 
           <PostCardMeta meta={{ ...post } as any} />
         </div>
-        <div className="mt-5 flex items-center flex-wrap justify-between">
+        {/* <div className="mt-5 flex items-center flex-wrap justify-between">
           <PostCardLikeAndComment
-          view={post?.viewdCount || 1}
-          commentscount={post?.comments.length || 1}
-          data={post?.likeUsersId?.length || 1}
-           />
+            view={post?.viewdCount || 1}
+            commentscount={post?.comments.length || 1}
+            data={post?.likeUsersId?.length || 1}
+          />
           <PostCardSaveAction readingTime={readingTime} />
-        </div>
+        </div> */}
       </div>
 
       <div

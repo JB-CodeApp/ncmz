@@ -1,854 +1,1527 @@
 [
-  {
-    "index": 1,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "Lenovo’s smarter devices stoke professional passions ",
-    "slug": "test-new-blog",
-    "href": "/blog/test-new-blog",
-    "mdxFile": "/public/blog/2025/03/test-new-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 2504,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel", "rohit-parmar"],
-    "categoriesId": ["network", "architecture"],
-    "tagsId": ["vapor", "mvvm"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 1,
+        "id": "m7x76k50g9adujt12",
+        "title": "API Calling Using Alamofire in Swift: A Step-by-Step Guide",
+        "slug": "api-calling-using-alamofire-in-swift-a-step-by-step-guide",
+        "href": "/blog/api-calling-using-alamofire-in-swift-a-step-by-step-guide/",
+        "featuredImage": "/blog/2025/03/data/Alamofire.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn how to efficiently make API calls using Alamofire in Swift and SwiftUI. Explore detailed examples and best practices for seamless API integration.",
+        "viewdCount": 383,
+        "readingTime": 2,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "architecture"
+        ],
+        "tagsId": [
+            "alamofire",
+            "swiftui"
+        ],
+        "status": "published",
+        "ishighlight": "true",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "API Calling Using Alamofire in Swift: A Step-by-Step Guide",
+            "seoKeyword": "api calling using Alamofire in Swift, Alamofire in Swift, Al",
+            "seoDesc": "Learn how to efficiently make API calls using Alamofire in Swift and SwiftUI. Explore detailed examples and best practices for seamless API integration.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is Alamofire in Swift?",
+                "answer": "Alamofire is a powerful networking library for Swift that simplifies tasks like API requests, response handling, and JSON parsing. "
+            },
+            {
+                "question": "2. How do I install Alamofire in my Swift project?",
+                "answer": "You can add Alamofire through Swift Package Manager by entering its GitHub URL in Xcode.  "
+            },
+            {
+                "question": "3. Can I use Alamofire with SwiftUI?",
+                "answer": "Yes, Alamofire works seamlessly with SwiftUI, allowing you to make API calls efficiently in SwiftUI applications.  "
+            },
+            {
+                "question": "4. How do I make a GET request using Alamofire?",
+                "answer": "Use `AF.request(url)` followed by response handling to make GET requests.  "
+            },
+            {
+                "question": "5. Is Alamofire better than URLSession for networking in Swift?",
+                "answer": "Alamofire provides a higher-level, user-friendly API compared to URLSession, making it a preferred choice for complex network tasks. "
+            },
+            {
+                "question": "6. How can I handle errors in Alamofire?",
+                "answer": "Use the `.failure` case in Alamofire's response handling to manage errors gracefully."
+            },
+            {
+                "question": "7. Is Alamofire free to use?",
+                "answer": "Yes, Alamofire is an open-source library available under the MIT license.  "
+            },
+            {
+                "question": "8. Does Alamofire support RESTful APIs?",
+                "answer": "Yes, Alamofire fully supports RESTful APIs for both GET and POST requests.  "
+            },
+            {
+                "question": "9. How do I parse JSON data using Alamofire?",
+                "answer": "You can use the `responseDecodable` method to parse JSON data directly into Swift models.  "
+            },
+            {
+                "question": "10. Can I use Alamofire for file uploads?",
+                "answer": "Yes, Alamofire supports file uploads and downloads with its built-in methods."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T10:22:13.621Z",
+        "publishedAt": "2025-03-06T10:33:26.129Z",
+        "updatedAt": "2025-03-06T10:22:13.621Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/api-calling-using-alamofire-in-swift-a-step-by-step-guide.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      },
-      {
-        "userId": "2",
-        "comments": "comments2",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 2,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "2nd blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 123,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 2,
+        "id": "m7x7w3snkksk1o4nz",
+        "title": "Build iOS App with SwiftUI: Your Guide to Modern iOS App Development",
+        "slug": "build-ios-app-with-swiftui-your-guide-to-modern-ios-app-development",
+        "href": "/blog/build-ios-app-with-swiftui-your-guide-to-modern-ios-app-development/",
+        "featuredImage": "/blog/2025/03/data/CreateNew.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn how to build an iOS app with SwiftUI. Explore development techniques, benefits, and best practices to create visually stunning and efficient applications.",
+        "viewdCount": 517,
+        "readingTime": 2,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "architecture"
+        ],
+        "tagsId": [
+            "swiftui",
+            "uikit"
+        ],
+        "status": "published",
+        "ishighlight": "true",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Build iOS App with SwiftUI: Your Guide to Modern iOS App Dev",
+            "seoKeyword": "build iOS app with SwiftUI, develop iOS app with Swift, Swif",
+            "seoDesc": "Learn how to build an iOS app with SwiftUI. Explore development techniques, benefits, and best practices to create visually stunning and efficient applications.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is SwiftUI?",
+                "answer": "SwiftUI is Apple's modern framework for building user interfaces across all its platforms, including iOS, macOS, watchOS, and tvOS."
+            },
+            {
+                "question": "2. Is SwiftUI better than UIKit for iOS app development?",
+                "answer": "SwiftUI is better for projects that prioritize fast UI development and cross-platform compatibility, while UIKit may be better for complex and legacy applications.  "
+            },
+            {
+                "question": "3. Can I use SwiftUI with older iOS versions?",
+                "answer": "SwiftUI is supported from iOS 13 onwards. For older versions, UIKit is recommended.  "
+            },
+            {
+                "question": "4. How do I test my SwiftUI app on a real device?",
+                "answer": "Connect your iOS device to Xcode, select it as the build target, and run the app.  "
+            },
+            {
+                "question": "5. What architecture should I use with SwiftUI?",
+                "answer": "MVVM (Model-View-ViewModel) is recommended for better code organization and maintainability.  "
+            },
+            {
+                "question": "6. How do I deploy my SwiftUI app to the App Store?",
+                "answer": "Prepare your app for release, archive it in Xcode, and submit it to the App Store using App Store Connect.  "
+            },
+            {
+                "question": "7. Is it possible to integrate third-party libraries with SwiftUI apps?",
+                "answer": "Yes, SwiftUI apps can use third-party libraries through Swift Package Manager, CocoaPods, or manual integration."
+            },
+            {
+                "question": "8. What are some common challenges when using SwiftUI?",
+                "answer": "Learning curve, backward compatibility, and limited support for some advanced UI components are common challenges.  "
+            },
+            {
+                "question": "9. How do I handle state management in SwiftUI?",
+                "answer": "SwiftUI provides state management tools like `@State`, `@Binding`, and `@ObservedObject`.  "
+            },
+            {
+                "question": "10. Can I use animations in SwiftUI?",
+                "answer": "Yes, SwiftUI offers a wide range of animation options, including implicit and explicit animations.  "
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T10:42:05.495Z",
+        "publishedAt": "2025-03-06T10:42:05.495Z",
+        "updatedAt": "2025-03-06T10:42:05.495Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/build-ios-app-with-swiftui-your-guide-to-modern-ios-app-development.mdx"
+        
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 3,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "3rd blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "jigar-patel",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 321,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 3,
+        "id": "m7x84weqqmk6n0wtc",
+        "title": "iOS Application Life Cycle: Understanding App Delegate Life Cycle in Swift",
+        "slug": "ios-application-life-cycle-understanding-app-delegate-life-cycle-in-swift",
+        "href": "/blog/ios-application-life-cycle-understanding-app-delegate-life-cycle-in-swift/",
+        "featuredImage": "/blog/2025/03/data/LifeCycle.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Explore the iOS application life cycle and the app delegate life cycle in Swift. Learn essential iOS tips for effective app management.",
+        "viewdCount": 408,
+        "readingTime": 2,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "architecture"
+        ],
+        "tagsId": [
+            "swiftui",
+            "userdefaults"
+        ],
+        "status": "published",
+        "ishighlight": "false",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "iOS Application Life Cycle: Understanding App Delegate Life",
+            "seoKeyword": "iOS application life cycle, app delegate life cycle in Swift",
+            "seoDesc": "Explore the iOS application life cycle and the app delegate life cycle in Swift. Learn essential iOS tips for effective app management.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is the iOS application life cycle?",
+                "answer": "The iOS application life cycle defines the various states an app goes through from launch to termination, including transitions between foreground and background."
+            },
+            {
+                "question": "2. What are the key states of the iOS application life cycle?",
+                "answer": "The main states are Not Running, Inactive, Active, Background, and Suspended."
+            },
+            {
+                "question": "3. Why is understanding the life cycle important for iOS developers?",
+                "answer": "It helps developers manage resources efficiently, provide a seamless user experience, and handle app transitions correctly."
+            },
+            {
+                "question": "4. What is the role of AppDelegate in the life cycle?",
+                "answer": "AppDelegate handles life cycle events and allows developers to perform specific tasks when the app transitions between states."
+            },
+            {
+                "question": "5. How can I handle background tasks in an iOS app?",
+                "answer": "Use the `applicationDidEnterBackground(_:)` method to save data and release resources when the app enters the background."
+            },
+            {
+                "question": "6. What happens when the app is in the suspended state?",
+                "answer": "The app remains in memory but does not execute any code."
+            },
+            {
+                "question": "7. Can I handle notifications during the iOS life cycle?",
+                "answer": "Yes, you can handle push notifications using life cycle methods such as `applicationDidBecomeActive(_:)`."
+            },
+            {
+                "question": "8. How can I test life cycle events in Xcode?",
+                "answer": "You can use Xcode’s debugging and breakpoints to simulate app state transitions."
+            },
+            {
+                "question": "9. What happens if `applicationWillTerminate(_:)` is not implemented?",
+                "answer": "If not implemented, the app may not perform critical cleanup tasks before termination."
+            },
+            {
+                "question": "10. How can I ensure smooth state transitions in my iOS app?",
+                "answer": "Implement appropriate logic for each life cycle event and thoroughly test all transitions."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T10:48:55.826Z",
+        "publishedAt": "2025-03-06T10:48:55.826Z",
+        "updatedAt": "2025-03-06T10:48:55.826Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/ios-application-life-cycle-understanding-app-delegate-life-cycle-in-swift.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 4,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "4th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 321,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 4,
+        "id": "m7x8xshbj8opj356z",
+        "title": "iOS MVVM Architecture: A Clean Swift Development Pattern",
+        "slug": "ios-mvvm-architecture-a-clean-swift-development-pattern",
+        "href": "/blog/ios-mvvm-architecture-a-clean-swift-development-pattern/",
+        "featuredImage": "/blog/2025/03/data/MVVM.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn about iOS MVVM architecture, its benefits, and how to implement it in Swift for clean and maintainable code. See practical examples and tips.",
+        "viewdCount": 229,
+        "readingTime": 5,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "architecture"
+        ],
+        "tagsId": [
+            "mvvm",
+            "userdefaults",
+            "clean-architecture"
+        ],
+        "status": "published",
+        "ishighlight": "true",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "iOS MVVM Architecture: A Clean Swift Development Pattern",
+            "seoKeyword": "iOS MVVM architecture, MVVM architecture iOS Swift, Swift MV",
+            "seoDesc": "Learn about iOS MVVM architecture, its benefits, and how to implement it in Swift for clean and maintainable code. See practical examples and tips.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is MVVM architecture in iOS development?",
+                "answer": "MVVM is a design pattern that separates the UI, business logic, and data handling through Model, View, and ViewModel components for better maintainability and scalability."
+            },
+            {
+                "question": "2. Why is MVVM preferred over MVC in iOS?",
+                "answer": "MVVM offers a cleaner separation of concerns, better testability, and improved data binding compared to MVC, where the ViewController often becomes overloaded with logic."
+            },
+            {
+                "question": "3. How does the ViewModel differ from the Model in MVVM?",
+                "answer": "The ViewModel handles the logic required for the View and binds data, while the Model focuses on data management and business logic."
+            },
+            {
+                "question": "4. Can I use MVVM with UIKit instead of SwiftUI?",
+                "answer": "Yes, MVVM can be implemented in both UIKit and SwiftUI applications."
+            },
+            {
+                "question": "5. What frameworks support MVVM architecture in iOS?",
+                "answer": "Libraries like Combine and RxSwift are popular for managing reactive data binding in MVVM architecture."
+            },
+            {
+                "question": "6. Is MVVM suitable for small iOS projects?",
+                "answer": "Yes, MVVM can be beneficial even for small projects due to its clean separation of concerns."
+            },
+            {
+                "question": "7. How can I test the ViewModel in MVVM architecture?",
+                "answer": "Write unit tests to verify the correctness of the logic and data binding in ViewModels."
+            },
+            {
+                "question": "8. How does MVVM help in reactive programming?",
+                "answer": "MVVM easily integrates with reactive frameworks like Combine, enabling automatic data updates between the Model and View."
+            },
+            {
+                "question": "9. What challenges can I face while implementing MVVM?",
+                "answer": "Potential challenges include overcomplicating the ViewModel and handling complex binding scenarios."
+            },
+            {
+                "question": "10. What tools can assist with MVVM architecture in iOS?",
+                "answer": "Tools like Xcode, Combine, and dependency injection frameworks can streamline MVVM implementation."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T11:11:23.759Z",
+        "publishedAt": "2025-03-06T11:11:23.759Z",
+        "updatedAt": "2025-03-06T11:11:23.759Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/ios-mvvm-architecture-a-clean-swift-development-pattern.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 5,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "5th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 461,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel","jigar-aptel","jigar-aptel","jigar-aptel","jigar-aptel","jigar-aptel","jigar-aptel","jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 5,
+        "id": "m7x9e0j8yt6jet478",
+        "title": "Core Data Framework: A Comprehensive Guide with Examples for iOS & macOS Developers",
+        "slug": "core-data-framework-a-comprehensive-guide-with-examples-for-ios-macos-developers",
+        "href": "/blog/core-data-framework-a-comprehensive-guide-with-examples-for-ios-macos-developers/",
+        "featuredImage": "/blog/2025/03/data/Persistance.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Explore Core Data framework for iOS and macOS with practical examples. Learn about persistent storage, fetch requests, object graphs, and best practices for efficient app development.",
+        "viewdCount": 495,
+        "readingTime": 2,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata",
+            "swiftui",
+            "userdefaults"
+        ],
+        "status": "published",
+        "ishighlight": "true",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Core Data Framework: A Comprehensive Guide with Examples for",
+            "seoKeyword": "Core Data Framework, Core Data iOS tutorial",
+            "seoDesc": "Explore Core Data framework for iOS and macOS with practical examples. Learn about persistent storage, fetch requests, object graphs, and best practices for efficient app development.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is the difference between Core Data and SQLite?",
+                "answer": "Core Data is an object graph management framework, while SQLite is a relational database. Core Data abstracts database management, making it easier to work with objects instead of writing SQL queries."
+            },
+            {
+                "question": "2. Can Core Data be used without an SQLite database?",
+                "answer": "Yes, Core Data supports multiple storage types, including in-memory and XML-based storage, besides SQLite."
+            },
+            {
+                "question": "3. What is NSManagedObjectContext in Core Data?",
+                "answer": "NSManagedObjectContext is an essential component of Core Data that manages objects in memory and interacts with persistent storage. It handles saving and fetching data."
+            },
+            {
+                "question": "4. How do I handle data migration in Core Data?",
+                "answer": "Core Data provides lightweight and manual migration options. You can enable automatic migration in the data model or implement custom mapping models for complex migrations."
+            },
+            {
+                "question": "5. Does Core Data work with SwiftUI?",
+                "answer": "Yes, Core Data integrates well with SwiftUI using @Environment(\\.managedObjectContext) and @FetchRequest for state management."
+            },
+            {
+                "question": "6. How do I improve Core Data performance?",
+                "answer": "Optimize fetch requests, use batch operations, minimize the number of save calls, and use background contexts for heavy operations."
+            },
+            {
+                "question": "7. What is an NSPersistentContainer?",
+                "answer": "NSPersistentContainer is a high-level API introduced in iOS 10 that simplifies the Core Data stack setup, including the creation of the managed object model, context, and coordinator."
+            },
+            {
+                "question": "8. How do I delete objects in Core Data?",
+                "answer": "You can delete objects using context.delete(object) and then save the context to reflect changes in the database."
+            },
+            {
+                "question": "9. Can Core Data be used in a multi-threaded environment?",
+                "answer": "Yes, but each thread should have its own NSManagedObjectContext to prevent concurrency issues."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T11:24:00.692Z",
+        "publishedAt": "2025-03-06T11:24:00.692Z",
+        "updatedAt": "2025-03-06T11:24:00.692Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/core-data-framework-a-comprehensive-guide-with-examples-for-ios-macos-developers.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      },
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      },
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      },
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      },
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 6,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "6th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 798,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 6,
+        "id": "m7x9q4zypxvjyhb5n",
+        "title": "Step-by-Step Guide: Core Data Fetch Requests with Examples in Swift",
+        "slug": "step-by-step-guide-core-data-fetch-requests-with-examples-in-swift",
+        "href": "/blog/step-by-step-guide-core-data-fetch-requests-with-examples-in-swift/",
+        "featuredImage": "/blog/2025/03/data/AddCoreData.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn how to set up Core Data fetch requests in iOS with Swift. This comprehensive guide includes practical examples to retrieve and manage data efficiently.",
+        "viewdCount": 528,
+        "readingTime": 5,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata",
+            "userdefaults"
+        ],
+        "status": "published",
+        "ishighlight": "false",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Step-by-Step Guide: Core Data Fetch Requests with Examples i",
+            "seoKeyword": "Core Data fetch requests, NSFetchRequest example, Core Data",
+            "seoDesc": "Learn how to set up Core Data fetch requests in iOS with Swift. This comprehensive guide includes practical examples to retrieve and manage data efficiently.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is a fetch request in Core Data?",
+                "answer": "A fetch request in Core Data is a query that retrieves specific data from the persistent store. It allows developers to filter, sort, and limit results based on defined criteria."
+            },
+            {
+                "question": "2. How do I create a simple fetch request in Core Data?",
+                "answer": "You can create a fetch request using NSFetchRequest, specify the entity name, and execute it using the managed object context. Example:\n\nlet fetchRequest = NSFetchRequest<NSManagedObject>(entityName: \"Task\")\nlet tasks = try context.fetch(fetchRequest)"
+            },
+            {
+                "question": "3. What is an NSPredicate in Core Data?",
+                "answer": "NSPredicate is used to filter fetch requests based on conditions. For example, to fetch tasks with priority 1:\n\nfetchRequest.predicate = NSPredicate(format: \"priority == %d\", 1)"
+            },
+            {
+                "question": "4. How can I sort fetch request results in Core Data?",
+                "answer": "Use NSSortDescriptor to define sorting criteria. Example:\n\nfetchRequest.sortDescriptors = [NSSortDescriptor(key: \"title\", ascending: true)]"
+            },
+            {
+                "question": "5. How do I limit the number of results in a fetch request?",
+                "answer": "Set the fetchLimit property to restrict the number of records returned:\n\nfetchRequest.fetchLimit = 5"
+            },
+            {
+                "question": "6. What is batch fetching in Core Data?",
+                "answer": "Batch fetching improves performance by limiting the number of objects loaded into memory at once using fetchBatchSize:\n\nfetchRequest.fetchBatchSize = 20"
+            },
+            {
+                "question": "7. How can I perform a fetch request on a background thread?",
+                "answer": "Use a background context with perform {} to prevent blocking the main UI thread:\n\ncontext.perform {\n    let tasks = try? fetchRequest.fetch()\n}"
+            },
+            {
+                "question": "8. What should I do if my fetch request is slow?",
+                "answer": "Optimize fetch requests by using:\n\n- Predicates to filter unnecessary data\n- Fetch limits to reduce load\n- Background contexts for heavy operations"
+            },
+            {
+                "question": "9. How do I fetch only specific attributes in Core Data?",
+                "answer": "Use propertiesToFetch to retrieve only the required fields, reducing memory usage:\n\nfetchRequest.propertiesToFetch = [\"title\", \"priority\"]"
+            },
+            {
+                "question": "10. How can I detect and handle fetch request errors?",
+                "answer": "Always use do-catch blocks to handle errors and prevent crashes:\n\ndo {\n    let tasks = try context.fetch(fetchRequest)\n} catch {\n    print(\"Fetch error: (error.localizedDescription)\")\n}"
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T11:33:26.350Z",
+        "publishedAt": "2025-03-06T11:33:26.350Z",
+        "updatedAt": "2025-03-06T11:33:26.350Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/step-by-step-guide-core-data-fetch-requests-with-examples-in-swift.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 7,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "7th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 678,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 7,
+        "id": "m7xaga5il6zc00q72",
+        "title": "Core Data Performance Optimization Tips: Enhance Your Swift App's Data Efficiency",
+        "slug": "core-data-performance-optimization-tips-enhance-your-swift-app-s-data-efficiency",
+        "href": "/blog/core-data-performance-optimization-tips-enhance-your-swift-app-s-data-efficiency/",
+        "featuredImage": "/blog/2025/03/data/core-data-performance-optimization-tips-enhance-your-swift-app-s-data-efficiency.webp",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Boost your app’s performance with Core Data performance optimization tips. Learn how to optimize CRUD operations with Core Data and improve overall app performance in Swift.",
+        "viewdCount": 335,
+        "readingTime": 3,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata",
+            "userdefaults"
+        ],
+        "status": "published",
+        "ishighlight": "true",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Core Data Performance Optimization Tips: Enhance Your Swift",
+            "seoKeyword": "Core Data performance optimization, Improve Core Data fetch",
+            "seoDesc": "Boost your app’s performance with Core Data performance optimization tips. Learn how to optimize CRUD operations with Core Data and improve overall app performance in Swift.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is Core Data, and why is it important?",
+                "answer": "Core Data is Apple’s framework for managing and persisting data in iOS and macOS applications. It provides an object graph management system and enables efficient data storage and retrieval."
+            },
+            {
+                "question": "2. How can I improve the performance of fetch requests in Core Data?",
+                "answer": "You can optimize fetch requests by using predicates, sort descriptors, limiting fetch results, and performing queries in the background to avoid blocking the main thread."
+            },
+            {
+                "question": "3. What are batch operations in Core Data?",
+                "answer": "Batch operations allow you to perform multiple inserts, updates, or deletes in a single transaction, reducing database interactions and improving app performance."
+            },
+            {
+                "question": "4. How do background contexts improve Core Data performance?",
+                "answer": "Background contexts allow heavy data operations to run on a separate thread, preventing UI lag and improving responsiveness."
+            },
+            {
+                "question": "5. Why should I avoid frequent Core Data saves?",
+                "answer": "Saving too frequently can slow down your app and cause unnecessary disk writes. Instead, batch multiple changes together before saving."
+            },
+            {
+                "question": "6. What is lightweight migration in Core Data?",
+                "answer": "Lightweight migration allows seamless data model changes without requiring a full data wipe, enabling smooth schema upgrades."
+            },
+            {
+                "question": "7. How does faulting help with Core Data memory management?",
+                "answer": "Faulting ensures that only necessary data is loaded into memory, reducing overall memory usage and improving app performance."
+            },
+            {
+                "question": "8. Can I fetch only specific attributes instead of full objects in Core Data?",
+                "answer": "Yes, by using NSFetchRequest with propertiesToFetch, you can retrieve only specific attributes instead of loading entire objects into memory."
+            },
+            {
+                "question": "9. What is the best way to handle large datasets in Core Data?",
+                "answer": "For large datasets, use background contexts, batch operations, fetch limits, and NSFetchedResultsController to manage memory efficiently."
+            },
+            {
+                "question": "10. How can I improve Core Data performance in table views?",
+                "answer": "Use NSFetchedResultsController to efficiently track changes, perform incremental updates, and reduce memory usage when displaying data in table views."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T11:53:46.086Z",
+        "publishedAt": "2025-03-06T11:53:46.086Z",
+        "updatedAt": "2025-03-06T11:53:46.086Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/core-data-performance-optimization-tips-enhance-your-swift-app-s-data-efficiency.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 8,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "8th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 12454545,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 8,
+        "id": "m7xaga5il6zc00q72",
+        "title": "Core Data vs Realm: Which One Is Better for iOS Apps?",
+        "slug": "core-data-vs-realm-which-one-is-better-for-ios-apps",
+        "href": "/blog/core-data-performance-optimization-tips-enhance-your-swift-app-s-data-efficiency/",
+        "featuredImage": "/blog/2025/03/data/coredataVSrealm.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Discover the differences between Core Data and Realm for iOS apps. Learn which is better for your project based on performance, setup complexity, and use cases.",
+        "viewdCount": 335,
+        "readingTime": 3,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "realm",
+            "coredata"
+        ],
+        "status": "published",
+        "ishighlight": "true",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Core Data vs Realm: Which One Is Better for iOS Apps?",
+            "seoKeyword": "Core Data vs Realm, Core Data iOS, Realm iOS, Core Data performance",
+            "seoDesc": "Discover the differences between Core Data and Realm for iOS apps. Learn which is better for your project based on performance, setup complexity, and use cases.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. Is Core Data better than Realm for iOS app development?",
+                "answer": "Core Data is better for iOS app development if you need Apple ecosystem integration, complex data relationships, and advanced data management. However, Realm is faster, easier to use, and more efficient for mobile data storage."
+            },
+            {
+                "question": "2. Which is faster, Core Data or Realm for iOS apps?",
+                "answer": "Realm is faster than Core Data in most cases due to its custom-built database engine. Core Data uses SQLite, which can add overhead, making Realm a better choice for high-performance iOS applications."
+            },
+            {
+                "question": "3. Can I use Realm for cross-platform mobile app development?",
+                "answer": "Yes, Realm is a cross-platform database that supports iOS, Android, and other platforms. Core Data is limited to iOS and macOS. If you're building a React Native or Flutter app, Realm is a better choice."
+            },
+            {
+                "question": "4. Does Core Data use SQLite as a backend?",
+                "answer": "Yes, Core Data uses SQLite as its default backend for data persistence. However, it is an object graph management framework, not a direct database. Realm database is built differently and doesn’t rely on SQLite."
+            },
+            {
+                "question": "5. Is Realm easier to learn than Core Data for iOS developers?",
+                "answer": "Yes, Realm has a simpler API with less boilerplate code, making it easier for iOS developers to implement. Core Data has a steeper learning curve but offers more control over data persistence."
+            },
+            {
+                "question": "6. Which one provides better data migration, Core Data or Realm?",
+                "answer": "Realm database supports automatic schema migration, making it easier to handle updates. Core Data migration requires manual setup and can be complex, especially for large-scale iOS applications."
+            },
+            {
+                "question": "7. Can I use Core Data and Realm together in an iOS app?",
+                "answer": "Yes, but using both Core Data and Realm in the same iOS app is uncommon. Most developers choose either Core Data or Realm based on performance and app requirements."
+            },
+            {
+                "question": "8. Does Realm support complex object relationships like Core Data?",
+                "answer": "Yes, Realm database supports object relationships such as one-to-many, many-to-one, and many-to-many relationships, similar to Core Data."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T11:53:46.086Z",
+        "publishedAt": "2025-03-06T11:53:46.086Z",
+        "updatedAt": "2025-03-06T11:53:46.086Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/core-data-vs-realm-which-one-is-better-for-ios-apps.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 2,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "like blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 123,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel", "test", "jigar-aptel", "rohit-parmar"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 9,
+        "id": "m7xaxe9yy40w8ktcn",
+        "title": "Core Data vs SQLite: Which Should You Choose for Your App? A Comprehensive Comparison",
+        "slug": "core-data-vs-sqlite-which-should-you-choose-for-your-app-a-comprehensive-comparison",
+        "href": "/blog/core-data-vs-sqlite-which-should-you-choose-for-your-app-a-comprehensive-comparison/",
+        "featuredImage": "/blog/2025/03/data/coredataVSsqlite.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn the key differences between Core Data and SQLite for iOS app development. Discover which is better for CRUD operations in Swift, and explore helpful Core Data tips for optimizing performance.",
+        "viewdCount": 221,
+        "readingTime": 3,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata",
+            "sqlite"
+        ],
+        "status": "published",
+        "ishighlight": "true",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Core Data vs SQLite: Which Should You Choose for Your App? A",
+            "seoKeyword": "Core Data vs SQLite, Core Data performance tips, SQLite CRUD operations Swift, Core Data vs SQLite for iOS",
+            "seoDesc": "Learn the key differences between Core Data and SQLite for iOS app development. Discover which is better for CRUD operations in Swift, and explore helpful Core Data tips for optimizing performance.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. Is Core Data faster than SQLite?",
+                "answer": "Core Data can be faster for complex data models due to its built-in caching and lazy loading, while SQLite is generally better for direct SQL queries and bulk data processing."
+            },
+            {
+                "question": "2. Can I use Core Data and SQLite together in an iOS app?",
+                "answer": "Yes, you can use both Core Data and SQLite in the same app, but it’s generally not recommended unless you have a specific use case that requires both."
+            },
+            {
+                "question": "3. Which one is better for offline storage, Core Data or SQLite?",
+                "answer": "Core Data is better for offline storage with complex relationships, while SQLite is preferred for structured relational data that requires direct queries."
+            },
+            {
+                "question": "4. Does Core Data use SQLite internally?",
+                "answer": "Yes, by default, Core Data uses SQLite as its persistent storage, but it abstracts SQL queries behind its object graph management system."
+            },
+            {
+                "question": "5. Is SQLite or Core Data better for large datasets?",
+                "answer": "SQLite performs better for large datasets that require complex queries, while Core Data is more efficient for managing object relationships and in-memory caching."
+            },
+            {
+                "question": "6. How does Core Data handle data migration?",
+                "answer": "Core Data provides automatic and lightweight migration options, but developers need to configure them correctly to avoid issues during schema changes."
+            },
+            {
+                "question": "7. Is SQLite suitable for high-performance mobile applications?",
+                "answer": "Yes, SQLite is highly optimized for mobile applications, offering fast query execution and efficient data handling with low memory usage."
+            },
+            {
+                "question": "8. Which one is easier to use, Core Data or SQLite?",
+                "answer": "Core Data is easier for developers familiar with Apple’s ecosystem, while SQLite requires knowledge of SQL queries and manual data handling."
+            },
+            {
+                "question": "9. Does Core Data support multi-threading?",
+                "answer": "Yes, Core Data supports multi-threading, but developers must use separate managed object contexts to prevent concurrency issues."
+            },
+            {
+                "question": "10. Can SQLite work without an internet connection?",
+                "answer": "Yes, SQLite is a local database and does not require an internet connection to function, making it ideal for offline storage in mobile applications."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T12:07:04.582Z",
+        "publishedAt": "2025-03-06T12:07:04.582Z",
+        "updatedAt": "2025-03-06T12:07:04.582Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/core-data-vs-sqlite-which-should-you-choose-for-your-app-a-comprehensive-comparison.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 9,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "9th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 12453,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 10,
+        "id": "m7xb3motv101cm3sp",
+        "title": "Core Data vs UserDefaults: Choosing the Right Data Storage in iOS",
+        "slug": "core-data-vs-userdefaults-choosing-the-right-data-storage-in-ios",
+        "href": "/blog/core-data-vs-userdefaults-choosing-the-right-data-storage-in-ios/",
+        "featuredImage": "/blog/2025/03/data/codedataVSUserdefaults.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Explore Core Data vs UserDefaults in iOS. Learn when to use Core Data for complex data storage and UserDefaults for lightweight preferences with practical examples in Swift.",
+        "viewdCount": 250,
+        "readingTime": 3,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata",
+            "userdefaults"
+        ],
+        "status": "published",
+        "ishighlight": "true",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Core Data vs UserDefaults: Choosing the Right Data Storage i",
+            "seoKeyword": "Core Data vs UserDefaults, iOS data storage, Core Data tutor",
+            "seoDesc": "Explore Core Data vs UserDefaults in iOS. Learn when to use Core Data for complex data storage and UserDefaults for lightweight preferences with practical examples in Swift.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is the main difference between Core Data and UserDefaults?",
+                "answer": "Core Data is used for managing large and complex datasets with relationships, while UserDefaults is a lightweight storage system for simple key-value pairs like app settings."
+            },
+            {
+                "question": "2. When should I use Core Data instead of UserDefaults?",
+                "answer": "Use Core Data when dealing with structured data, object relationships, or large datasets that require querying and persistence."
+            },
+            {
+                "question": "3. Can UserDefaults store complex objects?",
+                "answer": "UserDefaults is designed for storing simple data types. To store complex objects, you must convert them into Data using NSCoding or Codable."
+            },
+            {
+                "question": "4. Is Core Data faster than UserDefaults?",
+                "answer": "For simple key-value lookups, UserDefaults is faster. However, Core Data is optimized for handling large datasets and complex queries efficiently."
+            },
+            {
+                "question": "5. Does Core Data require an internet connection?",
+                "answer": "No, Core Data stores data locally on the device. However, it can be integrated with iCloud for syncing across devices."
+            },
+            {
+                "question": "6. Can I use both Core Data and UserDefaults in the same app?",
+                "answer": "Yes, many apps use both—UserDefaults for preferences and Core Data for complex data management."
+            },
+            {
+                "question": "7. Does Core Data automatically save changes?",
+                "answer": "No, you must explicitly save the NSManagedObjectContext using context.save() to persist changes."
+            },
+            {
+                "question": "8. Is UserDefaults data encrypted?",
+                "answer": "No, UserDefaults is not encrypted by default. Avoid storing sensitive user data in it."
+            },
+            {
+                "question": "9. How much data can UserDefaults store?",
+                "answer": "UserDefaults is best for small data (a few KBs). Storing large data can slow down the app's performance."
+            },
+            {
+                "question": "10. What are the alternatives to Core Data in iOS?",
+                "answer": "Alternatives to Core Data include SQLite, Realm, and Firebase Firestore, depending on your app’s needs."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T12:11:55.421Z",
+        "publishedAt": "2025-03-06T12:11:55.421Z",
+        "updatedAt": "2025-03-06T12:11:55.421Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/core-data-vs-userdefaults-choosing-the-right-data-storage-in-ios.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      },
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      },
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2025",
-    "updatedAt": "March 03, 2025",
-    "deletedAt": ""
-  },
-  {
-    "index": 10,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "10th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 4500000,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 11,
+        "id": "m7xbb66vdlz5wsmjh",
+        "title": "CRUD Operations with Core Data in Swift: A Complete Guide with Examples",
+        "slug": "crud-operations-with-core-data-in-swift-a-complete-guide-with-examples",
+        "href": "/blog/crud-operations-with-core-data-in-swift-a-complete-guide-with-examples/",
+        "featuredImage": "/blog/2025/03/data/APP_iOS.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn how to perform CRUD operations with Core Data in Swift. This comprehensive guide explains how to Create, Read, Update, and Delete data in Core Data with practical examples.",
+        "viewdCount": 212,
+        "readingTime": 2,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata",
+            "swiftui"
+        ],
+        "status": "published",
+        "ishighlight": "false",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "CRUD Operations with Core Data in Swift: A Complete Guide",
+            "seoKeyword": "Core Data Swift tutorial, CRUD operations in Core Data,",
+            "seoDesc": "Learn how to perform CRUD operations with Core Data in Swift. This comprehensive guide explains how to Create, Read, Update, and Delete data in Core Data with practical examples.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is Core Data in Swift?",
+                "answer": "Core Data is Apple’s framework for managing and persisting data in iOS and macOS applications. It allows developers to store, retrieve, and manage object graphs efficiently."
+            },
+            {
+                "question": "2. How do you create an entity in Core Data?",
+                "answer": "To create an entity, define a new entity in the .xcdatamodeld file, then create an instance of the entity in the context, set its properties, and save the context."
+            },
+            {
+                "question": "3. What is NSPersistentContainer in Core Data?",
+                "answer": "NSPersistentContainer is a convenience class that handles the Core Data stack, including the managed object model, context, and persistent store."
+            },
+            {
+                "question": "4. How do you fetch data from Core Data using predicates?",
+                "answer": "Use NSFetchRequest with NSPredicate to filter data based on specific conditions. Example: fetchRequest.predicate = NSPredicate(format: \"title == %@\", \"Task Title\")"
+            },
+            {
+                "question": "5. How do you update an existing object in Core Data?",
+                "answer": "Fetch the object, modify its properties, and save the context using context.save()."
+            },
+            {
+                "question": "6. What is the best way to delete multiple records in Core Data?",
+                "answer": "For batch deletions, use NSBatchDeleteRequest for better performance instead of deleting each object individually."
+            },
+            {
+                "question": "7. How to prevent data loss when updating Core Data?",
+                "answer": "Always perform updates in a separate background context and save the changes correctly. Use Core Data’s undo manager if necessary."
+            },
+            {
+                "question": "8. Can Core Data work without an internet connection?",
+                "answer": "Yes, Core Data is a local storage solution and does not require an internet connection unless syncing with iCloud or a remote database."
+            },
+            {
+                "question": "9. What are the advantages of Core Data over UserDefaults?",
+                "answer": "Core Data is optimized for complex object storage, relationships, and querying, while UserDefaults is best for storing simple key-value pairs."
+            },
+            {
+                "question": "10. How to improve Core Data performance for large datasets?",
+                "answer": "Use batch requests, background contexts, indexing, and fetch limits to optimize performance for large data sets."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T12:17:47.287Z",
+        "publishedAt": "2025-03-06T12:17:47.287Z",
+        "updatedAt": "2025-03-06T12:17:47.287Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/crud-operations-with-core-data-in-swift-a-complete-guide-with-examples.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2023",
-    "updatedAt": "March 03, 2023",
-    "deletedAt": ""
-  },
-  {
-    "index": 11,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "11th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 67925,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 12,
+        "id": "m7xbjpixyvf42hwlh",
+        "title": "How to Manage Large Datasets with Core Data: Performance Optimization Tips",
+        "slug": "how-to-manage-large-datasets-with-core-data-performance-optimization-tips",
+        "href": "/blog/how-to-manage-large-datasets-with-core-data-performance-optimization-tips/",
+        "featuredImage": "/blog/2025/03/data/how-to-manage-large-datasets-with-core-data-performance-optimization-tips.webp",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn how to manage large datasets with Core Data in iOS. This guide covers CRUD operations, performance optimization, and tips to handle large datasets efficiently.",
+        "viewdCount": 195,
+        "readingTime": 3,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata"
+        ],
+        "status": "published",
+        "ishighlight": "false",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "How to Manage Large Datasets with Core Data: Performance",
+            "seoKeyword": "Core Data performance optimization, Core Data large dataset handling, CRUD operations in Core Data, Fetch request optimization in Core Data, Core Data batch processing, Core Data vs SQLite comparison",
+            "seoDesc": "Learn how to manage large datasets with Core Data in iOS. This guide covers CRUD operations, performance optimization, and tips to handle large datasets efficiently.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is Core Data in iOS development?",
+                "answer": "Core Data is Apple’s framework for managing object graphs and data persistence in iOS apps. It helps store, retrieve, and manipulate data efficiently."
+            },
+            {
+                "question": "2. How can I improve Core Data performance with large datasets?",
+                "answer": "You can optimize performance by using fetch limits, batch size, background contexts, predicates for filtering, and relationship faults to minimize memory usage."
+            },
+            {
+                "question": "3. What is the difference between Core Data and SQLite?",
+                "answer": "Core Data is an object graph management framework, while SQLite is a relational database. Core Data provides automatic caching, lazy loading, and relationship handling, making it better for managing complex data models."
+            },
+            {
+                "question": "4. How does batch fetching improve Core Data performance?",
+                "answer": "Batch fetching loads data in chunks, reducing memory usage and speeding up queries by only fetching a subset of records at a time."
+            },
+            {
+                "question": "5. Can I use Core Data without persistence?",
+                "answer": "Yes, you can configure Core Data to use an in-memory store if you don’t need to persist data beyond the app’s session."
+            },
+            {
+                "question": "6. What is a background context in Core Data?",
+                "answer": "A background context allows performing data operations asynchronously without blocking the main thread, improving app responsiveness."
+            },
+            {
+                "question": "7. How can I delete large amounts of data efficiently in Core Data?",
+                "answer": "Instead of deleting objects one by one, use batch delete requests (NSBatchDeleteRequest) to remove data efficiently."
+            },
+            {
+                "question": "8. What is faulting in Core Data, and how does it help performance?",
+                "answer": "Faulting is a technique where Core Data loads objects lazily, meaning it doesn’t fetch related data until it is explicitly accessed, reducing memory consumption."
+            },
+            {
+                "question": "9. How do I debug and monitor Core Data performance?",
+                "answer": "Use tools like the Core Data Instruments profiler in Xcode to monitor fetch requests, save operations, and memory usage."
+            },
+            {
+                "question": "10. What are predicates in Core Data, and how do they help?",
+                "answer": "Predicates filter data at the database level, reducing the amount of data fetched and improving query performance."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T12:24:25.593Z",
+        "publishedAt": "2025-03-06T12:24:25.593Z",
+        "updatedAt": "2025-03-06T12:24:25.593Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/how-to-manage-large-datasets-with-core-data-performance-optimization-tips.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2023",
-    "updatedAt": "March 03, 2023",
-    "deletedAt": ""
-  },
-  {
-    "index": 12,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "12th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 98745,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel", "jigar-aptel", "jigar-aptel", "jigar-aptel" ],
-    "categoriesId": ["network"],
-    "tagsId": ["vaposr"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 13,
+        "id": "m7xbr76ss6sbbjqq0",
+        "title": "How to Set Up Core Data in iOS with Swift: Step-by-Step Guide",
+        "slug": "how-to-set-up-core-data-in-ios-with-swift-step-by-step-guide",
+        "href": "/blog/how-to-set-up-core-data-in-ios-with-swift-step-by-step-guide/",
+        "featuredImage": "/blog/2025/03/data/APP_iOS.jpg",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn how to set up Core Data in iOS with Swift. Follow this comprehensive step-by-step guide to create and manage a persistent data store in your app efficiently.",
+        "viewdCount": 81,
+        "readingTime": 1,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata",
+            "swiftui"
+        ],
+        "status": "published",
+        "ishighlight": "false",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "How to Set Up Core Data in iOS with Swift",
+            "seoKeyword": "Core Data iOS Swift tutorial, Swift Core Data example, Core Data setup in Xcode, Core Data persistent storage iOS, Save and fetch Core Data Swift",
+            "seoDesc": "Learn how to set up Core Data in iOS with Swift. Follow this comprehensive step-by-step guide to create and manage a persistent data store in your app efficiently.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is Core Data in Swift?",
+                "answer": "Core Data is Apple’s framework for managing and persisting data in iOS and macOS applications. It allows developers to store, retrieve, and manage object graphs efficiently."
+            },
+            {
+                "question": "2. How do you create an entity in Core Data?",
+                "answer": "To create an entity, define a new entity in the .xcdatamodeld file, then create an instance of the entity in the context, set its properties, and save the context."
+            },
+            {
+                "question": "3. What is NSPersistentContainer in Core Data?",
+                "answer": "NSPersistentContainer is a convenience class that handles the Core Data stack, including the managed object model, context, and persistent store."
+            },
+            {
+                "question": "4. How do you fetch data from Core Data using predicates?",
+                "answer": "Use NSFetchRequest with NSPredicate to filter data based on specific conditions. Example: fetchRequest.predicate = NSPredicate(format: \"title == %@\", \"Task Title\")"
+            },
+            {
+                "question": "5. How do you update an existing object in Core Data?",
+                "answer": "Fetch the object, modify its properties, and save the context using context.save()."
+            },
+            {
+                "question": "6. What is the best way to delete multiple records in Core Data?",
+                "answer": "For batch deletions, use NSBatchDeleteRequest for better performance instead of deleting each object individually."
+            },
+            {
+                "question": "7. How to prevent data loss when updating Core Data?",
+                "answer": "Always perform updates in a separate background context and save the changes correctly. Use Core Data’s undo manager if necessary."
+            },
+            {
+                "question": "8. Can Core Data work without an internet connection?",
+                "answer": "Yes, Core Data is a local storage solution and does not require an internet connection unless syncing with iCloud or a remote database."
+            },
+            {
+                "question": "9. What are the advantages of Core Data over UserDefaults?",
+                "answer": "Core Data is optimized for complex object storage, relationships, and querying, while UserDefaults is best for storing simple key-value pairs."
+            },
+            {
+                "question": "10. How to improve Core Data performance for large datasets?",
+                "answer": "Use batch requests, background contexts, indexing, and fetch limits to optimize performance for large data sets."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T12:30:15.076Z",
+        "publishedAt": "2025-03-06T12:30:15.076Z",
+        "updatedAt": "2025-03-06T12:30:15.076Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/how-to-set-up-core-data-in-ios-with-swift-step-by-step-guide.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2023",
-    "updatedAt": "March 03, 2023",
-    "deletedAt": ""
-  },
-  {
-    "index": 2,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "last blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 4500000,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapor"],
-    "status": "published", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 14,
+        "id": "m7xbvd341nvbbts2h",
+        "title": "Top Core Data Best Practices for iOS Developers",
+        "slug": "top-core-data-best-practices-for-ios-developers",
+        "href": "/blog/top-core-data-best-practices-for-ios-developers/",
+        "featuredImage": "/blog/2025/03/data/top-core-data-best-practices-for-ios-developers.webp",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn top Core Data best practices for iOS developers. Explore efficient techniques to set up Core Data in iOS with Swift, optimize performance, and manage persistent storage.",
+        "viewdCount": 268,
+        "readingTime": 1,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata"
+        ],
+        "status": "published",
+        "ishighlight": "false",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Top Core Data Best Practices for iOS Developers",
+            "seoKeyword": "Core Data best practices, iOS Core Data optimization, Core Data fetch requests, Swift Core Data tutorial, Core Data vs Realm",
+            "seoDesc": "Learn top Core Data best practices for iOS developers. Explore efficient techniques to set up Core Data in iOS with Swift, optimize performance, and manage persistent storage.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What is Core Data in iOS development?",
+                "answer": "Core Data is Apple’s framework for managing object graphs and data persistence in iOS apps. It allows efficient storage, retrieval, and manipulation of data."
+            },
+            {
+                "question": "2. How does NSPersistentContainer simplify Core Data setup?",
+                "answer": "NSPersistentContainer abstracts Core Data stack setup, automatically handling store loading, context management, and background operations."
+            },
+            {
+                "question": "3. Why should I use background contexts in Core Data?",
+                "answer": "Using background contexts prevents UI blocking by offloading heavy operations, such as fetching or saving large amounts of data, to a separate thread."
+            },
+            {
+                "question": "4. What are the best ways to optimize Core Data fetch requests?",
+                "answer": "Use predicates, fetch limits, and property selections to fetch only the required data and improve performance."
+            },
+            {
+                "question": "5. How does batch updating improve Core Data performance?",
+                "answer": "Batch updates modify multiple records at once without loading them into memory, making updates significantly faster."
+            },
+            {
+                "question": "6. What is lightweight migration in Core Data?",
+                "answer": "Lightweight migration automatically updates the Core Data model schema when making minor changes, preventing data loss without requiring manual migration."
+            },
+            {
+                "question": "7. Why should I avoid using NSManagedObject directly in the UI?",
+                "answer": "Directly accessing NSManagedObject in UI components can cause threading issues and unexpected behaviors. Using ViewModels ensures a clean architecture."
+            },
+            {
+                "question": "8. What is faulting in Core Data?",
+                "answer": "Faulting is a Core Data feature that delays data loading until it is needed, reducing memory usage for large datasets."
+            },
+            {
+                "question": "9. How often should I save data in Core Data?",
+                "answer": "Frequent saves can degrade performance. It’s best to batch save operations and only save data at key points, such as app termination or user actions."
+            },
+            {
+                "question": "10. How do I handle Core Data errors effectively?",
+                "answer": "Always use do-catch blocks for Core Data operations, log errors properly, and implement fallback mechanisms to prevent app crashes."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T12:33:29.344Z",
+        "publishedAt": "2025-03-06T12:33:29.344Z",
+        "updatedAt": "2025-03-06T12:33:29.344Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/top-core-data-best-practices-for-ios-developers.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2023",
-    "updatedAt": "March 03, 2023",
-    "deletedAt": ""
-  },
-  {
-    "index": 13,
-    "id": "9e3e3994-a3ed-47ca-a014-d4483884cfe2",
-    "title": "13th blog ",
-    "slug": "second-blog",
-    "href": "/blog/second-blog",
-    "mdxFile": "/public/blog/2025/03/second-blog.mdx",
-    "featuredImage": "https://images.unsplash.com/photo-1440778303588-435521a205bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    "authorId": "bhumika-ios",
-    "desc": "Second blog desc Donec quis orci eget orci vehicula condimentum.",
-    "viewdCount": 6457,
-    "readingTime": 2,
-    "bookmarkUsersId": ["jigar-patel", "rohit-parmar"],
-    "likeUsersId": ["jigar-aptel"],
-    "categoriesId": ["network"],
-    "tagsId": ["vapora"],
-    "status": "draft", 
-    "ishighlight": "true",
-    "contentType": "free, login, subscribed",
-    "postType": "standard",
-    "postTypeUrl": "https://springgreen-curlew-802312.hostingersite.com/wp-content/uploads/2024/12/paudio2.mp3",
-    "seo": {
-      "seoTitle": "",
-      "seoKeyword": "",
-      "seoDesc": "",
-      "jsonLD": ""
+    {
+        "index": 15,
+        "id": "m7xcjqbz42gny7nac",
+        "title": "Understanding Core Data Relationships in Swift: Performance Optimization and CRUD Operations",
+        "slug": "understanding-core-data-relationships-in-swift-performance-optimization-and-crud-operations",
+        "href": "/blog/understanding-core-data-relationships-in-swift-performance-optimization-and-crud-operations/",
+        "featuredImage": "/blog/2025/03/data/understanding-core-data-relationships-in-swift-performance-optimization-and-crud-operations.webp",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn how to manage Core Data relationships in Swift, optimize performance, and perform CRUD operations with practical examples and Core Data tips to enhance your app’s efficiency.",
+        "viewdCount": 510,
+        "readingTime": 2,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata",
+            "swiftui"
+        ],
+        "status": "published",
+        "ishighlight": "-2",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Understanding Core Data Relationships in Swift",
+            "seoKeyword": "Core Data relationships in Swift, Core Data CRUD operations, Core Data performance optimization, Fetching related objects in Core Data, Core Data one-to-many relationship",
+            "seoDesc": "Learn how to manage Core Data relationships in Swift, optimize performance, and perform CRUD operations with practical examples and Core Data tips to enhance your app’s efficiency.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "1. What are Core Data relationships in Swift?",
+                "answer": "Core Data relationships define how different entities relate to each other, such as one-to-one, one-to-many, or many-to-many associations, making data management more structured."
+            },
+            {
+                "question": "2. How do I create a one-to-many relationship in Core Data?",
+                "answer": "In the .xcdatamodeld file, define an entity with a to-many relationship to another entity. Ensure inverse relationships are correctly set to maintain data integrity."
+            },
+            {
+                "question": "3. How do I fetch related objects using Core Data in Swift?",
+                "answer": "Use NSFetchRequest along with predicates to filter and fetch objects efficiently. You can also use NSPredicate to retrieve specific related records."
+            },
+            {
+                "question": "4. What is the best way to optimize Core Data performance?",
+                "answer": "Optimize performance by limiting fetch requests, using background contexts, leveraging lazy loading (faulting), and implementing batch updates/inserts."
+            },
+            {
+                "question": "5. How does faulting improve Core Data efficiency?",
+                "answer": "Faulting loads only metadata until the actual object is accessed, reducing memory usage and improving performance when dealing with large datasets."
+            },
+            {
+                "question": "6. How do I update relationships in Core Data?",
+                "answer": "Modify relationships using addTo<Relationship>() or removeFrom<Relationship>() methods, then save the context to persist changes."
+            },
+            {
+                "question": "7. Can I use Core Data with SwiftUI?",
+                "answer": "Yes, Core Data integrates well with SwiftUI using @FetchRequest and @Environment(\\ .managedObjectContext), making it easy to manage persistent data."
+            },
+            {
+                "question": "8. How do I delete an object and its related data in Core Data?",
+                "answer": "First, remove related objects manually if needed, then delete the parent entity from the context and save the changes."
+            },
+            {
+                "question": "9. What is the difference between NSManagedObject and NSManagedObjectContext?",
+                "answer": "NSManagedObject represents a single Core Data entity instance. NSManagedObjectContext manages Core Data objects, tracking changes and handling CRUD operations."
+            },
+            {
+                "question": "10. How do I perform CRUD operations with Core Data efficiently?",
+                "answer": "Use NSManagedObjectContext for creating, reading, updating, and deleting objects, ensuring you use background contexts and batch processing for optimization."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T12:52:26.255Z",
+        "publishedAt": "2025-03-06T12:52:26.255Z",
+        "updatedAt": "2025-03-06T12:52:26.255Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/understanding-core-data-relationships-in-swift-performance-optimization-and-crud-operations.mdx"
     },
-    "blogImgs": [
-      "https://images.pexels.com/photos/2363814/pexels-photo-2363814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/4352244/pexels-photo-4352244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-    ],
-    "faqs": [
-      {
-        "question": "question1",
-        "answer": "Answer1"
-      },
-      {
-        "question": "question2",
-        "answer": "Answer2"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "1",
-        "comments": "comments1",
-        "commentDate": "",
-        "commentLikes": ""
-      }
-    ],
-    "createdAt": "March 03, 2025",
-    "publishedAt": "March 03, 2023",
-    "updatedAt": "March 03, 2023",
-    "deletedAt": ""
-  }
+    {
+        "index": 16,
+        "id": "m7xcpni7bwpkcvxld",
+        "title": "Understanding Persistent Storage in Core Data with Examples",
+        "slug": "understanding-persistent-storage-in-core-data-with-examples",
+        "href": "/blog/understanding-persistent-storage-in-core-data-with-examples/",
+        "featuredImage": "/blog/2025/03/data/understanding-persistent-storage-in-core-data-with-examples.webp",
+        "authorId": "bhumika-ios",
+        "authorslug": "bhumika-ios",
+        "desc": "Learn how to set up persistent storage in Core Data for iOS apps using Swift. Explore examples and best practices to efficiently store and manage app data.",
+        "viewdCount": 368,
+        "readingTime": 5,
+        "bookmarkUsersId": [
+            ""
+        ],
+        "likeUsersId": [
+            ""
+        ],
+        "categoriesId": [
+            "data-storage"
+        ],
+        "tagsId": [
+            "coredata",
+            "swiftui"
+        ],
+        "status": "published",
+        "ishighlight": "false",
+        "contentType": "free",
+        "postType": "standard",
+        "postTypeUrl": "",
+        "seo": {
+            "seoTitle": "Understanding Persistent Storage in Core Data with Examples",
+            "seoKeyword": "Core Data persistent storage, Core Data SQLite storage, Save data in Core Data, Fetch data using Core Data, Core Data vs UserDefaults",
+            "seoDesc": "Learn how to set up persistent storage in Core Data for iOS apps using Swift. Explore examples and best practices to efficiently store and manage app data.",
+            "jsonLD": "{}"
+        },
+        "blogImgs": [
+            "",
+            ""
+        ],
+        "faqs": [
+            {
+                "question": "What is Core Data persistent storage?",
+                "answer": "Core Data persistent storage allows iOS apps to store and retrieve data even after the app is closed or the device is restarted."
+            },
+            {
+                "question": "Which persistent store types does Core Data support?",
+                "answer": "Core Data supports SQLite (default), In-Memory, and Binary storage types."
+            },
+            {
+                "question": "How do I enable Core Data in an iOS project?",
+                "answer": "When creating a new Xcode project, check the Use Core Data option. This automatically configures Core Data in your app."
+            },
+            {
+                "question": "What is NSPersistentContainer in Core Data?",
+                "answer": "NSPersistentContainer simplifies the setup of the Core Data stack, including the managed object model, persistent store, and context."
+            },
+            {
+                "question": "How do I save data using Core Data?",
+                "answer": "Use NSManagedObjectContext to create an entity, set its attributes, and call context.save() to persist the data."
+            },
+            {
+                "question": "How do I fetch data from Core Data?",
+                "answer": "Use NSFetchRequest to retrieve data from Core Data and access the stored objects."
+            },
+            {
+                "question": "Can I use Core Data without SQLite?",
+                "answer": "Yes, you can configure Core Data to use In-Memory or Binary storage instead of SQLite."
+            },
+            {
+                "question": "How can I improve Core Data performance?",
+                "answer": "Use background contexts for large data operations, batch updates, and avoid frequent save operations to improve performance."
+            },
+            {
+                "question": "What is the difference between Core Data and UserDefaults?",
+                "answer": "Core Data is for managing complex structured data, while UserDefaults is for simple key-value storage."
+            },
+            {
+                "question": "How do I handle Core Data migrations?",
+                "answer": "Enable automatic migrations in NSPersistentContainer or use lightweight migrations to update the data model without data loss."
+            }
+        ],
+        "comments": [
+            {
+                "userId": "1",
+                "comments": "comments1",
+                "commentDate": "",
+                "commentLikes": ""
+            }
+        ],
+        "createdAt": "2025-03-06T12:57:02.528Z",
+        "publishedAt": "2025-03-06T12:57:02.528Z",
+        "updatedAt": "2025-03-06T12:57:02.528Z",
+        "deletedAt": "",
+        "mdxPath": "/public/blog/2025/03/understanding-persistent-storage-in-core-data-with-examples.mdx"
+    }
 ]

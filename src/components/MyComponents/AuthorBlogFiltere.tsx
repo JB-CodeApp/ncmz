@@ -10,8 +10,8 @@ import ModalCategories from '../SectionHero/ModalCategories';
 
 const FILTERS = [
   { name: 'Most Recent', key: 'latest' },
-  { name: 'Most Appreciated', key: 'appreciated' },
-  { name: 'Most Discussed', key: 'discussed' },
+  // { name: 'Most Appreciated', key: 'appreciated' },
+  // { name: 'Most Discussed', key: 'discussed' },
   { name: 'Most Viewed', key: 'viewed' },
 ];
 

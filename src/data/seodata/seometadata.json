@@ -26,13 +26,29 @@
                             "@type": "Answer",
                             "text": "The development timeline depends on the app's complexity. A basic app takes 4-6 weeks, while advanced apps require more time."
                         }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What iOS development services do you offer?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "I provide end-to-end iOS app development, including UI/UX design, API integration, and performance optimization."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What technologies do you use for iOS development?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "I specialize in Swift, SwiftUI, UIKit, Core Data, and advanced app architecture to create seamless mobile experiences."
+                        }
                     }
                 ]
             }
         ],
         "seo_keyword": "iOS developer, iPhone app development, iOS app developer, custom iOS apps, Swift app development, hire iOS developer, iOS app design",
-        "created_date": "",
-        "updated_date": ""
+        "created_date": "2025-03-06T10:20:26.129Z",
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
         "page_title": "about",
@@ -58,8 +74,8 @@
             }
         ],
         "seo_keyword": "iOS developer portfolio, Swift developer, iPhone app developer, mobile app expert, UI/UX designer",
-        "created_date": "",
-        "updated_date": ""
+        "created_date": "2025-03-06T10:20:26.129Z",
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
         "page_title": "contact",
@@ -85,11 +101,11 @@
             }
         ],
         "seo_keyword": "hire iOS developer, Swift expert, iPhone app development, iOS consultation, app development contact",
-        "created_date": "",
-        "updated_date": ""
+        "created_date": "2025-03-06T10:20:26.129Z",
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
-        "page_title": "blogs",
+        "page_title": "blog",
         "seo_title": "Latest iOS Development Blogs & Tutorials",
         "seo_description": "Read expert blogs on iOS app development, Swift programming, UI/UX design, and app optimization. Stay updated with new trends.",
         "og_image_alt": "iOS Development Blogs and Tutorials",
@@ -120,8 +136,8 @@
             }
         ],
         "seo_keyword": "iOS development blogs, Swift tutorials, iOS coding tips, mobile app development, iOS frameworks, UI/UX design",
-        "created_date": "",
-        "updated_date": ""
+        "created_date": "2025-03-06T10:20:26.129Z",
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
         "page_title": "tag",
@@ -155,8 +171,8 @@
             }
         ],
         "seo_keyword": "iOS development topics, Swift tags, mobile app trends, iOS UI design, iPhone app coding, Xcode development",
-        "created_date": "",
-        "updated_date": ""
+        "created_date": "2025-03-06T10:20:26.129Z",
+        "updated_date": "2025-03-06T10:20:26.129Z"
     },
     {
         "page_title": "category",
@@ -190,7 +206,42 @@
             }
         ],
         "seo_keyword": "iOS development blog, Swift tutorials, app design guides, iOS frameworks, iOS coding tips, Apple app development",
-        "created_date": "",
-        "updated_date": ""
+        "created_date": "2025-03-06T10:20:26.129Z",
+        "updated_date": "2025-03-06T10:20:26.129Z"
+    },
+    {
+        "page_title": "author",
+        "seo_title": "Expert Tech Author In-Depth Software & Development Insights",
+        "seo_description": "Explore expert articles from a tech author. Gain insights on iOS development, programming, and industry best practices.",
+        "og_image_alt": "Tech Author - Software & Development Insights",
+        "og_image": "/assets/images/seoimages/author.webp",
+        "json_ld": [],
+        "faq": [
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What topics do you cover as a tech author?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "I write about software development, web technologies, programming languages, and industry trends."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you provide tutorials for beginners?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, I create beginner-friendly guides on coding, development tools, and best practices."
+                        }
+                    }
+                ]
+            }
+        ],
+        "seo_keyword": "tech author, programming blogs, coding tutorials, technology articles, iOS insights, expert tech writer",
+        "created_date": "2025-03-07T12:30:00.000Z",
+        "updated_date": "2025-03-07T12:30:00.000Z"
     }
 ]

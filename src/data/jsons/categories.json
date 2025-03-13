@@ -4,7 +4,7 @@
     "name": "Architecture",
     "slug": "architecture",
     "href": "/category/architecture",
-    "thumbnail": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=550&q=80",
+    "thumbnail": "/assets/images/category/architecture_category.webp",
     "count": 13,
     "color": "indigo"
   },
@@ -13,8 +13,26 @@
     "name": "Network",
     "slug": "network",
     "href": "/category/network",
-    "thumbnail": "https://images.unsplash.com/photo-1485841890310-6a055c88698a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=550&q=80",
+    "thumbnail": "/assets/images/category/network_category.webp",
     "count": 16,
     "color": "red"
+  },
+  {
+    "id": 3,
+    "slug": "ui-ux-development",
+    "name": "UI/UX Development",
+    "href": "/category/ui-ux-development",
+    "thumbnail": "/assets/images/category/ui-ux-development_category.webp",
+    "count": 13,
+    "color": "green"
+  },
+  {
+    "id": 4,
+    "slug": "data-storage",
+    "name": "Data Storage",
+    "href": "/category/data-storage",
+    "thumbnail": "/assets/images/category/data-storage_category.webp",
+    "count": 16,
+    "color": "yellow"
   }
 ]

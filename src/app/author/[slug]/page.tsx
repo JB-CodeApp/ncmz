@@ -10,7 +10,7 @@ import { avatarImgs } from "@/contains/fakeData";
 import VerifyIcon from "@/components/VerifyIcon";
 import AccountActionDropdown from "@/components/AccountActionDropdown/AccountActionDropdown";
 import Image from "next/image";
-import { getBlogsByAuthor } from "@/data/blogs";
+import { AUTHORS, getBlogsByAuthor } from "@/data/blogs";
 import Link from "next/link";
 import AuthorSocials from "@/components/MyComponents/AuthorSocials";
 import { AuthorBlogFiltere } from "@/components/MyComponents/AuthorBlogFiltere";
@@ -65,25 +65,23 @@ const PageAuthor = ({ params }: { params: { slug: string } }) => {
             {/*  */}
             <div className="pt-5 md:pt-1 lg:ml-6 xl:ml-12 flex-grow">
               <div className="max-w-screen-sm space-y-3.5 ">
-                <h2 className="inline-flex items-center text-2xl sm:text-3xl lg:text-4xl font-semibold">
+                <h1 className="inline-flex items-center text-2xl sm:text-3xl lg:text-4xl font-semibold">
                   <span>{author?.displayName}</span>
                   <VerifyIcon
                     className="ml-2"
                     iconClass="w-6 h-6 sm:w-7 sm:h-7 xl:w-8 xl:h-8"
                   />
-                </h2>
-                <span className="block text-sm text-neutral-500 dark:text-neutral-400">
+                </h1>
+                <h2 className="block text-sm text-neutral-500 dark:text-neutral-400">
                   {author?.desc}
-                </span>
+                </h2>
                 <a
-                  href="#"
+                  href={author?.Social.website as any || ''}
                   className="flex items-center text-xs font-medium space-x-2.5 rtl:space-x-reverse cursor-pointer text-neutral-500 dark:text-neutral-400 truncate"
                 >
                   <GlobeAltIcon className="flex-shrink-0 w-4 h-4" />
                   <span className="text-neutral-700 dark:text-neutral-300 truncate">
-                    <Link href={author?.Social.website as any || ''}>
-                      {author?.Social.website}
-                    </Link>
+                    {author?.Social.website}
                   </span>
                 </a>
                 <AuthorSocials
@@ -159,15 +157,11 @@ const PageAuthor = ({ params }: { params: { slug: string } }) => {
   );
 };
 
-export async function generateStaticParams({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
-  const { author, authorblogs } = getBlogsByAuthor(slug);
-
-  const paths = authorblogs.map((author) => ({
-    params: { slug: author.slug },
+export async function generateStaticParams() {
+  return AUTHORS.map((author) => ({
+    slug: author.slug.toString(),
   }));
-
-  return paths;
 }
+
 
 export default PageAuthor;
